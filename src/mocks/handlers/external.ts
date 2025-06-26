@@ -1,0 +1,27 @@
+import { PRODUCT_MOCK } from "../datas/product";
+import { http, HttpResponse } from "msw";
+import { apiPath } from "../../lib/api/utils";
+import { CUSTOMER_REVIEWS } from "../datas/rating";
+
+export const EXTERNAL_HANDLERS = [
+  http.get(apiPath("/v1/product/search"), async ({ request }) => {
+    console.log("MSW request:", request);
+    const url = new URL(request.url);
+    const sortBy = url.searchParams.get("sortBy") || "createdAt";
+    const orderBy = url.searchParams.get("orderBy") || "desc";
+
+    const sortedProducts = [...PRODUCT_MOCK];
+
+    if (sortBy === "sold") {
+      sortedProducts.sort((a, b) => {
+        return orderBy === "desc" ? b.sold - a.sold : a.sold - b.sold;
+      });
+    }
+    return HttpResponse.json({ data: sortedProducts });
+  }),
+
+  http.get(apiPath('/v1/reviews'), async () => {
+    return HttpResponse.json({ data: CUSTOMER_REVIEWS });
+  }),
+
+];
