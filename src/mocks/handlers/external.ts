@@ -1,21 +1,21 @@
-import { PRODUCT_MOCK } from "../datas/product";
-import { http, HttpResponse } from "msw";
-import { apiPath } from "../../lib/api/utils";
-import { CUSTOMER_REVIEWS } from "../datas/rating";
-import { CART_MOCK } from "../datas/cart";
+import { PRODUCT_MOCK } from '../datas/product';
+import { http, HttpResponse } from 'msw';
+import { apiPath } from '../../lib/api/utils';
+import { CUSTOMER_REVIEWS } from '../datas/rating';
+import { CART_MOCK } from '../datas/cart';
 
 export const EXTERNAL_HANDLERS = [
-  http.get(apiPath("/v1/product/search"), async ({ request }) => {
-    console.log("MSW request:", request);
+  http.get(apiPath('/v1/product/search'), async ({ request }) => {
+    console.log('MSW request:', request);
     const url = new URL(request.url);
-    const sortBy = url.searchParams.get("sortBy") || "createdAt";
-    const orderBy = url.searchParams.get("orderBy") || "desc";
+    const sortBy = url.searchParams.get('sortBy') || 'createdAt';
+    const orderBy = url.searchParams.get('orderBy') || 'desc';
 
     const sortedProducts = [...PRODUCT_MOCK];
 
-    if (sortBy === "sold") {
+    if (sortBy === 'sold') {
       sortedProducts.sort((a, b) => {
-        return orderBy === "desc" ? b.sold - a.sold : a.sold - b.sold;
+        return orderBy === 'desc' ? b.sold - a.sold : a.sold - b.sold;
       });
     }
     return HttpResponse.json({ data: sortedProducts });
@@ -26,7 +26,7 @@ export const EXTERNAL_HANDLERS = [
   }),
 
   //Mock api cart
-  http.get(apiPath("/v1/cart"), async () => {
+  http.get(apiPath('/v1/cart'), async () => {
     return HttpResponse.json({ data: CART_MOCK });
   }),
 ];

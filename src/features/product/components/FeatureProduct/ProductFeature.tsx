@@ -1,24 +1,28 @@
 import ProductSkeleton from '@/components/skeleton/productSekeleton';
-import ProductFeatureList from '@/features/product/components/FeatureProduct/ProductFeatureList'
+import ProductFeatureList from '@/features/product/components/FeatureProduct/ProductFeatureList';
 import { Suspense } from 'react';
 type Props = {
-    type: 'new' | 'bestseller';
-    title: string;
+  type: 'new' | 'bestseller';
+  title: string;
 };
 
 export default function ProductFeature({ type, title }: Props) {
-
-    return (
-        <div className="px-5 md:px-15 py-10 animate-in slide-in-from-bottom duration-700 delay-300">
-            <h2 className="text-3xl md:mt-10 md:text-5xl font-bold text-center mb-10 font-display">
-                {title}
-            </h2>
-            <div className='w-full flex justify-center'><Suspense fallback={<ProductSkeleton />}><ProductFeatureList type={type} title={title} /></Suspense></div>
-            <div className="flex justify-center"> <button
-                className="w-full cursor-pointer px-8 py-2 text-md border md:w-1/6 md:h-15 border-gray-200 rounded-full md:text-lg font-medium hover:bg-primary hover:text-white transition"
-            >
-                View All
-            </button></div>
-        </div>
-    );
+  return (
+    <div className="px-5 md:px-15 py-10 animate-in slide-in-from-bottom duration-700 delay-300">
+      <h2 className="text-3xl md:mt-10 md:text-5xl font-bold text-center mb-10 font-display">
+        {title}
+      </h2>
+      <div className="w-full flex justify-center">
+        <Suspense fallback={<ProductSkeleton />}>
+          <ProductFeatureList type={type} title={title} />
+        </Suspense>
+      </div>
+      <div className="flex justify-center">
+        {' '}
+        <button className="w-full cursor-pointer px-8 py-2 text-md border md:w-1/6 md:h-15 border-gray-200 rounded-full md:text-lg font-medium hover:bg-primary hover:text-white transition">
+          View All
+        </button>
+      </div>
+    </div>
+  );
 }
