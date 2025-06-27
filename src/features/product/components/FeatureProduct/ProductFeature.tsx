@@ -9,7 +9,7 @@ type Props = {
 export default function ProductFeature({ type, title }: Props) {
 
     return (
-        <div className="px-4 md:px-15 py-10 animate-in slide-in-from-bottom duration-700 delay-300">
+        <div className="px-5 md:px-15 py-10 animate-in slide-in-from-bottom duration-700 delay-300">
             <h2 className="text-3xl md:mt-10 md:text-5xl font-bold text-center mb-10 font-display">
                 {title}
             </h2>

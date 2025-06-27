@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function BrowseByCategory() {
     return (
-        <section className="mx-auto px-4 md:px-20 py-14 w-full ">
+        <section className="mx-auto px-4 md:px-20 w-full ">
             <div className="bg-[#f6f6f6] md:px-25 rounded-3xl">
                 <h2 className="text-3xl md:text-5xl font-bold text-center pt-10 mb-10 font-display">
                     BROWSE BY DRESS STYLE

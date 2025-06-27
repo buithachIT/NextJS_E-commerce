@@ -2,6 +2,7 @@ import { PRODUCT_MOCK } from "../datas/product";
 import { http, HttpResponse } from "msw";
 import { apiPath } from "../../lib/api/utils";
 import { CUSTOMER_REVIEWS } from "../datas/rating";
+import { CART_MOCK } from "../datas/cart";
 
 export const EXTERNAL_HANDLERS = [
   http.get(apiPath("/v1/product/search"), async ({ request }) => {
@@ -19,9 +20,13 @@ export const EXTERNAL_HANDLERS = [
     }
     return HttpResponse.json({ data: sortedProducts });
   }),
-
+  //Mock api reviewer
   http.get(apiPath('/v1/reviews'), async () => {
     return HttpResponse.json({ data: CUSTOMER_REVIEWS });
   }),
 
+  //Mock api cart
+  http.get(apiPath("/v1/cart"), async () => {
+    return HttpResponse.json({ data: CART_MOCK });
+  }),
 ];

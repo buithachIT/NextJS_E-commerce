@@ -21,7 +21,9 @@ import Twitter from '@/assets/social/twitter.svg'
 import FaceBook from '@/assets/social/facebook.svg'
 import Insta from '@/assets/social/insta.svg'
 import Github from '@/assets/social/github.svg'
+import ArrowSm from '@/assets/arrow-sm.svg'
 export {
+    ArrowSm,
     UserIcon,
     CartIcon,
     SearchIcon,

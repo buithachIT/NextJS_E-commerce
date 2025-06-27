@@ -21,8 +21,8 @@ const DefaultHeader = () => {
                     <span><CartIcon className="w-10 h-6" /></span>
                     <span><UserIcon className="w-10 h-6" /></span>
                 </div>
-
             </div>
+            <hr className="border-t border-gray-200" />
         </>
     )
 }
