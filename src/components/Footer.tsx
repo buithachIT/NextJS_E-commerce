@@ -3,7 +3,7 @@ import { ApplePay, FaceBook, Github, GooglePay, Insta, MasterCard, Paypal, Twitt
 export default function Footer() {
     return (
         <footer className="relative">
-            <div className="max-w-96 md:max-w-[78rem] my-0 mx-auto">
+            <div className="max-w-96 px-5 md:max-w-[78rem] my-0 mx-auto">
                 <div
                     className="bg-black rounded-3xl flex flex-col md:flex-row justify-between items-center px-6 py-8 md:px-16 md:py-11 mb-14">
                     <h1 className="text-white text-4xl w-full mb-8 md:w-1/2 font-display">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
@@ -28,7 +28,7 @@ export default function Footer() {
                             <Github />
                         </div>
                     </div>
-                    <div className="text-sm mx-auto grid grid-cols-2 md:grid-cols-4 gap-x-10">
+                    <div className="text-sm  grid grid-cols-2 md:grid-cols-4 gap-x-10">
                         <div>
                             <h3 className="mb-7 font-bold">COMPANY</h3>
                             <a className="block mb-5" href="#">About</a>
@@ -89,6 +89,6 @@ export default function Footer() {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-[rgba(240,240,240,1)] -z-10 h-5/6"></div>
             </div>
-        </footer>
+        </footer >
     );
 }

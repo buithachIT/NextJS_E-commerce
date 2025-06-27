@@ -13,7 +13,7 @@ export default async function ProductFeatureList({ type }: Props) {
             ? await getBestSellerProducts()
             : await getNewProducts();
     return (
-        <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-4">
+        <div className="flex gap-4 overflow-x-auto overflow-y-visible px-6 scrollbar-hide pb-4">
             {products.map((product: Product) => (
                 <ProductCard product={product} key={product.id} />
             ))}

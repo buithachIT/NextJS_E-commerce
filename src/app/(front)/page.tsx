@@ -5,7 +5,7 @@ import HeroSection from "@/components/hero/hero";
 import FeatureRating from "@/features/rating/components/FeatureRating/FeatureRating";
 import ProductFeature from "@/features/product/components/FeatureProduct/ProductFeature";
 import { Fragment } from "react";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BStar, SStar } from "../ui/icons";
 import Brands from "./brand";
 import Link from "next/link";
+
 const HeroSection = () => {
     return (
         <>
@@ -74,10 +75,10 @@ const HeroSection = () => {
 
                 </div>
 
-                <span className="absolute right-5 bottom-72 md:top-[50px] md:-translate-x-1/2 z-10">
-                    <BStar className="md:w-35 md:h-auto" />
+                <span className="absolute right-5 bottom-72 md:top-[50px] md:-translate-x-1/2 z-10 ">
+                    <BStar className="md:w-35 md:h-auto hover:animate-spin transition-transform duration-7000" />
                 </span>
-                <span className="absolute left-5 bottom-2/6 md:hidden z-10">
+                <span className="absolute left-5 bottom-2/6 md:hidden z-10 animate-spin duration-[30000ms]">
                     <SStar />
                 </span>
             </div>

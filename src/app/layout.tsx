@@ -4,7 +4,13 @@ if (process.env.NEXT_PUBLIC_ENABLE_MOCK === '1' && typeof window === 'undefined'
 import { satoshi, integralCF } from "@/config/fonts"
 import './globals.css'
 import { MSWProvider } from "@/context/MSWProvider"
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: 'Aurore',
+    icons: '/assets/images/logo-aurore-small.png',
+    description: 'Fashion shop',
+}
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className={`${satoshi.variable} ${integralCF.variable} antialiased`}>

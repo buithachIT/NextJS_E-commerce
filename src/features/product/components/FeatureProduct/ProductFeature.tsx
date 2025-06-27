@@ -9,13 +9,13 @@ type Props = {
 export default function ProductFeature({ type, title }: Props) {
 
     return (
-        <div className="px-4 md:px-20 py-10">
-            <h2 className="text-3xl md:text-6xl font-bold text-center mb-10 font-display">
+        <div className="px-4 md:px-15 py-10 animate-in slide-in-from-bottom duration-700 delay-300">
+            <h2 className="text-3xl md:mt-10 md:text-5xl font-bold text-center mb-10 font-display">
                 {title}
             </h2>
-            <Suspense fallback={<ProductSkeleton />}><ProductFeatureList type={type} title={title} /></Suspense>
+            <div className='w-full flex justify-center'><Suspense fallback={<ProductSkeleton />}><ProductFeatureList type={type} title={title} /></Suspense></div>
             <div className="flex justify-center"> <button
-                className="w-full px-8 py-2 text-md border md:w-1/6 md:h-15 border-gray-200 rounded-full md:text-lg font-medium hover:bg-gray-100 transition"
+                className="w-full cursor-pointer px-8 py-2 text-md border md:w-1/6 md:h-15 border-gray-200 rounded-full md:text-lg font-medium hover:bg-primary hover:text-white transition"
             >
                 View All
             </button></div>

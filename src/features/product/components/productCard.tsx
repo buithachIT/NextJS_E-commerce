@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function ProductCard({ product }: { product: Product }) {
     return (
-        <div className="min-w-[250px] flex flex-col items-start md:min-w-[280px] rounded-xl p-4 hover:shadow-xl transition duration-300">
+        <div className="min-w-[250px] flex flex-col items-start md:min-w-[280px] md:mb-5 md:mt-5 rounded-xl p-4 transition-transform duration-500 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-md">
             <div className="aspect-square overflow-hidden rounded-xl bg-[#f2f2f2]">
                 <Image
                     src={product.image}
