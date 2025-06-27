@@ -78,7 +78,7 @@ const HeroSection = () => {
                 <span className="absolute right-5 bottom-72 md:top-[50px] md:-translate-x-1/2 z-10 ">
                     <BStar className="md:w-35 md:h-auto hover:animate-spin transition-transform duration-7000" />
                 </span>
-                <span className="absolute left-5 bottom-2/6 md:hidden z-10 animate-spin duration-[30000ms]">
+                <span className="absolute left-5 bottom-2/6 md:hidden z-10">
                     <SStar />
                 </span>
             </div>
