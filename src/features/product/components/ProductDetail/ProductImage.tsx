@@ -13,6 +13,8 @@ type ProductImageProps = {
 };
 
 export default function ProductImage({ product }: ProductImageProps) {
+    const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+
     const allImages = useMemo(() => {
         return product?.variants?.flatMap(v => v.images) ?? [];
     }, [product]);
@@ -26,11 +28,11 @@ export default function ProductImage({ product }: ProductImageProps) {
             {/* Ảnh lớn */}
             <div className="relative w-full md:w-3/4 md:h-full aspect-[4/3] rounded-2xl bg-[#f6f6f6]">
                 <Image
-                    src={selectedImage}
+                    src={hoveredImage || selectedImage}
                     alt="Product Image"
                     width={400}
                     height={300}
-                    className="absolute inset-0 w-full h-full rounded-2xl object-cover"
+                    className="absolute inset-0 w-full h-full rounded-2xl object-cover transition duration-300"
                 />
             </div>
 
@@ -41,8 +43,10 @@ export default function ProductImage({ product }: ProductImageProps) {
                         <div
                             key={img}
                             onClick={() => setSelectedImage(img)}
+                            onMouseEnter={() => setHoveredImage(img)}
+                            onMouseLeave={() => setHoveredImage(null)}
                             className={`relative w-26 h-26 md:w-full md:h-full aspect-square rounded-2xl border transition
-                ${selectedImage === img ? 'border-black' : ''}`}
+                          ${selectedImage === img ? 'border-black' : ''}`}
                         >
                             <Image
                                 src={img}

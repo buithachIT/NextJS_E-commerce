@@ -29,7 +29,7 @@ export default function ProductReviewSection({ reviews }: { reviews: CUSTOMER_RE
                                     window.location.search = `?${newSearch.toString()}`
                                 }}
                             >
-                                <SelectTrigger className="w-[160px] text-sm hidden md:flex bg-transparent border-none focus:ring-0 focus:outline-none">
+                                <SelectTrigger className="w-[160px] cursor-pointer text-sm hidden md:flex bg-transparent border-none focus:ring-0 focus:outline-none">
                                     <SelectValue placeholder="Sort by" />
                                 </SelectTrigger>
                                 <SelectContent>
