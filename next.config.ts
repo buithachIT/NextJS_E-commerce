@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  experimental: {
+    typedRoutes: false,
+  },
   /* config options here */
   webpack(config) {
     // Configure webpack to handle SVG files

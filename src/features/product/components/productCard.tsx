@@ -2,6 +2,7 @@ import { Product } from '@/types/product';
 import Image from 'next/image';
 import StarRating from '../../../components/starRating';
 import Link from 'next/link';
+import { ROUTES } from '@/config/routes';
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -15,7 +16,7 @@ export default function ProductCard({ product }: { product: Product }) {
           className="object-cover w-full h-full"
         />
       </div>
-      <Link href="/">
+      <Link href={`${ROUTES.PRODUCT}/${product.id}`}>
         <h4 className="text-lg font-semibold mb-2 text-center">
           {product.name}
         </h4>

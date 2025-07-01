@@ -3,57 +3,43 @@ import { getNewProducts, getBestSellerProducts } from '../product';
 import { PRODUCT_MOCK } from '@/mocks/datas/product';
 import { apiPath } from '../../api/utils';
 
-// Mock the global fetch function
-global.fetch = vi.fn();
-
-describe('Product Actions', () => {
+describe('Product Actions (unit test with vi.mocked)', () => {
   beforeEach(() => {
-    // Clear mock history before each test
-    vi.mocked(fetch).mockClear();
+    global.fetch = vi.fn(); // reset fetch mock
   });
 
   describe('getNewProducts', () => {
     it('should fetch new products and return a limited list', async () => {
-      const mockResponse = {
-        data: PRODUCT_MOCK,
-      };
-
-      // Setup the mock response for fetch
       vi.mocked(fetch).mockResolvedValue({
         ok: true,
-        json: async () => mockResponse,
+        json: async () => ({ data: PRODUCT_MOCK }),
       } as Response);
 
-      const result = await getNewProducts(2);
+      const result = await getNewProducts();
 
-      // Check if fetch was called correctly
       expect(fetch).toHaveBeenCalledWith(
         apiPath('/v1/product/search?sortBy=createdAt&orderBy=desc')
       );
-
-      // Check if the data is correctly sliced
-      expect(result.data).toHaveLength(2);
+      expect(result.data).toHaveLength(4);
       expect(result.data[0].id).toBe(PRODUCT_MOCK[0].id);
     });
 
-    it('should throw an error if the fetch response is not ok', async () => {
-      // Setup a failed mock response
+    it('should return empty data if the fetch response is not ok', async () => {
       vi.mocked(fetch).mockResolvedValue({
         ok: false,
         json: async () => ({ message: 'Error' }),
       } as Response);
 
-      // Expect the function to throw an error because res.json() will be called on a non-ok response
-      await expect(getNewProducts()).rejects.toThrow();
+      const result = await getNewProducts();
+      expect(result.data).toHaveLength(0);
     });
   });
 
   describe('getBestSellerProducts', () => {
     it('should fetch best-seller products', async () => {
-      const mockResponse = { data: PRODUCT_MOCK };
       vi.mocked(fetch).mockResolvedValue({
         ok: true,
-        json: async () => mockResponse,
+        json: async () => ({ data: PRODUCT_MOCK }),
       } as Response);
 
       await getBestSellerProducts();

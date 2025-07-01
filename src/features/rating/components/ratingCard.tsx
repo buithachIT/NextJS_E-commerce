@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 import StarRating from '@/components/starRating';
 export default function RatingCard({ review }: { review: CUSTOMER_REVIEWS }) {
   return (
-    <div className="rounded-xl border border-gray-200 p-6 shadow-sm min-w-[350px]">
+    <div className="rounded-xl mb-5 border border-gray-200 p-6 shadow-sm min-w-[340px]">
       {/* Rating stars */}
       <div className="flex gap-1 text-yellow-500 mb-4">
         <StarRating rating={review.rating} />
@@ -18,7 +18,6 @@ export default function RatingCard({ review }: { review: CUSTOMER_REVIEWS }) {
           <></>
         )}
       </div>
-
       {/* Feedback text */}
       <p className="text-gray-600 leading-relaxed text-sm">{review.comment}</p>
     </div>

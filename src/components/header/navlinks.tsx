@@ -50,14 +50,14 @@ export default function NavLinks() {
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/about-us" className="text-md">
+            <Link href="/" className="text-md">
               New Arrivals
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/about-us">Brands</Link>
+            <Link href="/">Brands</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

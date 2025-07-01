@@ -26,13 +26,13 @@ const DefaultHeader = () => {
         </div>
         <div className="flex w-1/2 items-center justify-end">
           <span className="md:hidden">
-            <SearchIcon className="w-10 h-6" />
+            <SearchIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
           </span>
           <span>
-            <CartIcon className="w-10 h-6" />
+            <CartIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
           </span>
           <span>
-            <UserIcon className="w-10 h-6" />
+            <UserIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
           </span>
         </div>
       </div>

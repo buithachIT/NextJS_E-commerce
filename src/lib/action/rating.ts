@@ -9,3 +9,10 @@ export const getCustomerRating = cache(async () => {
     data: json.data,
   };
 });
+export const getRatingByProductId = cache(async (productId: string) => {
+  const res = await fetch(apiPath(`/v1/reviews/product/${productId}`));
+  const json = await res.json();
+  return {
+    data: json.data,
+  };
+});

@@ -1,10 +1,14 @@
 import RatingCard from '../ratingCard';
-import { getCustomerRating } from '@/lib/action/rating';
 import { CUSTOMER_REVIEWS } from '@/types/rating';
 
-const FeatureRatingList = async () => {
-  const { data: reviews } = await getCustomerRating();
+type FeatureRatingListProps = {
+  reviews: CUSTOMER_REVIEWS[];
+};
 
+const FeatureRatingList = ({ reviews }: FeatureRatingListProps) => {
+  if (!reviews || reviews.length === 0) {
+    return <p>There are no reviews yet.</p>;
+  }
   return (
     <>
       {reviews.map((review: CUSTOMER_REVIEWS) => (
@@ -13,4 +17,5 @@ const FeatureRatingList = async () => {
     </>
   );
 };
+
 export default FeatureRatingList;

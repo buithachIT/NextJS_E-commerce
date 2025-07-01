@@ -22,7 +22,9 @@ import FaceBook from '@/assets/social/facebook.svg';
 import Insta from '@/assets/social/insta.svg';
 import Github from '@/assets/social/github.svg';
 import ArrowSm from '@/assets/arrow-sm.svg';
+import AdjustmentsHorizontalIcon from '@/assets/AdjustmentsHorizontalIcon.svg'
 export {
+  AdjustmentsHorizontalIcon,
   ArrowSm,
   UserIcon,
   CartIcon,

@@ -1,12 +1,26 @@
 export type Product = {
   id: string;
   name: string;
+  description: string;
   price: number;
   oldPrice?: number;
-  description: string;
   discount?: string;
   rating: number;
+  image: string;
   createdAt: string;
   sold: number;
-  image: string;
+  category?: string;
+  brand?: string;
+  variants: Variant[];
+};
+
+export type Variant = {
+  id: string;
+  colorName: string;
+  colorCode: string;
+  sizes: string[];
+  stock: number;
+  price: number;
+  thumbnail: string;
+  images: string[];
 };

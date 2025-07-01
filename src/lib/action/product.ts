@@ -1,20 +1,29 @@
-import { cache } from 'react';
-import { apiPath } from '../api/utils';
+import { cache } from "react";
+import { apiPath } from "../api/utils";
 
-export const getBestSellerProducts = cache(async (limit = 4) => {
-  const res = await fetch(
-    apiPath(`/v1/product/search?sortBy=sold&orderBy=desc`)
-  );
-  const json = await res.json();
-  return {
-    data: json.data.slice(0, limit),
-  };
-});
+async function fetchProductList(sortBy: string, limit: number) {
+  try {
+    const res = await fetch(
+      apiPath(`/v1/product/search?sortBy=${sortBy}&orderBy=desc`)
+    );
+    if (!res.ok) throw new Error(`Failed to fetch products: ${res.status}`);
+    const json = await res.json();
+    return { data: json.data.slice(0, limit) };
+  } catch (err) {
+    console.error(`fetchProductList (${sortBy}) error:`, err);
+    return { data: [] };
+  }
+}
 
-export const getNewProducts = cache(async (limit = 4) => {
-  const res = await fetch(
-    apiPath(`/v1/product/search?sortBy=createdAt&orderBy=desc`)
-  );
+export const getBestSellerProducts = cache(() => fetchProductList('sold', 4));
+export const getNewProducts = cache(() => fetchProductList('createdAt', 4));
+export const getProductById = async (id: string) => {
+  const res = await fetch(apiPath(`/v1/product/${id}`), {
+    next: { revalidate: 60 },
+  });
+
+  if (!res.ok) throw new Error('Failed to fetch product');
+
   const json = await res.json();
-  return { data: json.data.slice(0, limit) };
-});
+  return json.data;
+};
