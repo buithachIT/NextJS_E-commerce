@@ -1,6 +1,6 @@
 import { UserIcon, CartIcon, SearchIcon } from '../ui/icons';
 import NavLink from './navlinks';
-import SearchBox from '@/components/header/search';
+import SearchBox from '@/components/headers/search';
 import MobileNav from './mobileNav';
 import Link from 'next/link';
 

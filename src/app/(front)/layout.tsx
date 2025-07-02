@@ -1,6 +1,6 @@
-import Footer from '@/components/footer/Footer';
-import DefaultHeader from '@/components/header/defaultHeader';
-import SignupCTA from '@/components/header/signupCTA';
+import Footer from '@/components/footers/Footer';
+import DefaultHeader from '@/components/headers/defaultHeader';
+import SignupCTA from '@/components/headers/signupCTA';
 import { ReactNode } from 'react';
 
 function PublicLayout({ children }: { children: ReactNode }) {

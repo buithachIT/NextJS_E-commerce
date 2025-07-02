@@ -1,4 +1,4 @@
-import { PRODUCT_MOCK } from '../datas/product';
+import { CATEGORY, PRODUCT_MOCK } from '../datas/product';
 import { http, HttpResponse } from 'msw';
 import { apiPath } from '../../lib/api/utils';
 import { CUSTOMER_REVIEWS } from '../datas/rating';
@@ -39,6 +39,9 @@ export const EXTERNAL_HANDLERS = [
     return HttpResponse.json({ data: CART_MOCK });
   }),
 
+  http.get(apiPath('/v1/category'), async () => {
+    return HttpResponse.json({ data: CATEGORY });
+  }),
   //get product by id
   http.get(apiPath('/v1/product/:id'), async ({ params }) => {
     const { id } = params;
@@ -54,4 +57,55 @@ export const EXTERNAL_HANDLERS = [
 
     return HttpResponse.json({ data: product });
   }),
+
+  http.get(apiPath('/v1/product'), async ({ request }) => {
+    const url = new URL(request.url);
+
+    const categoryId = url.searchParams.get('categoryId');
+    const page = parseInt(url.searchParams.get('page') || '1');
+    const limit = parseInt(url.searchParams.get('limit') || '8');
+    const sortBy = url.searchParams.get('sortBy') || 'createdAt';
+    const orderBy = url.searchParams.get('orderBy') || 'desc';
+
+    let filteredProducts = PRODUCT_MOCK;
+
+    // Lọc theo category
+    if (categoryId) {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.categoryId === categoryId
+      );
+    }
+
+    // Sắp xếp
+    filteredProducts.sort((a, b) => {
+      const valueA = a[sortBy as keyof typeof a];
+      const valueB = b[sortBy as keyof typeof b];
+
+      if (typeof valueA === 'number' && typeof valueB === 'number') {
+        return orderBy === 'desc' ? valueB - valueA : valueA - valueB;
+      }
+
+      if (typeof valueA === 'string' && typeof valueB === 'string') {
+        return orderBy === 'desc'
+          ? valueB.localeCompare(valueA)
+          : valueA.localeCompare(valueB);
+      }
+
+      return 0;
+    });
+
+    // Phân trang
+    const start = (page - 1) * limit;
+    const paginated = filteredProducts.slice(start, start + limit);
+
+    return HttpResponse.json({
+      data: paginated,
+      meta: {
+        total: filteredProducts.length,
+        page,
+        limit,
+        totalPages: Math.ceil(filteredProducts.length / limit),
+      },
+    });
+  })
 ];

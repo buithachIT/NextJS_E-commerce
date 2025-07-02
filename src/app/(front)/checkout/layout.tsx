@@ -1,4 +1,4 @@
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/footers/Footer';
 import DefaultHeader from '@/components/header/defaultHeader';
 import { Fragment } from 'react';
 

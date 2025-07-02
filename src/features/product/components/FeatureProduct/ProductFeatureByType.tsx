@@ -1,5 +1,5 @@
-import ProductSkeleton from '@/components/skeleton/productSekeleton';
-import ProductFeatureList from '@/features/product/components/FeatureProduct/ProductFeatureList';
+import ProductSkeleton from '@/components/skeletons/productSekeleton';
+import ProductFeatureList from '@/features/product/components/FeatureProduct/ProductFeatureListByType';
 import { Suspense } from 'react';
 type Props = {
   type: 'new' | 'bestseller';
@@ -7,7 +7,7 @@ type Props = {
   className: string;
 };
 
-export default function ProductFeature({ type, title, className }: Props) {
+export default function ProductFeatureByType({ type, title, className }: Props) {
   return (
     <div className={`px-5 md:px-15 py-5 animate-in slide-in-from-bottom duration-700 delay-300 ${className}`}>
       <h2 className="text-3xl md:mt-10 md:text-5xl font-bold text-center mb-10 font-display">

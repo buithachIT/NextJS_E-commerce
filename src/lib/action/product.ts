@@ -27,3 +27,20 @@ export const getProductById = async (id: string) => {
   const json = await res.json();
   return json.data;
 };
+// Get products by category
+export const getProductsByCategory = cache(async (categoryId: string, page = 1, pageSize = 6, limit = 9) => {
+  await sleep(2000);
+
+  try {
+    const res = await fetch(
+      apiPath(`/v1/product?categoryId=${categoryId}&page=${page}&pageSize=${pageSize}&limit=${limit}`)
+    );
+    const json = await res.json();
+    return { data: json.data, meta: json.meta };
+  } catch (err) {
+    return { data: { products: [], total: 0 } };
+  }
+  function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+});

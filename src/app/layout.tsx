@@ -8,6 +8,7 @@ import { satoshi, integralCF } from '@/config/fonts';
 import './globals.css';
 import { MSWProvider } from '@/context/MSWProvider';
 import { Metadata } from 'next';
+import ProgressBarProvider from '@/context/ProgressBarProvider';
 
 export const metadata: Metadata = {
   title: 'Aurore',
@@ -28,10 +29,12 @@ export default function RootLayout({
       <body>
         <MSWProvider>
           <div className="min-h-screen lg:px-0">
-            <div className="max-w-[1440x] mx-auto">{children}</div>
+            <div className="max-w-[1440x] mx-auto">
+              <ProgressBarProvider>{children}</ProgressBarProvider>
+            </div>
           </div>
         </MSWProvider>
       </body>
-    </html>
+    </html >
   );
 }
