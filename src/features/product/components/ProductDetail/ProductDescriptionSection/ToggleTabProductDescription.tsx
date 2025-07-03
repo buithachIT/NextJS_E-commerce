@@ -15,19 +15,19 @@ export default function ProductTabs({ reviews, product }: { reviews: CUSTOMER_RE
             <div className="flex md:px-25 px-5 gap-8 text-[16px] text-gray-500 md:justify-between md:w-full mb-6">
                 <div className="md:px-0 w-full flex justify-between border-b">
                     <button
-                        className={`py-3 md:w-full border-b ${tab === "details" ? "border-black font-bold" : "border-transparent"}`}
+                        className={`py-3 md:w-full hover:text-gray-400 border-b ${tab === "details" ? "border-black font-bold" : "border-transparent"}`}
                         onClick={() => setTab("details")}
                     >
                         Product Details
                     </button>
                     <button
-                        className={`py-3 md:w-full border-b-2 ${tab === "reviews" ? "border-black font-bold" : "border-transparent"}`}
+                        className={`py-3 md:w-full hover:text-gray-400 border-b-2 ${tab === "reviews" ? "border-black font-bold" : "border-transparent"}`}
                         onClick={() => setTab("reviews")}
                     >
                         Rating & Reviews
                     </button>
                     <button
-                        className={`py-3 md:w-full border-b-2 ${tab === "faqs" ? "border-black font-bold" : "border-transparent"}`}
+                        className={`py-3 md:w-full hover:text-gray-400 border-b-2 ${tab === "faqs" ? "border-black font-bold" : "border-transparent"}`}
                         onClick={() => setTab("faqs")}
                     >
                         FAQs

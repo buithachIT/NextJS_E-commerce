@@ -16,4 +16,11 @@ export const ROUTES = {
     FAQ: '/faq',
     TERMS: '/terms',
     PRIVACY: '/privacy',
+
+    //Category
+    CAT_GUCCI: '/gucci',
+    CAT_VERSACE: '/versace',
+    CAT_ZARA: '/zara',
+    CAT_PRADA: '/prada',
+    CAT_CALVINKLEIN: '/calvinklein',
 }

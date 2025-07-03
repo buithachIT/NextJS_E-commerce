@@ -1,5 +1,5 @@
 import Breadcrumb from "@/components/breadcrumb";
-import ProductFeature from "@/features/product/components/FeatureProduct/ProductFeature";
+import ProductFeatureByType from "@/features/product/components/FeatureProduct/ProductFeatureByType";
 import ProductTabs from "@/features/product/components/ProductDetail/ProductDescriptionSection/ToggleTabProductDescription";
 import ProductDetail from "@/features/product/components/ProductDetail/ProductDetail";
 import { getProductById } from "@/lib/action/product";
@@ -13,7 +13,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <Breadcrumb />
             <ProductDetail product={product} />
             <ProductTabs reviews={reviews} product={product} />
-            <ProductFeature title="YOU MIGHT ALSO LIKE" type="bestseller" className="hide-btn" />
+            <ProductFeatureByType title="YOU MIGHT ALSO LIKE" type="bestseller" className="hide-btn" />
         </>
     )
 }
