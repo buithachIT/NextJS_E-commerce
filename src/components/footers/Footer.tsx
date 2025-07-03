@@ -20,13 +20,16 @@ export default function Footer() {
   return (
     <footer className="relative w-full">
       <div className="w-full px-5 md:px-25 my-0 mx-auto">
-        <div className=''>
+        <div className="">
           <div className="bg-black rounded-3xl flex flex-col md:flex-row justify-between items-center px-6 py-8 md:px-16 md:py-11 mb-14">
             <h1 className="text-white text-4xl w-full mb-8 md:w-1/2 font-display">
               STAY UPTO DATE ABOUT OUR LATEST OFFERS
             </h1>
             <form className="w-full md:w-1/3">
-              <label className={`relative block`} htmlFor="email_footer"></label>
+              <label
+                className={`relative block`}
+                htmlFor="email_footer"
+              ></label>
               <input
                 id="email_footer"
                 className="bg-white text-black rounded-full w-full py-3 pl-14 mb-3"
@@ -65,12 +68,18 @@ export default function Footer() {
                     <Link
                       key={label.label}
                       href={label.link}
-                      className={`block mb-5 relative group w-fit transition ${isActive ? 'text-black font-semibold' : 'hover:text-white'
-                        }`}
+                      className={`block mb-5 relative group w-fit transition ${
+                        isActive
+                          ? 'text-black font-semibold'
+                          : 'hover:text-white'
+                      }`}
                     >
                       <span
-                        className={`relative after:content-[''] text-[#606060] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-black after:transition-all ${isActive ? 'after:w-full' : 'after:w-0 group-hover:after:w-full'
-                          }`}
+                        className={`relative after:content-[''] text-[#606060] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-black after:transition-all ${
+                          isActive
+                            ? 'after:w-full'
+                            : 'after:w-0 group-hover:after:w-full'
+                        }`}
                       >
                         {label.label}
                       </span>
@@ -80,7 +89,6 @@ export default function Footer() {
               </div>
             ))}
           </div>
-
         </div>
         <hr className="mt-12 mb-6" />
         <div className="flex flex-col md:flex-row justify-between items-center pb-20">

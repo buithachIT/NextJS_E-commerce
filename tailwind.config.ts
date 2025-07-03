@@ -13,6 +13,15 @@ const config: Config = {
         sans: ['var(--font-satoshi)', 'sans-serif'],
         display: ['var(--font-integral)', 'sans-serif'],
       },
+      keyframes: {
+        'fade-in-up': {
+          '0%': { opacity: 0, transform: 'translateY(12px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'fade-in-up': 'fade-in-up 0.4s ease-out forwards',
+      },
     },
   },
   plugins: [],

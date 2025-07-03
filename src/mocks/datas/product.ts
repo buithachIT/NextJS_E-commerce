@@ -1,55 +1,63 @@
 export const CATEGORY_LIST = ['casual', 'formal', 'party', 'gym'] as const;
 
+export const DRESS_STYLE = [
+  { id: '1', name: 'casual' },
+  { id: '2', name: 'formal' },
+  { id: '3', name: 'party' },
+  { id: '4', name: 'gym' },
+];
+
 export const CATEGORY = [
   {
     id: '1',
     name: 'GUCCI',
     description: 'gucci ho',
     slug: 'gucci',
-    href: '/category/gucci'
+    href: '/category/gucci',
   },
   {
     id: '2',
     name: 'VERSACE',
     description: 'versace ho',
     slug: 'versace',
-    href: '/category/versace'
+    href: '/category/versace',
   },
   {
     id: '3',
     name: 'Prada',
     description: 'gucci ho',
     slug: 'prada',
-    href: '/category/prada'
+    href: '/category/prada',
   },
   {
     id: '4',
     name: 'Calvin Klein',
     description: 'gucci ho',
     slug: 'calvinklein',
-    href: '/category/calvinklein'
+    href: '/category/calvinklein',
   },
   {
     id: '5',
     name: 'Zara',
     description: 'gucci ho',
     slug: 'zara',
-    href: '/category/zara'
+    href: '/category/zara',
   },
   {
     id: '6',
     name: 'Dior',
     description: 'dori',
     slug: 'dior',
-    href: '/category/dior'
+    href: '/category/dior',
   },
-]
+];
 
 export const PRODUCT_MOCK = [
   {
     id: '1',
     name: 'Vertical Striped Shirt',
-    description: 'A stylish vertical striped shirt perfect for both casual and formal settings. Made from breathable cotton.',
+    description:
+      'A stylish vertical striped shirt perfect for both casual and formal settings. Made from breathable cotton.',
     price: 212,
     oldPrice: 235,
     discount: '-10%',
@@ -58,6 +66,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-01T10:00:00Z',
     sold: 120,
     categoryId: '1',
+    dressStyle: '1',
     variants: [
       {
         id: 'var_001',
@@ -102,7 +111,8 @@ export const PRODUCT_MOCK = [
   {
     id: '2',
     name: 'Slim Fit Chinos',
-    description: 'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
+    description:
+      'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
     price: 145,
     oldPrice: 160,
     discount: '-9%',
@@ -111,6 +121,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-03T08:30:00Z',
     sold: 75,
     categoryId: '2',
+    dressStyle: '2',
     variants: [
       {
         id: 'var_003',
@@ -152,7 +163,8 @@ export const PRODUCT_MOCK = [
   {
     id: '3',
     name: 'Linen Summer Shirt',
-    description: 'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
+    description:
+      'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
     price: 118,
     oldPrice: 130,
     discount: '-9%',
@@ -161,6 +173,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-05T15:00:00Z',
     sold: 90,
     categoryId: '3',
+    dressStyle: '3',
     variants: [
       {
         id: 'var_005',
@@ -198,12 +211,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '4',
     name: 'Oversized Hoodie',
-    description: 'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
+    description:
+      'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
     price: 189,
     oldPrice: 210,
     discount: '-10%',
@@ -212,6 +225,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-06T12:00:00Z',
     sold: 112,
     categoryId: '4',
+    dressStyle: '4',
     variants: [
       {
         id: 'var_007',
@@ -248,12 +262,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '5',
     name: 'Classic Polo Shirt',
-    description: 'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
+    description:
+      'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
     price: 98,
     oldPrice: 110,
     discount: '-11%',
@@ -262,6 +276,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-07T09:30:00Z',
     sold: 67,
     categoryId: '5',
+    dressStyle: '1',
     variants: [
       {
         id: 'var_009',
@@ -302,7 +317,8 @@ export const PRODUCT_MOCK = [
   {
     id: '6',
     name: 'Lightweight Bomber Jacket',
-    description: 'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
+    description:
+      'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
     price: 278,
     oldPrice: 299,
     discount: '-7%',
@@ -311,6 +327,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-08T11:45:00Z',
     sold: 105,
     categoryId: '6',
+    dressStyle: '1',
     variants: [
       {
         id: 'var_011',
@@ -351,7 +368,8 @@ export const PRODUCT_MOCK = [
   {
     id: '7',
     name: 'Vertical Striped Shirt',
-    description: 'A stylish vertical striped shirt perfect for both casual and formal settings. Made from breathable cotton.',
+    description:
+      'A stylish vertical striped shirt perfect for both casual and formal settings. Made from breathable cotton.',
     price: 212,
     oldPrice: 235,
     discount: '-10%',
@@ -360,6 +378,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-01T10:00:00Z',
     sold: 120,
     categoryId: '1',
+    dressStyle: '2',
     variants: [
       {
         id: 'var_001',
@@ -404,7 +423,8 @@ export const PRODUCT_MOCK = [
   {
     id: '8',
     name: 'Slim Fit Chinos',
-    description: 'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
+    description:
+      'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
     price: 145,
     oldPrice: 160,
     discount: '-9%',
@@ -413,6 +433,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-03T08:30:00Z',
     sold: 75,
     categoryId: '1',
+    dressStyle: '3',
     variants: [
       {
         id: 'var_003',
@@ -454,7 +475,8 @@ export const PRODUCT_MOCK = [
   {
     id: '9',
     name: 'Linen Summer Shirt',
-    description: 'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
+    description:
+      'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
     price: 118,
     oldPrice: 130,
     discount: '-9%',
@@ -463,6 +485,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-05T15:00:00Z',
     sold: 90,
     categoryId: '1',
+    dressStyle: '4',
     variants: [
       {
         id: 'var_005',
@@ -500,12 +523,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '10',
     name: 'Oversized Hoodie',
-    description: 'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
+    description:
+      'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
     price: 189,
     oldPrice: 210,
     discount: '-10%',
@@ -514,6 +537,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-06T12:00:00Z',
     sold: 112,
     categoryId: '1',
+    dressStyle: '2',
     variants: [
       {
         id: 'var_007',
@@ -550,12 +574,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '11',
     name: 'Classic Polo Shirt',
-    description: 'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
+    description:
+      'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
     price: 98,
     oldPrice: 110,
     discount: '-11%',
@@ -564,6 +588,7 @@ export const PRODUCT_MOCK = [
     createdAt: '2024-06-07T09:30:00Z',
     sold: 67,
     categoryId: '1',
+    dressStyle: '3',
     variants: [
       {
         id: 'var_009',
@@ -604,7 +629,8 @@ export const PRODUCT_MOCK = [
   {
     id: '12',
     name: 'Lightweight Bomber Jacket',
-    description: 'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
+    description:
+      'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
     price: 278,
     oldPrice: 299,
     discount: '-7%',
@@ -653,7 +679,8 @@ export const PRODUCT_MOCK = [
   {
     id: '18',
     name: 'Slim Fit Chinos',
-    description: 'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
+    description:
+      'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
     price: 145,
     oldPrice: 160,
     discount: '-9%',
@@ -703,7 +730,8 @@ export const PRODUCT_MOCK = [
   {
     id: '19',
     name: 'Linen Summer Shirt',
-    description: 'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
+    description:
+      'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
     price: 118,
     oldPrice: 130,
     discount: '-9%',
@@ -749,12 +777,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '20',
     name: 'Oversized Hoodie',
-    description: 'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
+    description:
+      'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
     price: 189,
     oldPrice: 210,
     discount: '-10%',
@@ -799,12 +827,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '21',
     name: 'Classic Polo Shirt',
-    description: 'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
+    description:
+      'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
     price: 98,
     oldPrice: 110,
     discount: '-11%',
@@ -853,7 +881,8 @@ export const PRODUCT_MOCK = [
   {
     id: '22',
     name: 'Lightweight Bomber Jacket',
-    description: 'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
+    description:
+      'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
     price: 278,
     oldPrice: 299,
     discount: '-7%',
@@ -902,7 +931,8 @@ export const PRODUCT_MOCK = [
   {
     id: '23',
     name: 'Lightweight Bomber Jacket',
-    description: 'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
+    description:
+      'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
     price: 278,
     oldPrice: 299,
     discount: '-7%',
@@ -951,7 +981,8 @@ export const PRODUCT_MOCK = [
   {
     id: '24',
     name: 'Slim Fit Chinos',
-    description: 'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
+    description:
+      'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
     price: 145,
     oldPrice: 160,
     discount: '-9%',
@@ -1001,7 +1032,8 @@ export const PRODUCT_MOCK = [
   {
     id: '25',
     name: 'Linen Summer Shirt',
-    description: 'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
+    description:
+      'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
     price: 118,
     oldPrice: 130,
     discount: '-9%',
@@ -1047,12 +1079,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '26',
     name: 'Oversized Hoodie',
-    description: 'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
+    description:
+      'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
     price: 189,
     oldPrice: 210,
     discount: '-10%',
@@ -1097,12 +1129,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '27',
     name: 'Classic Polo Shirt',
-    description: 'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
+    description:
+      'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
     price: 98,
     oldPrice: 110,
     discount: '-11%',
@@ -1151,7 +1183,8 @@ export const PRODUCT_MOCK = [
   {
     id: '28',
     name: 'Lightweight Bomber Jacket',
-    description: 'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
+    description:
+      'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
     price: 278,
     oldPrice: 299,
     discount: '-7%',
@@ -1196,10 +1229,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }, {
+  },
+  {
     id: '29',
     name: 'Lightweight Bomber Jacket',
-    description: 'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
+    description:
+      'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
     price: 278,
     oldPrice: 299,
     discount: '-7%',
@@ -1248,7 +1283,8 @@ export const PRODUCT_MOCK = [
   {
     id: '30',
     name: 'Slim Fit Chinos',
-    description: 'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
+    description:
+      'Elegant slim-fit chinos made from stretchable fabric. Perfect for work or casual days.',
     price: 145,
     oldPrice: 160,
     discount: '-9%',
@@ -1298,7 +1334,8 @@ export const PRODUCT_MOCK = [
   {
     id: '31',
     name: 'Linen Summer Shirt',
-    description: 'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
+    description:
+      'Lightweight linen shirt ideal for hot summer days. Stylish and breathable.',
     price: 118,
     oldPrice: 130,
     discount: '-9%',
@@ -1344,12 +1381,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '32',
     name: 'Oversized Hoodie',
-    description: 'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
+    description:
+      'A warm oversized hoodie designed for comfort and streetwear style. Soft fleece lining.',
     price: 189,
     oldPrice: 210,
     discount: '-10%',
@@ -1394,12 +1431,12 @@ export const PRODUCT_MOCK = [
         ],
       },
     ],
-  }
-  ,
+  },
   {
     id: '33',
     name: 'Classic Polo Shirt',
-    description: 'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
+    description:
+      'Timeless polo shirt made with premium cotton. Great for casual or semi-formal occasions.',
     price: 98,
     oldPrice: 110,
     discount: '-11%',
@@ -1448,7 +1485,8 @@ export const PRODUCT_MOCK = [
   {
     id: '34',
     name: 'Lightweight Bomber Jacket',
-    description: 'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
+    description:
+      'A sleek bomber jacket that adds edge to any outfit. Perfect for mid-season weather.',
     price: 278,
     oldPrice: 299,
     discount: '-7%',

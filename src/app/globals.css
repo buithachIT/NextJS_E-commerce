@@ -130,7 +130,7 @@ body {
 }
 
 .hide-btn button {
-  display: none
+  display: none;
 }
 
 @layer base {

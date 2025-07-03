@@ -20,7 +20,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <html
       lang="en"
@@ -35,6 +34,6 @@ export default function RootLayout({
           </div>
         </MSWProvider>
       </body>
-    </html >
+    </html>
   );
 }

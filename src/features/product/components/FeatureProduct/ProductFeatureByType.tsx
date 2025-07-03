@@ -7,9 +7,15 @@ type Props = {
   className: string;
 };
 
-export default function ProductFeatureByType({ type, title, className }: Props) {
+export default function ProductFeatureByType({
+  type,
+  title,
+  className,
+}: Props) {
   return (
-    <div className={`px-5 md:px-15 py-5 animate-in slide-in-from-bottom duration-700 delay-300 ${className}`}>
+    <div
+      className={`px-5 md:px-15 py-5 animate-in slide-in-from-bottom duration-700 delay-300 ${className}`}
+    >
       <h2 className="text-3xl md:mt-10 md:text-5xl font-bold text-center mb-10 font-display">
         {title}
       </h2>

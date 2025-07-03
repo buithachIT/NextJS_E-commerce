@@ -8,10 +8,10 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 describe('Product Actions (integration test with MSW)', () => {
-    it('should fetch new products using MSW mock', async () => {
-        const result = await getNewProducts();
+  it('should fetch new products using MSW mock', async () => {
+    const result = await getNewProducts();
 
-        expect(result.data).toHaveLength(4);
-        expect(result.data[0].id).toBe(PRODUCT_MOCK[0].id);
-    });
+    expect(result.data).toHaveLength(4);
+    expect(result.data[0].id).toBe(PRODUCT_MOCK[0].id);
+  });
 });

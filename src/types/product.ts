@@ -10,6 +10,7 @@ export type Product = {
   createdAt: string;
   sold: number;
   category?: string;
+  dressStyle: string;
   brand?: string;
   variants: Variant[];
 };
