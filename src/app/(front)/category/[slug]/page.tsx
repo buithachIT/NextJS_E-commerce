@@ -11,13 +11,12 @@ const CategoryPage = async (
 ) => {
   const searchParams = await props.searchParams;
   const params = await props.params;
-  const resolvedParams = await params;
   return (
     <div>
       <Breadcrumb />
       <div className="px-5 md:px-25 pb-10">
         <Suspense fallback={<SkeletonCategoryPage />}>
-          <FeatureCategory params={resolvedParams} searchParams={searchParams} />
+          <FeatureCategory params={params} searchParams={searchParams} />
         </Suspense>
       </div>
     </div>

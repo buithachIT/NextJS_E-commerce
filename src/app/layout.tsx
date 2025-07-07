@@ -9,6 +9,7 @@ import './globals.css';
 import { MSWProvider } from '@/context/MSWProvider';
 import { Metadata } from 'next';
 import ProgressBarProvider from '@/context/ProgressBarProvider';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: 'Aurore',
@@ -25,11 +26,15 @@ export default function RootLayout({
       lang="en"
       className={`${satoshi.variable} ${integralCF.variable} antialiased`}
     >
+
+
+
       <body>
         <MSWProvider>
           <div className="min-h-screen lg:px-0">
             <div className="max-w-[1440x] mx-auto">
               <ProgressBarProvider>{children}</ProgressBarProvider>
+              <Toaster />
             </div>
           </div>
         </MSWProvider>

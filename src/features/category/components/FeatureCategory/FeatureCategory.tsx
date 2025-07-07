@@ -1,7 +1,7 @@
 import Pagination from '@/components/paginations/pagination';
 import ProductList from '@/features/product/components/FeatureProduct/ProductList';
-import FilterToggle from '@/features/product/components/filterProduct/FilterProduct';
-import { SortSelect } from '@/features/product/components/filterProduct/sortProduct';
+import FilterToggle from '@/features/product/components/FilterProduct/FilterProduct';
+import { SortSelect } from '@/features/product/components/FilterProduct/sortProduct';
 import { getSortParams } from '@/features/product/utils/sortProduct';
 import { getProductsByCategory } from '@/lib/action/product';
 import { parseFilter } from '@/lib/utils/parseFilter';
@@ -28,8 +28,8 @@ export default async function FeatureCategory({
     categoryId: category?.id || '1',
     minPrice: Number(parsedFilter.price?.[0]),
     maxPrice: Number(parsedFilter.price?.[1]),
-    color: parsedFilter.color,
-    size: parsedFilter.size,
+    color: parsedFilter.color?.join(','),
+    size: parsedFilter.size?.join(','),
     page: currentPage,
     limit: limit,
     sortBy: sortBy,

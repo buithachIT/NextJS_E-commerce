@@ -6,13 +6,13 @@ import { X } from 'lucide-react';
 import FilterContent from './FilterContent';
 import { Button } from '@/components/ui/button';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import ActiveFilters from './ActiveFilters';
 
 export type FilterValues = {
   categoryId?: string;
   price: [number, number];
-  color?: string;
-  size?: string;
+  color?: string[];
+  size?: string[];
   style?: string;
 };
 
@@ -28,9 +28,11 @@ export default function FilterToggle({
 
   const [localFilterValues, setLocalFilterValues] =
     useState<FilterValues>(filterValues);
+  const [appliedFilterValues, setAppliedFilterValues] = useState<FilterValues>(filterValues);
 
   useEffect(() => {
     setLocalFilterValues(filterValues);
+    setAppliedFilterValues(filterValues);
   }, [filterValues]);
 
   useEffect(() => {
@@ -42,11 +44,54 @@ export default function FilterToggle({
           ...prev,
           ...parsed,
         }));
+        setAppliedFilterValues((prev) => ({
+          ...prev,
+          ...parsed,
+        }));
       } catch (e) {
         console.error('Invalid query param:', e);
       }
     }
   }, [searchParams]);
+
+  const handleRemoveFilter = (key: keyof FilterValues, value?: string) => {
+    setLocalFilterValues((prev) => {
+      let next: FilterValues;
+      if (key === 'color' || key === 'size') {
+        const arr = prev[key] || [];
+        const newArr = (arr as string[]).filter((v: string) => v !== value);
+        next = { ...prev, [key]: newArr.length > 0 ? newArr : undefined };
+      } else if (key === 'price') {
+        next = { ...prev, price: [50, 300] };
+      } else {
+        next = { ...prev, [key]: undefined };
+      }
+
+      setTimeout(() => {
+        const params = new URLSearchParams(searchParams);
+        params.set('query', JSON.stringify(next));
+        params.delete('page');
+        router.push(`${pathname}?${params.toString()}`);
+      }, 0);
+      return next;
+    });
+  };
+
+  const handleClearAll = () => {
+    const cleared: FilterValues = {
+      price: [50, 300],
+      color: undefined,
+      size: undefined,
+      style: undefined,
+    };
+    setLocalFilterValues(cleared);
+    setTimeout(() => {
+      const params = new URLSearchParams(searchParams);
+      params.set('query', JSON.stringify(cleared));
+      params.delete('page');
+      router.push(`${pathname}?${params.toString()}`);
+    }, 0);
+  };
 
   const handleFilter = useCallback(() => {
     const params = new URLSearchParams(searchParams);
@@ -54,8 +99,8 @@ export default function FilterToggle({
     params.delete('page');
     router.push(`${pathname}?${params.toString()}`);
     setOpen(false);
+    setAppliedFilterValues(localFilterValues);
   }, [localFilterValues, pathname, router, searchParams]);
-
   return (
     <>
       {/* Mobile Toggle */}
@@ -64,20 +109,25 @@ export default function FilterToggle({
       </button>
 
       {/* Desktop Sidebar */}
-      <div className="hidden md:block w-[250px] p-4 border rounded-xl bg-white">
+      <div className="hidden md:block w-[315px] p-4 border rounded-xl bg-white">
         <div className="flex justify-between border-b-2 mb-2">
           <h2 className="text-xl font-bold mb-4">Filters</h2>
           <span className="rounded-full flex justify-center pt-1">
             <AdjustmentsHorizontalIcon className="text-gray-400" />
           </span>
         </div>
+        <ActiveFilters
+          filterValues={appliedFilterValues}
+          onRemove={handleRemoveFilter}
+          onClear={handleClearAll}
+        />
         <FilterContent
           values={localFilterValues}
           onChange={setLocalFilterValues}
         />
         <Button
           onClick={handleFilter}
-          className="w-full mt-4 py-3 rounded-full"
+          className="w-full mt-4 py-3 cursor-pointer rounded-full"
         >
           Apply Filter
         </Button>
@@ -102,6 +152,11 @@ export default function FilterToggle({
               </Button>
             </div>
             <hr className="my-4" />
+            <ActiveFilters
+              filterValues={appliedFilterValues}
+              onRemove={handleRemoveFilter}
+              onClear={handleClearAll}
+            />
             <FilterContent
               values={localFilterValues}
               onChange={setLocalFilterValues}

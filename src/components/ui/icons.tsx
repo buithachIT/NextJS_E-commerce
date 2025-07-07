@@ -23,7 +23,11 @@ import Insta from '@/assets/social/insta.svg';
 import Github from '@/assets/social/github.svg';
 import ArrowSm from '@/assets/arrow-sm.svg';
 import AdjustmentsHorizontalIcon from '@/assets/AdjustmentsHorizontalIcon.svg';
+import TrashIconSVG from '@/assets/trash-btn.svg';
+import SaleTicket from '@/assets/sale-label.svg'
 export {
+  SaleTicket,
+  TrashIconSVG,
   AdjustmentsHorizontalIcon,
   ArrowSm,
   UserIcon,

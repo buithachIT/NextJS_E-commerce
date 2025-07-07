@@ -41,13 +41,15 @@ export const getProductsByCategory = cache(
     orderBy?: string;
   }) => {
     const searchParams = new URLSearchParams();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const filterObj: any = {};
+    if (params.minPrice !== undefined || params.maxPrice !== undefined || params.color || params.size) {
+      filterObj.price = [params.minPrice, params.maxPrice];
+      if (params.color) filterObj.color = params.color.split(',');
+      if (params.size) filterObj.size = params.size.split(',');
+    }
+    searchParams.set('query', JSON.stringify(filterObj));
     if (params.categoryId) searchParams.set('categoryId', params.categoryId);
-    if (params.minPrice !== undefined)
-      searchParams.set('minPrice', params.minPrice.toString());
-    if (params.maxPrice !== undefined)
-      searchParams.set('maxPrice', params.maxPrice.toString());
-    if (params.size) searchParams.set('size', params.size);
-    if (params.color) searchParams.set('color', params.color);
     if (params.page) searchParams.set('page', params.page.toString());
     if (params.limit) searchParams.set('limit', params.limit.toString());
     if (params.sortBy) searchParams.set('sortBy', params.sortBy);
