@@ -57,26 +57,38 @@ export const EXTERNAL_HANDLERS = [
 
     return HttpResponse.json({ data: product });
   }),
-
+  //Filter
   http.get(apiPath('/v1/product'), async ({ request }) => {
     const url = new URL(request.url);
 
     const categoryId = url.searchParams.get('categoryId');
-    const page = parseInt(url.searchParams.get('page') || '1');
-    const limit = parseInt(url.searchParams.get('limit') || '8');
+    const color = url.searchParams.get('color')?.toLowerCase();
+    const size = url.searchParams.get('size');
+    const minPrice = parseFloat(url.searchParams.get('minPrice') || '0');
+    const maxPrice = parseFloat(url.searchParams.get('maxPrice') || '99999');
     const sortBy = url.searchParams.get('sortBy') || 'createdAt';
     const orderBy = url.searchParams.get('orderBy') || 'desc';
+    const page = parseInt(url.searchParams.get('page') || '1');
+    const limit = parseInt(url.searchParams.get('limit') || '');
 
-    let filteredProducts = PRODUCT_MOCK;
+    // Lọc sản phẩm
+    const filteredProducts = PRODUCT_MOCK.filter((product) => {
+      // Lọc theo category
+      const matchCategory = !categoryId || product.categoryId === categoryId;
 
-    // Lọc theo category
-    if (categoryId) {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.categoryId === categoryId
-      );
-    }
+      // Lọc theo variant (color, size, price)
+      const matchVariant = product.variants.some((variant) => {
+        const matchColor = !color || variant.colorCode.toLowerCase() === color;
+        const matchSize = !size || variant.sizes.some((s) => s.label === size);
+        const matchPrice =
+          variant.price >= minPrice && variant.price <= maxPrice;
+        return matchColor && matchSize && matchPrice;
+      });
 
-    // Sắp xếp
+      return matchCategory && matchVariant;
+    });
+
+    //Sort
     filteredProducts.sort((a, b) => {
       const valueA = a[sortBy as keyof typeof a];
       const valueB = b[sortBy as keyof typeof b];
@@ -107,5 +119,5 @@ export const EXTERNAL_HANDLERS = [
         totalPages: Math.ceil(filteredProducts.length / limit),
       },
     });
-  })
+  }),
 ];

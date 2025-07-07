@@ -1,5 +1,5 @@
 import Footer from '@/components/footers/Footer';
-import DefaultHeader from '@/components/header/defaultHeader';
+import DefaultHeader from '@/components/headers/defaultHeader';
 import { Fragment } from 'react';
 
 const CheckoutLayout = ({ children }: { children: React.ReactNode }) => {

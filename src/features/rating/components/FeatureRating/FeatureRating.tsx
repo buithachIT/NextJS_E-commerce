@@ -4,7 +4,6 @@ import { getCustomerRating } from '@/lib/action/rating';
 import { Suspense } from 'react';
 import RatingCardSkeleton from '@/components/skeletons/ratingSkeleton';
 
-
 const FeatureRating = async () => {
   const { data: review } = await getCustomerRating();
   return (

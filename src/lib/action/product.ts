@@ -1,5 +1,5 @@
-import { cache } from "react";
-import { apiPath } from "../api/utils";
+import { cache } from 'react';
+import { apiPath } from '../api/utils';
 
 async function fetchProductList(sortBy: string, limit: number) {
   try {
@@ -28,19 +28,33 @@ export const getProductById = async (id: string) => {
   return json.data;
 };
 // Get products by category
-export const getProductsByCategory = cache(async (categoryId: string, page = 1, pageSize = 6, limit = 9) => {
-  await sleep(2000);
+export const getProductsByCategory = cache(
+  async (params: {
+    categoryId?: string;
+    minPrice?: number;
+    maxPrice?: number;
+    size?: string;
+    color?: string;
+    page?: number;
+    limit?: number;
+    sortBy?: string;
+    orderBy?: string;
+  }) => {
+    const searchParams = new URLSearchParams();
+    if (params.categoryId) searchParams.set('categoryId', params.categoryId);
+    if (params.minPrice !== undefined)
+      searchParams.set('minPrice', params.minPrice.toString());
+    if (params.maxPrice !== undefined)
+      searchParams.set('maxPrice', params.maxPrice.toString());
+    if (params.size) searchParams.set('size', params.size);
+    if (params.color) searchParams.set('color', params.color);
+    if (params.page) searchParams.set('page', params.page.toString());
+    if (params.limit) searchParams.set('limit', params.limit.toString());
+    if (params.sortBy) searchParams.set('sortBy', params.sortBy);
+    if (params.orderBy) searchParams.set('orderBy', params.orderBy);
 
-  try {
-    const res = await fetch(
-      apiPath(`/v1/product?categoryId=${categoryId}&page=${page}&pageSize=${pageSize}&limit=${limit}`)
-    );
+    const res = await fetch(apiPath(`/v1/product?${searchParams.toString()}`));
     const json = await res.json();
     return { data: json.data, meta: json.meta };
-  } catch (err) {
-    return { data: { products: [], total: 0 } };
   }
-  function sleep(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-});
+);

@@ -6,7 +6,7 @@ import { ROUTES } from '@/config/routes';
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="flex flex-col items-start md:min-w-[280px] md:mb-5 md:mt-5 rounded-xl md:p-4 transition-transform duration-500 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-md">
+    <div className="min-w-[160px] flex flex-col items-start md:mb-5 md:mt-5 rounded-xl md:p-4 transition-transform duration-500 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-md">
       <div className="aspect-square overflow-hidden rounded-xl bg-[#f2f2f2]">
         <Image
           src={product.image}
@@ -16,11 +16,11 @@ export default function ProductCard({ product }: { product: Product }) {
           className="object-cover w-full h-full"
         />
       </div>
-      <Link href={`${ROUTES.PRODUCT}/${product.id}`}>
-        <h4 className="text-lg font-semibold mb-2 text-center">
-          {product.name}
-        </h4>
-      </Link>
+      <div className="block w-full text-start">
+        <Link href={`${ROUTES.PRODUCT}/${product.id}`}>
+          <h4 className="text-lg font-bold mb-2 truncate">{product.name}</h4>
+        </Link>
+      </div>
       <div className="flex items-center justify-center gap-2 text-sm mb-2">
         <StarRating rating={product.rating} />
         <p>{product.rating}/5</p>
