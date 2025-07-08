@@ -1,5 +1,5 @@
 'use client';
-import { Product } from '@/types/product';
+import { Product } from '@/__generated__/types';
 import ProductCard from '../productCard';
 import useIsMobile from '@/hooks/useIsMobile';
 import { useMemo } from 'react';

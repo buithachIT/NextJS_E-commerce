@@ -1,32 +1,38 @@
 import { cache } from 'react';
 import { apiPath } from '../api/utils';
+import { getClient } from '../apollo/apollo-client';
+import { GET_PRODUCT_BY_SLUG, GET_PRODUCTS_BY_TAG } from '@/utils/gql/GQL_QUERIES';
 
-async function fetchProductList(sortBy: string, limit: number) {
-  try {
-    const res = await fetch(
-      apiPath(`/v1/product/search?sortBy=${sortBy}&orderBy=desc`)
-    );
-    if (!res.ok) throw new Error(`Failed to fetch products: ${res.status}`);
-    const json = await res.json();
-    return { data: json.data.slice(0, limit) };
-  } catch (err) {
-    console.error(`fetchProductList (${sortBy}) error:`, err);
-    return { data: [] };
-  }
-}
-
-export const getBestSellerProducts = cache(() => fetchProductList('sold', 4));
-export const getNewProducts = cache(() => fetchProductList('createdAt', 4));
-export const getProductById = async (id: string) => {
-  const res = await fetch(apiPath(`/v1/product/${id}`), {
-    next: { revalidate: 60 },
+export async function getBestSellerProducts() {
+  console.log('hceck path', process.env.NEXT_PUBLIC_CLIENT_URI)
+  const client = getClient();
+  const { data } = await client.query({
+    query: GET_PRODUCTS_BY_TAG,
+    variables: { tag: "bestseller" },
   });
 
-  if (!res.ok) throw new Error('Failed to fetch product');
+  return data.products.nodes.slice(0, 4);
+}
 
-  const json = await res.json();
-  return json.data;
+export async function getNewProducts() {
+  const client = getClient();
+  const { data } = await client.query({
+    query: GET_PRODUCTS_BY_TAG,
+    variables: { tag: "new" },
+  });
+
+  return data.products.nodes.slice(0, 4);
+}
+
+export const getProductBySlug = async (slug: string) => {
+  const client = getClient();
+  const { data } = await client.query({
+    query: GET_PRODUCT_BY_SLUG,
+    variables: { slug: slug },
+  });
+  return data.product;
 };
+
 // Get products by category
 export const getProductsByCategory = cache(
   async (params: {

@@ -32,9 +32,9 @@ const DefaultHeader = () => {
           <Link href={ROUTES.CART}>
             <CartIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
           </Link>
-          <span>
+          <Link href={ROUTES.LOGIN}>
             <UserIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
-          </span>
+          </Link>
         </div>
       </div>
       <hr className="border-t border-gray-200" />

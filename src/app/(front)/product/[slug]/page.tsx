@@ -2,16 +2,19 @@ import Breadcrumb from '@/components/breadcrumb';
 import ProductFeatureByType from '@/features/product/components/FeatureProduct/ProductFeatureByType';
 import ProductTabs from '@/features/product/components/ProductDetail/ProductDescriptionSection/ToggleTabProductDescription';
 import ProductDetail from '@/features/product/components/ProductDetail/ProductDetail';
-import { getProductById } from '@/lib/action/product';
+import { getProductBySlug } from '@/lib/action/product';
 import { getRatingByProductId } from '@/lib/action/rating';
+import { Product } from '@/types/product';
 
 export default async function ProductDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const product = await getProductById((await params).id);
-  const { data: reviews } = await getRatingByProductId((await params).id);
+
+  const product: Product = await getProductBySlug((await params).slug);
+  console.log(product)
+  const { data: reviews } = await getRatingByProductId((await params).slug);
   return (
     <>
       <Breadcrumb />

@@ -1,25 +1,14 @@
-import { CodegenConfig } from '@graphql-codegen/cli';
+import type { CodegenConfig } from '@graphql-codegen/cli';
+import 'dotenv/config';
 
 const config: CodegenConfig = {
-  schema: 'https://countries.trevorblades.com',
-  documents: ['graphql/**/*.graphql'],
+  schema: process.env.NEXT_PUBLIC_CLIENT_URI!,
+  documents: ['./src/utils/gql/**/*.{ts,tsx}'],
   generates: {
     './src/__generated__/': {
       preset: 'client',
       presetConfig: {
         gqlTagName: 'gql',
-      },
-    },
-    './src/__generated__/types.ts': {
-      plugins: [
-        'typescript',
-        'typescript-operations',
-        'typescript-react-apollo',
-      ],
-      config: {
-        withHooks: true,
-        withHOC: false,
-        withComponent: false,
       },
     },
   },

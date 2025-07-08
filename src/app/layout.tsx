@@ -26,9 +26,6 @@ export default function RootLayout({
       lang="en"
       className={`${satoshi.variable} ${integralCF.variable} antialiased`}
     >
-
-
-
       <body>
         <MSWProvider>
           <div className="min-h-screen lg:px-0">

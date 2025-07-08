@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   experimental: {
     typedRoutes: false,
   },
+  images: {
+    domains: ['localhost'], // 👈 Thêm domain này
+  },
   /* config options here */
   webpack(config) {
     // Configure webpack to handle SVG files

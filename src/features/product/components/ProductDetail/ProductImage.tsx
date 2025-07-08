@@ -2,22 +2,25 @@
 
 import { useState, useMemo } from 'react';
 import Image from 'next/image';
+import { Product } from '@/types/product';
 
-type ProductImageProps = {
-  product: {
-    variants: {
-      id: string;
-      images: string[];
-    }[];
-  };
-};
 
-export default function ProductImage({ product }: ProductImageProps) {
+export default function ProductImage({ product }: { product: Product }) {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const allImages = useMemo(() => {
-    return product?.variants?.flatMap((v) => v.images) ?? [];
+    if (
+      product.__typename === 'SimpleProduct' ||
+      product.__typename === 'VariableProduct'
+    ) {
+      return (
+        product.galleryImages?.nodes.map((img) => img.sourceUrl || '') ?? []
+      );
+    }
+
+    return [];
   }, [product]);
+
 
   const [selectedImage, setSelectedImage] = useState(allImages[0]);
 
