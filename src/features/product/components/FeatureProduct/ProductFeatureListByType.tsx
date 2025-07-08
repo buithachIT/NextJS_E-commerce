@@ -15,7 +15,7 @@ export default async function ProductFeatureList({ type }: Props) {
   return (
     <div className="flex gap-4 overflow-x-auto overflow-y-visible md:px-6 scrollbar-hide pb-4">
       {products.map((product: Product) => (
-        <ProductCard product={product} key={product.id} />
+        <ProductCard className='' product={product} key={product.id} />
       ))}
     </div>
   );

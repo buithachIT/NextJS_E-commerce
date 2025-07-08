@@ -21,7 +21,7 @@ export default function ProductList({
     <div className={`pt-5 md:pt-0 grid gap-4 ${className}`}>
       {displayed.map((product: Product) => (
         <div className="fade-in-up" key={product.id}>
-          <ProductCard product={product} />
+          <ProductCard className='w-full' product={product} />
         </div>
       ))}
     </div>

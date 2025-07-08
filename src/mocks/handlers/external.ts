@@ -4,6 +4,7 @@ import { apiPath } from '../../lib/api/utils';
 import { CUSTOMER_REVIEWS } from '../datas/rating';
 import { CART_MOCK } from '../datas/cart';
 import { CUSTOMER_REVIEWS_BY_PRODUCT } from '../datas/ratingByProduct';
+import { PROMO_CODES } from '../datas/promoCodes';
 export const EXTERNAL_HANDLERS = [
   http.get(apiPath('/v1/product/search'), async ({ request }) => {
     console.log('MSW request:', request);
@@ -61,31 +62,37 @@ export const EXTERNAL_HANDLERS = [
   http.get(apiPath('/v1/product'), async ({ request }) => {
     const url = new URL(request.url);
 
+    const rawQuery = url.searchParams.get('query') || '{}';
+    const parsedQuery = JSON.parse(rawQuery);
+
     const categoryId = url.searchParams.get('categoryId');
-    const color = url.searchParams.get('color')?.toLowerCase();
-    const size = url.searchParams.get('size');
-    const minPrice = parseFloat(url.searchParams.get('minPrice') || '0');
-    const maxPrice = parseFloat(url.searchParams.get('maxPrice') || '99999');
+    const sizes: string[] = parsedQuery.size || [];
+    const colors: string[] = parsedQuery.color?.map((c: string) => c.toLowerCase()) || [];
+    const minPrice: number = parsedQuery.price?.[0] ?? 0;
+    const maxPrice: number = parsedQuery.price?.[1] ?? 99999;
     const sortBy = url.searchParams.get('sortBy') || 'createdAt';
     const orderBy = url.searchParams.get('orderBy') || 'desc';
     const page = parseInt(url.searchParams.get('page') || '1');
-    const limit = parseInt(url.searchParams.get('limit') || '');
+    const limit = parseInt(url.searchParams.get('limit') || '9');
 
-    // Lọc sản phẩm
     const filteredProducts = PRODUCT_MOCK.filter((product) => {
-      // Lọc theo category
       const matchCategory = !categoryId || product.categoryId === categoryId;
 
-      // Lọc theo variant (color, size, price)
+      const productColors = product.variants.map((v) => v.colorCode.toLowerCase());
+      const matchColor = colors.length === 0 || colors.every((c) => productColors.includes(c));
+
       const matchVariant = product.variants.some((variant) => {
-        const matchColor = !color || variant.colorCode.toLowerCase() === color;
-        const matchSize = !size || variant.sizes.some((s) => s.label === size);
-        const matchPrice =
-          variant.price >= minPrice && variant.price <= maxPrice;
-        return matchColor && matchSize && matchPrice;
+        const matchSize =
+          sizes.length === 0 || sizes.every((s) =>
+            variant.sizes.some((vSize) => vSize.label === s)
+          );
+
+        const matchPrice = variant.price >= minPrice && variant.price <= maxPrice;
+
+        return matchSize && matchPrice;
       });
 
-      return matchCategory && matchVariant;
+      return matchCategory && matchColor && matchVariant;
     });
 
     //Sort
@@ -120,4 +127,40 @@ export const EXTERNAL_HANDLERS = [
       },
     });
   }),
+
+  //Mock cart API
+  http.get(apiPath('/v1/cart'), async () => {
+    const cartWithDetails = CART_MOCK.map((item) => {
+      const product = PRODUCT_MOCK.find((p) => p.id === item.productId);
+      const variant = product?.variants.find((v) => v.id === item.variant.id);
+
+      return {
+        productId: item.productId,
+        variantId: item.variant.id,
+        name: product?.name || '',
+        image: variant?.thumbnail || product?.image || '',
+        price: variant?.price || product?.price || 0,
+        size: item.variant.size,
+        color: variant?.colorName || '',
+        colorCode: variant?.colorCode || '',
+        quantity: item.quantity,
+      };
+    });
+
+    return HttpResponse.json({ data: cartWithDetails });
+  }),
+
+  http.get(apiPath('/v1/discount'), async ({ request }) => {
+    const url = new URL(request.url);
+    const code = url.searchParams.get('code')?.toUpperCase();
+
+    const discount = PROMO_CODES.find(d => d.code === code);
+
+    if (!discount) {
+      return HttpResponse.json({ error: 'Mã giảm giá không hợp lệ' }, { status: 404 });
+    }
+
+    return HttpResponse.json({ data: discount });
+  }),
+
 ];

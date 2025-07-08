@@ -55,7 +55,7 @@ export default function ProductDetailVariant({
                   setVariantIndex(idx);
                   setSelectedSize(null);
                 }}
-                className={`w-9 h-9 rounded-full border-2 flex items-center justify-center relative transition`}
+                className={`w-9 h-9 rounded-full cursor-pointer border-2 flex items-center justify-center relative transition`}
                 style={{ backgroundColor: v.colorCode }}
               >
                 {isSelected && (
@@ -89,11 +89,10 @@ export default function ProductDetailVariant({
                 key={s.label}
                 disabled={s.stock === 0}
                 onClick={() => setSelectedSize(s.label)}
-                className={`px-4 md:h-[50px] py-2 rounded-full border text-sm ${
-                  selectedSize === s.label
-                    ? 'bg-black text-white border-black'
-                    : 'bg-[#f0f0f0] text-gray-500 border-gray-300'
-                } ${s.stock === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:border-black'}`}
+                className={`px-4 cursor-pointer md:h-[50px] py-2 rounded-full border text-sm ${selectedSize === s.label
+                  ? 'bg-black text-white border-black'
+                  : 'bg-[#f0f0f0] text-gray-500 border-gray-300'
+                  } ${s.stock === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:border-black'}`}
               >
                 {s.label}
               </button>

@@ -30,7 +30,7 @@ export default function Breadcrumb() {
           <Link href="/" className="hover:underline">
             Home
           </Link>
-          {segments.length > 0 && <span>›</span>}
+          {segments.length > 0 && <span className='md:px-2 px-1'>›</span>}
         </li>
 
         {segments.map((seg, idx) => {
@@ -44,7 +44,7 @@ export default function Breadcrumb() {
                   <Link href={buildHref(idx)} className="hover:underline">
                     {label}
                   </Link>
-                  <span>›</span>
+                  <span className='md:px-2 px-1'>›</span>
                 </>
               ) : (
                 <span className="text-black font-medium">{label}</span>

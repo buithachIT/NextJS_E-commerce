@@ -4,15 +4,15 @@ import StarRating from '../../../components/starRating';
 import Link from 'next/link';
 import { ROUTES } from '@/config/routes';
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product, className }: { product: Product, className: string }) {
   return (
-    <div className="min-w-[160px] flex flex-col items-start md:mb-5 md:mt-5 rounded-xl md:p-4 transition-transform duration-500 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-md">
+    <div className={`${className} min-w-[160px] flex flex-col items-start md:mb-5 md:mt-5 rounded-xl md:p-4 transition-transform duration-500 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-md`}>
       <div className="aspect-square overflow-hidden rounded-xl bg-[#f2f2f2]">
         <Image
           src={product.image}
           alt={product.name}
-          width={300}
-          height={300}
+          width={800}
+          height={800}
           className="object-cover w-full h-full"
         />
       </div>

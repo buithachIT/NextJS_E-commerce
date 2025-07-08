@@ -1,4 +1,4 @@
-import { FilterValues } from '@/features/product/components/filterProduct/FilterProduct';
+import { FilterValues } from '@/features/product/components/FilterProduct/FilterProduct';
 
 export function parseFilter(queryStr: string): FilterValues {
   try {
