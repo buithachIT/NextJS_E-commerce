@@ -1,36 +1,26 @@
-# Ignore tất cả
-**/*
-
-
-!src/
-!src/**/*.{ts,tsx,js,jsx}
-!tests/
-!tests/**/*.{ts,tsx,js,jsx}
-!graphql/**/*.graphql
-!app/**/*.{ts,tsx,js,jsx}
-!pages/**/*.{ts,tsx,js,jsx}
-
+# ✅ Bỏ qua thư mục build, môi trường, tạm
 node_modules/
 .next/
 dist/
 build/
 coverage/
 .vercel/
-
 .cache/
 .parcel-cache/
+
+# ✅ Bỏ qua file lock & env
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
-
 .env*
 !.env.example
 
+# ✅ Bỏ log, file tạm
 *.log
 *.tmp
 *.temp
 
-# ❌ Ignore assets, config, docs
+# ✅ Bỏ assets
 *.png
 *.jpg
 *.jpeg
@@ -42,31 +32,41 @@ pnpm-lock.yaml
 *.eot
 *.otf
 
-mocks/
+# ✅ Bỏ thư mục test & mock
 __mocks__/
+mocks/
 *.mock.*
 *.test.*
 *.spec.*
 
+# ✅ Bỏ file cấu hình
 *.config.*
-components.json
+codegen.ts
 tailwind.config.ts
 vitest.config.ts
 eslint.config.*
 postcss.config.*
-codegen.ts
-svg.d.ts
+components.json
 next-env.d.ts
+svg.d.ts
 
-.git/
-.vscode/
+# ✅ Bỏ tài liệu & workspace
 README.md
 CHANGELOG.md
 LICENSE
+.vscode/
+.git/
 
-# ❌ Generated files
+# ✅ Bỏ các file generate
 src/__generated__/
 *.generated.*
 
-# ❌ Shadcn UI test
+# ✅ Bỏ thư mục UI thử nghiệm
 src/components/ui/
+
+# ✅ CHỈ ĐỊNH rõ thư mục cần kiểm tra (đặt sau cùng)
+!src/**/*.{ts,tsx,js,jsx}
+!app/**/*.{ts,tsx,js,jsx}
+!pages/**/*.{ts,tsx,js,jsx}
+!tests/**/*.{ts,tsx,js,jsx}
+!graphql/**/*.graphql

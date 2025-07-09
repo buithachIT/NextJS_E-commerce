@@ -25282,6 +25282,23 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>;
 };
 
+export type LoginUserMutationVariables = Exact<{
+  email: Scalars['String']['input'];
+  password: Scalars['String']['input'];
+}>;
+
+
+export type LoginUserMutation = { __typename?: 'RootMutation', login?: { __typename?: 'LoginPayload', authToken?: string | null, refreshToken?: string | null, user?: { __typename?: 'User', id: string, email?: string | null, username?: string | null } | null } | null };
+
+export type RegisterUserMutationVariables = Exact<{
+  username: Scalars['String']['input'];
+  email: Scalars['String']['input'];
+  password: Scalars['String']['input'];
+}>;
+
+
+export type RegisterUserMutation = { __typename?: 'RootMutation', registerUser?: { __typename?: 'RegisterUserPayload', user?: { __typename?: 'User', id: string, username?: string | null, email?: string | null } | null } | null };
+
 export type GetProductsByTagQueryVariables = Exact<{
   tag?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>> | InputMaybe<Scalars['String']['input']>>;
 }>;

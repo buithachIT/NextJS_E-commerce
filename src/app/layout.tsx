@@ -1,15 +1,15 @@
-if (
-  process.env.NEXT_PUBLIC_ENABLE_MOCK === '1' &&
-  typeof window === 'undefined'
-) {
-  import('@/mocks/enableServerMocking');
-}
 import { satoshi, integralCF } from '@/config/fonts';
 import './globals.css';
-import { MSWProvider } from '@/context/MSWProvider';
+import { MSWProvider } from '@/contexts/MSWProvider';
 import { Metadata } from 'next';
-import ProgressBarProvider from '@/context/ProgressBarProvider';
+import ProgressBarProvider from '@/contexts/ProgressBarProvider';
 import { Toaster } from 'react-hot-toast';
+import { enableServerMocking } from '@/mocks/enableServerMocking';
+import { AuthProvider } from '@/contexts/AuthContext';
+
+(async () => {
+  await enableServerMocking();
+})();
 
 export const metadata: Metadata = {
   title: 'Aurore',
@@ -28,12 +28,14 @@ export default function RootLayout({
     >
       <body>
         <MSWProvider>
-          <div className="min-h-screen lg:px-0">
-            <div className="max-w-[1440x] mx-auto">
-              <ProgressBarProvider>{children}</ProgressBarProvider>
-              <Toaster />
+          <AuthProvider>
+            <div className="min-h-screen lg:px-0">
+              <div className="max-w-[1440x] mx-auto">
+                <ProgressBarProvider>{children}</ProgressBarProvider>
+                <Toaster />
+              </div>
             </div>
-          </div>
+          </AuthProvider>
         </MSWProvider>
       </body>
     </html>

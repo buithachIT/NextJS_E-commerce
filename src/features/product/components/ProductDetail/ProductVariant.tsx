@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import { useEffect, useState } from 'react';
 import { Product } from '@/types/product';
@@ -41,15 +40,20 @@ export default function ProductDetailVariant({
     }
   }, [product, selectedColor]);
 
-  const isSimple = product.__typename === 'SimpleProduct';
-  const isVariable = product.__typename === 'VariableProduct';
+  const isSimple = isSimpleProduct(product);
+  const isVariable = isVariableProduct(product);
+
+  if (!hasPrice(product)) return null;
 
   const price = isSimple || isVariable ? product.price : null;
   const regularPrice = isSimple || isVariable ? product.regularPrice : null;
-  const { displayPrice, oldPrice, discountPercent } = getPriceInfo(price, regularPrice);
+  const { displayPrice, oldPrice, discountPercent } = getPriceInfo(
+    price,
+    regularPrice
+  );
 
   return (
-    <div className="md:flex-col md:pl-5 md:w-1/2 md:justify-between md:h-[520px]">
+    <div className="md:flex-col md:pl-5 md:w-1/2 md:justify-between">
       <h2 className="md:text-[40px] text-2xl md:pt-0 pt-5 font-display pb-5 font-bold">
         {product.name}
       </h2>
@@ -127,7 +131,7 @@ export default function ProductDetailVariant({
                     } hover:border-black`}
                 >
                   {size}
-                </button>
+                </Button>
               ))}
             </div>
           </div>

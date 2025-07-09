@@ -73,7 +73,6 @@ export default function FilterContent({
 
   return (
     <div className="pb-18 md:pb-5">
-      {/* Categories */}
       <div className="space-y-1 mb-4">
         {['T-shirts', 'Shorts', 'Shirts', 'Hoodie', 'Jeans'].map((cat) => (
           <div
@@ -86,7 +85,6 @@ export default function FilterContent({
         ))}
       </div>
 
-      {/* Price */}
       <div className="border-t pt-4">
         {renderSectionHeader('Price')}
         {openSections.Price && (
@@ -105,7 +103,6 @@ export default function FilterContent({
         )}
       </div>
 
-      {/* Colors */}
       <div className="border-t pt-4 mb-8">
         {renderSectionHeader('Colors')}
         {openSections.Colors && (
@@ -139,7 +136,6 @@ export default function FilterContent({
         )}
       </div>
 
-      {/* Sizes */}
       <div className="border-t pb-5 pt-4">
         {renderSectionHeader('Size')}
         {openSections.Size && (
@@ -160,7 +156,6 @@ export default function FilterContent({
         )}
       </div>
 
-      {/* Dress Style */}
       <div className="border-t pt-4">
         {renderSectionHeader('Dress Style')}
         {openSections['Dress Style'] && (

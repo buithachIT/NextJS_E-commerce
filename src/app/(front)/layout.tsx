@@ -9,7 +9,9 @@ function PublicLayout({ children }: { children: ReactNode }) {
     <>
       <SignupCTA />
       <DefaultHeader />
-      <main className="flex flex-col flex-1"><ApolloWrapper>{children}</ApolloWrapper></main>
+      <main className="flex flex-col flex-1">
+        <ApolloWrapper>{children}</ApolloWrapper>
+      </main>
       <Footer />
     </>
   );

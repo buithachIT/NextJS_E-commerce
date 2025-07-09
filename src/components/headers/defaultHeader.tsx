@@ -1,9 +1,10 @@
-import { UserIcon, CartIcon, SearchIcon } from '../ui/icons';
+import { CartIcon, SearchIcon } from '../ui/icons';
 import NavLink from './navlinks';
 import SearchBox from '@/components/headers/search';
 import MobileNav from './mobileNav';
 import Link from 'next/link';
 import { ROUTES } from '@/config/routes';
+import UserHeader from './userNav';
 
 const DefaultHeader = () => {
   return (
@@ -14,7 +15,9 @@ const DefaultHeader = () => {
             <MobileNav />
           </div>
           <Link href="/">
-            <h1 className={`font-bold font-display text-3xl md:text-4xl md:ml-5 pb-2 md:mr-5`}>
+            <h1
+              className={`font-bold font-display text-3xl md:text-4xl md:ml-5 pb-2 md:mr-5`}
+            >
               AURORE
             </h1>
           </Link>
@@ -32,9 +35,7 @@ const DefaultHeader = () => {
           <Link href={ROUTES.CART}>
             <CartIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
           </Link>
-          <Link href={ROUTES.LOGIN}>
-            <UserIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
-          </Link>
+          <UserHeader />
         </div>
       </div>
       <hr className="border-t border-gray-200" />

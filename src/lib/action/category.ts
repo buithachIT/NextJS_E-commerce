@@ -1,7 +1,6 @@
 import { cache } from 'react';
 import { apiPath } from '../api/utils';
 
-// Get categories
 export const getCategory = cache(async () => {
   try {
     const res = await fetch(apiPath(`/v1/category/`), {
