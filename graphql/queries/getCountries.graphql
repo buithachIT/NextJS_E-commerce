@@ -1,7 +1,0 @@
-query GetCountries {
-  countries {
-    code
-    name
-    emoji
-  }
-}

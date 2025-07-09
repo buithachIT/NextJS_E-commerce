@@ -1,8 +1,0 @@
-query GetStates($code: ID!) {
-  country(code: $code) {
-    states {
-      code
-      name
-    }
-  }
-}

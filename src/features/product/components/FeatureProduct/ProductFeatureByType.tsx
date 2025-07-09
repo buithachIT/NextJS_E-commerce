@@ -26,7 +26,7 @@ export default function ProductFeatureByType({
       </div>
       <div className="flex justify-center">
         {' '}
-        <button className="w-full cursor-pointer px-8 py-2 text-md border md:w-1/6 md:h-15 border-gray-200 rounded-full md:text-lg font-medium hover:bg-primary hover:text-white transition">
+        <button className="w-full cursor-pointer px-8 py-2 text-md border md:w-1/6 md:h-13 border-gray-200 rounded-full md:text-lg font-medium hover:bg-primary hover:text-white transition">
           View All
         </button>
       </div>
