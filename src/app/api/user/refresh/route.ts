@@ -1,5 +1,5 @@
 import { WPGRAPHQL_URL } from '@/config';
-import { EXPIRED_TOKEN } from '@/config/expiredtoken';
+import { EXPIRED_TOKEN } from '@/config/auth';
 import { STORAGE_KEY } from '@/config/storage';
 import { REFRESH_TOKEN_MUTATION } from '@/graphql/mutations/auth';
 import { cookies } from 'next/headers';

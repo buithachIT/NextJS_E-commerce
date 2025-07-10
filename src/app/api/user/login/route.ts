@@ -1,8 +1,8 @@
-import { STORAGE_KEY } from './../../../../config/storage';
+import { STORAGE_KEY } from '@/config/storage';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 import { getClient } from '@/lib/apollo/apollo-client';
-import { EXPIRED_TOKEN } from '@/config/expiredtoken';
+import { EXPIRED_TOKEN } from '@/config/auth';
 import { LOGIN_USER } from '@/graphql/mutations/auth';
 import { loginFormSchema } from '@/features/auth/components/LoginForm/LoginFormSchema';
 
