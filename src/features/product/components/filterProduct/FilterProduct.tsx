@@ -28,7 +28,8 @@ export default function FilterToggle({
 
   const [localFilterValues, setLocalFilterValues] =
     useState<FilterValues>(filterValues);
-  const [appliedFilterValues, setAppliedFilterValues] = useState<FilterValues>(filterValues);
+  const [appliedFilterValues, setAppliedFilterValues] =
+    useState<FilterValues>(filterValues);
 
   useEffect(() => {
     setLocalFilterValues(filterValues);

@@ -1,5 +1,5 @@
 import { Product } from '@/types/product';
-import parse from 'html-react-parser'
+import parse from 'html-react-parser';
 export default function ProductDetailsSection({
   product,
 }: {

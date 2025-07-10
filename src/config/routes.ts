@@ -17,7 +17,7 @@ export const ROUTES = {
   TERMS: '/terms',
   PRIVACY: '/privacy',
   PRODUCT_CATEGORY: '/category/:slug',
-  HOME: '',
+  HOME: '/',
   //Category
   CAT_GUCCI: '/gucci',
   CAT_VERSACE: '/versace',

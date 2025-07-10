@@ -41,18 +41,13 @@ export default function RatingSlider({ children }: { children: ReactNode }) {
       </div>
 
       <div className="relative">
-        {/* Scrollable container */}
         <div
           ref={scrollContainerRef}
           className="flex gap-4 overflow-x-auto scrollbar-hide pb-4"
         >
           {children}
         </div>
-
-        {/* Left Fade Overlay */}
         <div className="md:absolute inset-y-0 md:left-0 md:w-40 bg-gradient-to-r md:from-background to-transparent pointer-events-none" />
-
-        {/* Right Fade Overlay */}
         <div className="md:absolute inset-y-0 md:right-0  md:w-40 bg-gradient-to-l md:from-background to-transparent pointer-events-none" />
       </div>
     </>

@@ -7,13 +7,27 @@ import { isLightColor } from '@/helper/islight';
 import { FilterValues } from './FilterProduct';
 
 const colors = [
-  '#36454F', '#FF1744', '#FFD600', '#FF9100', '#2979FF',
-  '#651FFF', '#F500A3', '#F5F5F5', '#000000',
+  '#36454F',
+  '#FF1744',
+  '#FFD600',
+  '#FF9100',
+  '#2979FF',
+  '#651FFF',
+  '#F500A3',
+  '#F5F5F5',
+  '#000000',
 ];
 
 const sizes = [
-  'XX-Small', 'X-Small', 'Small', 'Medium',
-  'Large', 'X-Large', 'XX-Large', '3X-Large', '4X-Large',
+  'XX-Small',
+  'X-Small',
+  'Small',
+  'Medium',
+  'Large',
+  'X-Large',
+  'XX-Large',
+  '3X-Large',
+  '4X-Large',
 ];
 
 export default function FilterContent({
@@ -31,7 +45,9 @@ export default function FilterContent({
   });
 
   function toggleArrayValue<T>(value: T, array: T[]) {
-    return array.includes(value) ? array.filter((v) => v !== value) : [...array, value];
+    return array.includes(value)
+      ? array.filter((v) => v !== value)
+      : [...array, value];
   }
 
   const toggleSection = (key: string) => {
@@ -44,7 +60,11 @@ export default function FilterContent({
       onClick={() => toggleSection(label)}
     >
       <h3 className="font-bold text-[20px]">{label}</h3>
-      {openSections[label] ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+      {openSections[label] ? (
+        <ChevronUp className="w-4 h-4" />
+      ) : (
+        <ChevronDown className="w-4 h-4" />
+      )}
     </div>
   );
 
@@ -126,7 +146,11 @@ export default function FilterContent({
                       stroke="currentColor"
                       strokeWidth={3}
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   )}
                 </button>
@@ -144,10 +168,11 @@ export default function FilterContent({
               <button
                 key={size}
                 onClick={() => handleSizeChange(size)}
-                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-gray-800'
-                  }`}
+                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${
+                  (values.size ?? []).includes(size)
+                    ? 'bg-black text-white'
+                    : 'bg-gray-100 text-gray-800'
+                }`}
               >
                 {size}
               </button>

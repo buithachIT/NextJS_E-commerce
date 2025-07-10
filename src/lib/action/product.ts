@@ -65,7 +65,12 @@ export const getProductsByCategory = cache(
     const searchParams = new URLSearchParams();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const filterObj: any = {};
-    if (params.minPrice !== undefined || params.maxPrice !== undefined || params.color || params.size) {
+    if (
+      params.minPrice !== undefined ||
+      params.maxPrice !== undefined ||
+      params.color ||
+      params.size
+    ) {
       filterObj.price = [params.minPrice, params.maxPrice];
       if (params.color) filterObj.color = params.color.split(',');
       if (params.size) filterObj.size = params.size.split(',');

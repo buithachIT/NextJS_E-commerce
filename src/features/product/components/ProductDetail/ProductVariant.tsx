@@ -7,12 +7,12 @@ import { QuantityPicker } from '@/components/ui/customQuantityPicker';
 import { isLightColor } from '@/helper/islight';
 import { getPriceInfo } from '../../utils/formatCurrency';
 import parse from 'html-react-parser';
-
-function parseColorAndSize(name: string) {
-  const match = name.match(/- (.+),\s*(\w+)$/);
-  if (!match) return { color: '', size: '' };
-  return { color: match[1], size: match[2] };
-}
+import { parseColorAndSize } from '@/helper/parseColorAndSize';
+import {
+  hasPrice,
+  isSimpleProduct,
+  isVariableProduct,
+} from '@/helper/isTypeProduct';
 
 export default function ProductDetailVariant({
   product,
@@ -20,7 +20,7 @@ export default function ProductDetailVariant({
   product: Product;
 }) {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const [selectedColor, setSelectedColor] = useState<string | null>(null)
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const colorMap: Record<string, string[]> = {};
 
   if (product.__typename === 'VariableProduct' && product.variations) {
@@ -76,10 +76,11 @@ export default function ProductDetailVariant({
           </span>
         )}
       </div>
-      <div className="text-gray-400 text-md pt-5">{parse(product.shortDescription || '')}</div>
+      <div className="text-gray-400 text-md pt-5">
+        {parse(product.shortDescription || '')}
+      </div>
       <hr className="my-4 w-full  mx-auto border-t border-gray-300" />
       <div className="md:items-end mx-auto">
-
         {/* Color Picker */}
         <p className="text-md text-gray-400">Select Colors</p>
         <div className="flex gap-3 mt-3">
@@ -88,7 +89,7 @@ export default function ProductDetailVariant({
             const isLight = isLightColor(color.toLowerCase());
 
             return (
-              <button
+              <Button
                 key={color}
                 onClick={() => {
                   setSelectedColor(color);
@@ -106,14 +107,17 @@ export default function ProductDetailVariant({
                     stroke="currentColor"
                     strokeWidth={3}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 )}
-              </button>
+              </Button>
             );
           })}
         </div>
-
 
         <hr className="my-4 w-full mx-auto border-t border-gray-300" />
         {/* Size Picker */}
@@ -122,7 +126,7 @@ export default function ProductDetailVariant({
             <p className="text-md text-gray-400">Choose Size</p>
             <div className="flex gap-3 mt-3 overflow-x-auto scrollbar-hide">
               {colorMap[selectedColor].reverse().map((size: string) => (
-                <button
+                <Button
                   key={size}
                   onClick={() => setSelectedSize(size)}
                   className={`px-4 cursor-pointer md:h-[50px] py-2 rounded-full border text-sm ${selectedSize === size

@@ -17,7 +17,7 @@ export default function ProductTabs({
   const [tab, setTab] = useState<'details' | 'reviews' | 'faqs'>('reviews');
 
   return (
-    <div>
+    <div className="md:mt-5">
       <div className="flex md:px-25 px-5 gap-8 text-[16px] text-gray-500 md:justify-between md:w-full mb-6">
         <div className="md:px-0 w-full flex justify-between border-b">
           <button
