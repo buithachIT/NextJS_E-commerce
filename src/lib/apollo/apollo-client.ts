@@ -35,7 +35,9 @@ export const getClient = cache(() => {
     link: from([
       errorLink,
       new HttpLink({
-        uri: process.env.NEXT_PUBLIC_CLIENT_URI! || 'http://localhost:8000/graphql',
+        uri:
+          process.env.NEXT_PUBLIC_CLIENT_URI! ||
+          'http://localhost:8000/graphql',
       }),
     ]),
   });

@@ -14,7 +14,6 @@ import {
 } from '@/helper/isTypeProduct';
 import { ProductTypeBySlugQuery, VariationType } from '@/types/product';
 
-
 export default function ProductDetailVariant({
   product,
 }: {
@@ -130,10 +129,11 @@ export default function ProductDetailVariant({
                 <Button
                   key={size}
                   onClick={() => setSelectedSize(size)}
-                  className={`px-4 cursor-pointer md:h-[50px] py-2 rounded-full border text-sm ${selectedSize === size
-                    ? 'bg-black text-white border-black'
-                    : 'bg-[#f0f0f0] text-gray-500 border-gray-300'
-                    } hover:border-black`}
+                  className={`px-4 cursor-pointer md:h-[50px] py-2 rounded-full border text-sm ${
+                    selectedSize === size
+                      ? 'bg-black text-white border-black'
+                      : 'bg-[#f0f0f0] text-gray-500 border-gray-300'
+                  } hover:border-black`}
                 >
                   {size}
                 </Button>

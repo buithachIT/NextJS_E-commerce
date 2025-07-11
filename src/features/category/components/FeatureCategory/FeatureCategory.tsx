@@ -55,7 +55,9 @@ export default async function FeatureCategory({ params, searchParams }: Props) {
           <div className="flex items-end justify-between">
             <p className="pb-1 text-[#666666] text-sm mr-4">
               <p className="text-[#666666] text-sm mr-4">
-                Showing {sortedProducts.length === 0 ? 0 : start + 1}-{Math.min(end, sortedProducts.length)} of {sortedProducts.length} products
+                Showing {sortedProducts.length === 0 ? 0 : start + 1}-
+                {Math.min(end, sortedProducts.length)} of{' '}
+                {sortedProducts.length} products
               </p>
             </p>
 

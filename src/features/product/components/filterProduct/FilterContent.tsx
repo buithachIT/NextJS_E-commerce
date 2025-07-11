@@ -10,7 +10,16 @@ import { getSizeColor } from '@/lib/action/product';
 type ColorNode = { name?: string | null; slug?: string | null };
 type SizeNode = { name?: string | null; slug?: string | null };
 
-const DEFAULT_COLORS = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'purple', 'orange'];
+const DEFAULT_COLORS = [
+  'red',
+  'blue',
+  'green',
+  'yellow',
+  'black',
+  'white',
+  'purple',
+  'orange',
+];
 const DEFAULT_SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 
 export default function FilterContent({
@@ -35,8 +44,12 @@ export default function FilterContent({
         const result = await getSizeColor();
         console.log('Fetched result:', result);
 
-        const fetchedColors = result?.colors?.map((c: ColorNode) => c.name ?? '').filter(Boolean) ?? [];
-        const fetchedSizes = result?.sizes?.map((s: SizeNode) => s.name ?? '').filter(Boolean) ?? [];
+        const fetchedColors =
+          result?.colors?.map((c: ColorNode) => c.name ?? '').filter(Boolean) ??
+          [];
+        const fetchedSizes =
+          result?.sizes?.map((s: SizeNode) => s.name ?? '').filter(Boolean) ??
+          [];
 
         setColors(fetchedColors.length > 0 ? fetchedColors : DEFAULT_COLORS);
         setSizes(fetchedSizes.length > 0 ? fetchedSizes : DEFAULT_SIZES);
@@ -173,10 +186,11 @@ export default function FilterContent({
               <button
                 key={size}
                 onClick={() => handleSizeChange(size)}
-                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-gray-800'
-                  }`}
+                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${
+                  (values.size ?? []).includes(size)
+                    ? 'bg-black text-white'
+                    : 'bg-gray-100 text-gray-800'
+                }`}
               >
                 {size}
               </button>

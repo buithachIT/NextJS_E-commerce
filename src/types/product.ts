@@ -17,7 +17,9 @@ export type ProductCategoryListType = NonNullable<
   GetProductsByCategoryQuery['products']
 >['nodes'][number];
 
-export type ProductTypeBySlugQuery = NonNullable<GetProductBySlugQuery['product']>;
+export type ProductTypeBySlugQuery = NonNullable<
+  GetProductBySlugQuery['product']
+>;
 
 export type VariationType = {
   __typename?: 'SimpleProductVariation' | undefined;

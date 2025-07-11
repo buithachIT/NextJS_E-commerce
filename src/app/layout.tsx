@@ -7,9 +7,9 @@ import { Toaster } from 'react-hot-toast';
 import { enableServerMocking } from '@/mocks/enableServerMocking';
 import { AuthProvider } from '@/contexts/AuthContext';
 
-// (async () => {
-//   await enableServerMocking();
-// })();
+(async () => {
+  await enableServerMocking();
+})();
 
 export const metadata: Metadata = {
   title: 'Aurore',

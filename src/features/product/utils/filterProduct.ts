@@ -30,33 +30,33 @@ export function filterProducts(
     const colorMatch =
       Array.isArray(filters.color) && filters.color.length > 0
         ? attrs.some(
-          (attr: ProductAttribute) =>
-            attr &&
-            (attr.name?.toLowerCase() === 'color' ||
-              attr.name?.toLowerCase() === 'pa_color') &&
-            Array.isArray(attr.options) &&
-            attr.options.some((opt) =>
-              filters
-                .color!.map((c) => c.toLowerCase())
-                .includes(opt || ''.toLowerCase())
-            )
-        )
+            (attr: ProductAttribute) =>
+              attr &&
+              (attr.name?.toLowerCase() === 'color' ||
+                attr.name?.toLowerCase() === 'pa_color') &&
+              Array.isArray(attr.options) &&
+              attr.options.some((opt) =>
+                filters
+                  .color!.map((c) => c.toLowerCase())
+                  .includes(opt || ''.toLowerCase())
+              )
+          )
         : true;
 
     const sizeMatch =
       Array.isArray(filters.size) && filters.size.length > 0
         ? attrs.some(
-          (attr: ProductAttribute) =>
-            attr &&
-            (attr.name?.toLowerCase() === 'size' ||
-              attr.name?.toLowerCase() === 'pa_size') &&
-            Array.isArray(attr.options) &&
-            attr.options.some((opt) =>
-              filters
-                .size!.map((s) => s.toLowerCase())
-                .includes(opt || ''.toLowerCase())
-            )
-        )
+            (attr: ProductAttribute) =>
+              attr &&
+              (attr.name?.toLowerCase() === 'size' ||
+                attr.name?.toLowerCase() === 'pa_size') &&
+              Array.isArray(attr.options) &&
+              attr.options.some((opt) =>
+                filters
+                  .size!.map((s) => s.toLowerCase())
+                  .includes(opt || ''.toLowerCase())
+              )
+          )
         : true;
 
     return colorMatch && sizeMatch && price >= minPrice && price <= maxPrice;
