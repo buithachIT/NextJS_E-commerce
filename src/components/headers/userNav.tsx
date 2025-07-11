@@ -18,7 +18,7 @@ const UserHeader = () => {
   const { user, logout } = useAuth();
   const handleLogout = () => {
     logout();
-  }
+  };
   return (
     <>
       {!user?.id ? (
@@ -39,9 +39,13 @@ const UserHeader = () => {
             <DropdownMenuLabel>Bạn cần gì?</DropdownMenuLabel>
             <DropdownMenuGroup>
               <DropdownMenuSeparator />
-              <DropdownMenuItem><Link href={ROUTES.PROFILE}></Link>Xem Profile</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href={ROUTES.PROFILE}></Link>Xem Profile
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={handleLogout}>Đăng xuất</DropdownMenuItem>
+              <DropdownMenuItem onClick={handleLogout}>
+                Đăng xuất
+              </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>

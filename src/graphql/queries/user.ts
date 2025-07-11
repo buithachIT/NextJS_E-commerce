@@ -9,7 +9,7 @@ export const GET_CURRENT_USER = gql`
     }
   }
 `;
-export const VIEWER_QUERY = `
+export const VIEWER_QUERY = gql`
   query GetViewer {
     viewer {
       id

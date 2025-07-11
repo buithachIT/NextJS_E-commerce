@@ -8,5 +8,8 @@ export async function POST() {
   cookieStore.delete(STORAGE_KEY.AUTH_TOKEN);
   cookieStore.delete(STORAGE_KEY.REFRESH_TOKEN);
 
-  return NextResponse.json({ success: true, message: 'Logged out successfully' });
+  return NextResponse.json({
+    success: true,
+    message: 'Logged out successfully',
+  });
 }

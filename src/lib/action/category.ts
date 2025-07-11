@@ -1,16 +1,17 @@
 import { cache } from 'react';
-import { apiPath } from '../api/utils';
+import { getClient } from '../apollo/apollo-client';
+import { safeQuery } from '../utils/runQuery';
+import { GET_CATEGORIES } from '@/graphql/queries/category';
+import { GetAllProductCategoriesQuery } from '@/__generated__/graphql';
 
 export const getCategory = cache(async () => {
-  try {
-    const res = await fetch(apiPath(`/v1/category/`), {
-      next: { revalidate: 3600 },
-    });
-    if (!res.ok) throw new Error(`Failed to fetch categories: ${res.status}`);
-    const json = await res.json();
-    return { data: json.data };
-  } catch (error) {
-    console.error('[getCategory] Error:', error);
-    return { data: [] };
-  }
+  const client = getClient();
+  const { data, error } = await safeQuery<GetAllProductCategoriesQuery>(
+    client,
+    GET_CATEGORIES
+  );
+
+  if (error || !data) return null;
+
+  return data.productCategories?.nodes;
 });

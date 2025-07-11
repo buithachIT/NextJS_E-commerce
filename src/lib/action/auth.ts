@@ -14,7 +14,6 @@ export async function loginUser({
   if (!response.ok) {
     const errorData = await response.json().catch(() => null);
     let msg = errorData?.message || 'Login failed.';
-    // Loại bỏ thẻ HTML nếu có
     msg = msg.replace(/<[^>]*>?/gm, '');
     throw new Error(msg.trim());
   }

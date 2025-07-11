@@ -9,10 +9,11 @@ import {
   navigationMenuTriggerStyle,
 } from '../ui/navigation-menu';
 import { getCategory } from '@/lib/action/category';
-import { Category } from '@/types/category';
+import { ROUTES } from '@/config/routes';
 
 export default async function NavLinks() {
-  const { data: links } = await getCategory();
+  const links = await getCategory();
+  const navLinks = links?.slice(0, 6);
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -31,12 +32,12 @@ export default async function NavLinks() {
             </div>
             <ul className="grid z-50 gap-4 p-4 md:w-full lg:w-[500px] lg:grid-cols-[0.8fr_1.2fr] bg-white shadow-md rounded-md">
               {/* Các danh mục */}
-              {links &&
-                links.map((link: Category) => (
+              {navLinks &&
+                navLinks.map((link) => (
                   <li key={link.id}>
                     <NavigationMenuLink asChild>
                       <Link
-                        href={link.href}
+                        href={ROUTES.PRODUCT_CATEGORY(link.slug || '')}
                         className="block p-2 hover:bg-accent hover:text-accent-foreground rounded-md text-sm"
                       >
                         {link.name}

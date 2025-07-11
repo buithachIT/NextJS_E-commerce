@@ -85,6 +85,7 @@ export default function FilterToggle({
       size: undefined,
       style: undefined,
     };
+
     setLocalFilterValues(cleared);
     setTimeout(() => {
       const params = new URLSearchParams(searchParams);

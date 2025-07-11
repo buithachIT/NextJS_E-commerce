@@ -8250,6 +8250,7 @@ export enum MimeTypeEnum {
 
 /** An object with a globally unique identifier. All objects that can be identified by a unique ID implement this interface. */
 export type Node = {
+  sourceUrl: string;
   /** The globally unique ID for the object */
   id: Scalars['ID']['output'];
 };
@@ -25332,17 +25333,17 @@ export const GetNewArrivalsDocument = gql`
  * });
  */
 export function useGetNewArrivalsQuery(baseOptions?: Apollo.QueryHookOptions<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>(GetNewArrivalsDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>(GetNewArrivalsDocument, options);
+}
 export function useGetNewArrivalsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>(GetNewArrivalsDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>(GetNewArrivalsDocument, options);
+}
 export function useGetNewArrivalsSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>) {
-          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
-          return Apollo.useSuspenseQuery<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>(GetNewArrivalsDocument, options);
-        }
+  const options = baseOptions === Apollo.skipToken ? baseOptions : { ...defaultOptions, ...baseOptions }
+  return Apollo.useSuspenseQuery<GetNewArrivalsQuery, GetNewArrivalsQueryVariables>(GetNewArrivalsDocument, options);
+}
 export type GetNewArrivalsQueryHookResult = ReturnType<typeof useGetNewArrivalsQuery>;
 export type GetNewArrivalsLazyQueryHookResult = ReturnType<typeof useGetNewArrivalsLazyQuery>;
 export type GetNewArrivalsSuspenseQueryHookResult = ReturnType<typeof useGetNewArrivalsSuspenseQuery>;
@@ -25384,18 +25385,18 @@ export const GetProductByIdDocument = gql`
  *   },
  * });
  */
-export function useGetProductByIdQuery(baseOptions: Apollo.QueryHookOptions<GetProductByIdQuery, GetProductByIdQueryVariables> & ({ variables: GetProductByIdQueryVariables; skip?: boolean; } | { skip: boolean; }) ) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetProductByIdQuery, GetProductByIdQueryVariables>(GetProductByIdDocument, options);
-      }
+export function useGetProductByIdQuery(baseOptions: Apollo.QueryHookOptions<GetProductByIdQuery, GetProductByIdQueryVariables> & ({ variables: GetProductByIdQueryVariables; skip?: boolean; } | { skip: boolean; })) {
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useQuery<GetProductByIdQuery, GetProductByIdQueryVariables>(GetProductByIdDocument, options);
+}
 export function useGetProductByIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetProductByIdQuery, GetProductByIdQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetProductByIdQuery, GetProductByIdQueryVariables>(GetProductByIdDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return Apollo.useLazyQuery<GetProductByIdQuery, GetProductByIdQueryVariables>(GetProductByIdDocument, options);
+}
 export function useGetProductByIdSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<GetProductByIdQuery, GetProductByIdQueryVariables>) {
-          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
-          return Apollo.useSuspenseQuery<GetProductByIdQuery, GetProductByIdQueryVariables>(GetProductByIdDocument, options);
-        }
+  const options = baseOptions === Apollo.skipToken ? baseOptions : { ...defaultOptions, ...baseOptions }
+  return Apollo.useSuspenseQuery<GetProductByIdQuery, GetProductByIdQueryVariables>(GetProductByIdDocument, options);
+}
 export type GetProductByIdQueryHookResult = ReturnType<typeof useGetProductByIdQuery>;
 export type GetProductByIdLazyQueryHookResult = ReturnType<typeof useGetProductByIdLazyQuery>;
 export type GetProductByIdSuspenseQueryHookResult = ReturnType<typeof useGetProductByIdSuspenseQuery>;

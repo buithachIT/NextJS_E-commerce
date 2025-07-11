@@ -2,21 +2,20 @@
 
 import { useState, useMemo } from 'react';
 import Image from 'next/image';
-import { Product } from '@/types/product';
+import { GetProductByIdQuery } from '@/__generated__/types';
+import { isVariableProduct } from '@/helper/isTypeProduct';
+import { SimpleProduct, VariableProduct } from '@/__generated__/types';
 
-export default function ProductImage({ product }: { product: Product }) {
+type ProductType = NonNullable<GetProductByIdQuery['product']>;
+
+export default function ProductImage({ product }: { product: ProductType }) {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const allImages = useMemo(() => {
-    if (
-      product.__typename === 'SimpleProduct' ||
-      product.__typename === 'VariableProduct'
-    ) {
-      return (
-        product.galleryImages?.nodes.map((img) => img.sourceUrl || '') ?? []
-      );
+    if (isVariableProduct(product)) {
+      const p = product as SimpleProduct | VariableProduct;
+      return p.galleryImages?.nodes.map((img) => img.sourceUrl ?? '') ?? [];
     }
-
     return [];
   }, [product]);
 
