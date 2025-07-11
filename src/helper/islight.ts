@@ -1,4 +1,3 @@
-
 export const COLOR_HEX_MAP: Record<string, string> = {
   Red: '#ff0000',
   DarkRed: '#8b0000',

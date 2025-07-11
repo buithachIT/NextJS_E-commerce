@@ -1,39 +1,55 @@
 import { cache } from 'react';
 import { apiPath } from '../api/utils';
 import { getClient } from '../apollo/apollo-client';
-import { GET_PRODUCT_BY_SLUG, GET_PRODUCTS_BY_TAG } from '@/utils/gql/GQL_QUERIES';
+import {
+  GET_PRODUCT_BY_SLUG,
+  GET_PRODUCTS_BY_TAG,
+} from '@/graphql/queries/product';
+import { safeQuery } from '../utils/runQuery';
+import {
+  GetProductBySlugQuery,
+  GetProductsByTagQuery,
+} from '@/__generated__/graphql';
 
 export async function getBestSellerProducts() {
-  console.log('hceck path', process.env.NEXT_PUBLIC_CLIENT_URI)
   const client = getClient();
-  const { data } = await client.query({
-    query: GET_PRODUCTS_BY_TAG,
-    variables: { tag: "bestseller" },
-  });
+  const { data, error } = await safeQuery<GetProductsByTagQuery>(
+    client,
+    GET_PRODUCTS_BY_TAG,
+    { tag: 'bestseller' }
+  );
 
-  return data.products.nodes.slice(0, 4);
+  if (error || !data) return [];
+
+  return data.products?.nodes.slice(0, 4);
 }
 
 export async function getNewProducts() {
   const client = getClient();
-  const { data } = await client.query({
-    query: GET_PRODUCTS_BY_TAG,
-    variables: { tag: "new" },
-  });
+  const { data, error } = await safeQuery<GetProductsByTagQuery>(
+    client,
+    GET_PRODUCTS_BY_TAG,
+    { tag: 'new' }
+  );
 
-  return data.products.nodes.slice(0, 4);
+  if (error || !data) return [];
+
+  return data.products?.nodes.slice(0, 4);
 }
 
 export const getProductBySlug = async (slug: string) => {
   const client = getClient();
-  const { data } = await client.query({
-    query: GET_PRODUCT_BY_SLUG,
-    variables: { slug: slug },
-  });
+  const { data, error } = await safeQuery<GetProductBySlugQuery>(
+    client,
+    GET_PRODUCT_BY_SLUG,
+    { slug }
+  );
+
+  if (error || !data) return null;
+
   return data.product;
 };
 
-// Get products by category
 export const getProductsByCategory = cache(
   async (params: {
     categoryId?: string;
@@ -49,7 +65,12 @@ export const getProductsByCategory = cache(
     const searchParams = new URLSearchParams();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const filterObj: any = {};
-    if (params.minPrice !== undefined || params.maxPrice !== undefined || params.color || params.size) {
+    if (
+      params.minPrice !== undefined ||
+      params.maxPrice !== undefined ||
+      params.color ||
+      params.size
+    ) {
       filterObj.price = [params.minPrice, params.maxPrice];
       if (params.color) filterObj.color = params.color.split(',');
       if (params.size) filterObj.size = params.size.split(',');

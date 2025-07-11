@@ -1,0 +1,4 @@
+export const EXPIRED_TOKEN = {
+  EXPIRED_ACCESS_TOKEN: 60 * 60,
+  EXPIRED_REFRESH_TOKEN: 7 * 24 * 60 * 60,
+};

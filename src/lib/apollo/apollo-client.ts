@@ -1,12 +1,43 @@
-import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
-import { cache } from "react";
+import {
+  ApolloClient,
+  from,
+  fromPromise,
+  HttpLink,
+  InMemoryCache,
+} from '@apollo/client';
+import { onError } from '@apollo/client/link/error';
+import { cache } from 'react';
+
+const errorLink = onError(({ graphQLErrors, operation, forward }) => {
+  if (!graphQLErrors) return;
+
+  const isExpired = graphQLErrors.some(
+    (err) => err.message === 'JWT Token expired'
+  );
+
+  if (!isExpired) return;
+
+  return fromPromise(
+    fetch('/api/user/refresh', {
+      method: 'POST',
+      credentials: 'include',
+    }).then(async (res) => {
+      if (!res.ok) throw new Error('Refresh failed');
+      const data = await res.json();
+      if (!data?.success) throw new Error('No token refreshed');
+    })
+  ).flatMap(() => forward(operation));
+});
 
 export const getClient = cache(() => {
   return new ApolloClient({
     cache: new InMemoryCache(),
-    link: new HttpLink({
-      uri: process.env.NEXT_PUBLIC_CLIENT_URI!,
-      fetch,
-    }),
+    link: from([
+      errorLink,
+      new HttpLink({
+        uri: process.env.NEXT_PUBLIC_CLIENT_URI!,
+        credentials: 'include',
+      }),
+    ]),
   });
 });

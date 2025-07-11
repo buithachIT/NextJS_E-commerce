@@ -2,27 +2,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 import StarRating from '@/components/starRating';
 import { ROUTES } from '@/config/routes';
-import { GetProductsByTagQuery } from '@/__generated__/graphql';
-import { formatCurrency, getPriceInfo } from '../utils/formatCurrency';
-
-type Product = NonNullable<
-  NonNullable<GetProductsByTagQuery['products']>['nodes']
->[number];
+import { getPriceInfo } from '../utils/formatCurrency';
+import { Product } from '@/types/product';
 
 interface Props {
   product: Product;
   className?: string;
-  key: string;
 }
 
-export default function ProductCard({ product, className = '', key }: Props) {
-  console.log('check key', key)
+export default function ProductCard({ product, className = '' }: Props) {
   const isSimple = product.__typename === 'SimpleProduct';
   const isVariable = product.__typename === 'VariableProduct';
 
   const price = isSimple || isVariable ? product.price : null;
   const regularPrice = isSimple || isVariable ? product.regularPrice : null;
-  const { displayPrice, oldPrice, discountPercent } = getPriceInfo(price, regularPrice);
+  const { displayPrice, oldPrice, discountPercent } = getPriceInfo(
+    price,
+    regularPrice
+  );
 
   const imageUrl = product.image?.sourceUrl || '/placeholder.jpg';
   const altText = product.image?.altText || product.name || 'Product image';
@@ -47,17 +44,21 @@ export default function ProductCard({ product, className = '', key }: Props) {
         </Link>
       </div>
 
-      <div className="flex items-center justify-start gap-2 text-sm mb-2">
+      <div className="flex items-center justify-start gap-2 text-xs mb-2">
         <StarRating rating={product.averageRating || 5} />
         <p>{product.averageRating || 5}/5</p>
       </div>
 
       <div className="flex gap-2 items-center">
         {displayPrice && (
-          <h3 className="text-2xl font-bold text-primary">{displayPrice}</h3>
+          <h3 className="md:text-2xl text-xl font-bold text-primary">
+            {displayPrice}
+          </h3>
         )}
         {oldPrice && (
-          <h3 className="line-through text-gray-400 text-2xl font-bold">{oldPrice}</h3>
+          <h3 className="line-through text-gray-400 md:text-2xl text-xl font-bold">
+            {oldPrice}
+          </h3>
         )}
         {discountPercent && (
           <span className="bg-red-100 text-red-500 text-xs rounded-full px-2 py-1">

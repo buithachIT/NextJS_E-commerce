@@ -4,7 +4,6 @@ import { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { Product } from '@/types/product';
 
-
 export default function ProductImage({ product }: { product: Product }) {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
@@ -21,14 +20,12 @@ export default function ProductImage({ product }: { product: Product }) {
     return [];
   }, [product]);
 
-
   const [selectedImage, setSelectedImage] = useState(allImages[0]);
 
   if (allImages.length === 0) return <p>No images available</p>;
 
   return (
     <div className="flex md:w-1/2 md:pr-5 md:items-start md:justify-between md:aspect-[4/3] md:flex-row-reverse flex-col gap-4">
-      {/* Ảnh lớn */}
       <div className="relative w-full md:w-3/4 md:h-full aspect-[4/3] rounded-2xl bg-[#f6f6f6]">
         <Image
           src={hoveredImage || selectedImage}
@@ -39,7 +36,6 @@ export default function ProductImage({ product }: { product: Product }) {
         />
       </div>
 
-      {/* Thumbnails */}
       <div className="relative flex  max-w-full md:h-full md:w-1/4 overflow-x-auto scrollbar-hide">
         <div className="flex md:flex-col md:h-full md:w-full md:overflow-auto scrollbar-hide gap-3">
           {allImages.map((img) => (

@@ -11,9 +11,7 @@ export default async function ProductDetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-
   const product: Product = await getProductBySlug((await params).slug);
-  console.log(product)
   const { data: reviews } = await getRatingByProductId((await params).slug);
   return (
     <>

@@ -1,10 +1,12 @@
 import Pagination from '@/components/paginations/pagination';
+import { ROUTES } from '@/config/routes';
+import { DEFAULT_LIMIT, DEFAULT_PAGE_SIZE } from '@/consts/pagination';
 import ProductList from '@/features/product/components/FeatureProduct/ProductList';
 import FilterToggle from '@/features/product/components/FilterProduct/FilterProduct';
 import { SortSelect } from '@/features/product/components/FilterProduct/sortProduct';
 import { getSortParams } from '@/features/product/utils/sortProduct';
 import { getProductsByCategory } from '@/lib/action/product';
-import { parseFilter } from '@/lib/utils/parseFilter';
+import { parseFilter } from '@/features/product/utils/parseFilter';
 import { CATEGORY } from '@/mocks/datas/product';
 
 export default async function FeatureCategory({
@@ -20,7 +22,6 @@ export default async function FeatureCategory({
   const parsedFilter = parseFilter(rawQuery);
 
   const category = CATEGORY.find((c) => c.slug === params.slug);
-  const limit = 9;
   const sort = searchParams?.sort || 'popular';
   const { sortBy, orderBy } = getSortParams(sort);
 
@@ -31,11 +32,11 @@ export default async function FeatureCategory({
     color: parsedFilter.color?.join(','),
     size: parsedFilter.size?.join(','),
     page: currentPage,
-    limit: limit,
+    limit: DEFAULT_LIMIT,
     sortBy: sortBy,
     orderBy: orderBy,
   };
-  const pageSize = 9;
+  const pageSize = DEFAULT_PAGE_SIZE;
 
   const res = await getProductsByCategory(apiParams);
 
@@ -74,7 +75,7 @@ export default async function FeatureCategory({
         <Pagination
           currentPage={currentPage}
           totalPages={Math.ceil(total / pageSize)}
-          basePath={`/category/${params.slug}`}
+          basePath={ROUTES.PRODUCT_CATEGORY}
         />
       </div>
     </div>
