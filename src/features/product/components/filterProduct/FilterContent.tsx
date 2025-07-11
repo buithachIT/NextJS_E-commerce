@@ -42,7 +42,6 @@ export default function FilterContent({
     const fetchSizeColor = async () => {
       try {
         const result = await getSizeColor();
-        console.log('Fetched result:', result);
 
         const fetchedColors =
           result?.colors?.map((c: ColorNode) => c.name ?? '').filter(Boolean) ??
@@ -54,7 +53,6 @@ export default function FilterContent({
         setColors(fetchedColors.length > 0 ? fetchedColors : DEFAULT_COLORS);
         setSizes(fetchedSizes.length > 0 ? fetchedSizes : DEFAULT_SIZES);
       } catch (error) {
-        console.error('Error fetching size/color, using defaults:', error);
         setColors(DEFAULT_COLORS);
         setSizes(DEFAULT_SIZES);
       }
@@ -186,11 +184,10 @@ export default function FilterContent({
               <button
                 key={size}
                 onClick={() => handleSizeChange(size)}
-                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${
-                  (values.size ?? []).includes(size)
-                    ? 'bg-black text-white'
-                    : 'bg-gray-100 text-gray-800'
-                }`}
+                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
+                  ? 'bg-black text-white'
+                  : 'bg-gray-100 text-gray-800'
+                  }`}
               >
                 {size}
               </button>

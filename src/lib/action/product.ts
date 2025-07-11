@@ -10,7 +10,6 @@ import {
   GetProductsByTagQuery,
   GetProductBySlugQuery,
   GetProductsByCategoryQuery,
-  GetAllPaAttributesQuery,
 } from '@/__generated__/graphql';
 import { GET_SIZE_COLOR } from '@/graphql/queries/sizeColor';
 
@@ -74,7 +73,6 @@ export async function getSizeColor() {
     const { data } = await client.query({
       query: GET_SIZE_COLOR,
     });
-    console.log('Fetched GraphQL data:', data);
 
     return {
       colors: data?.allPaColor?.nodes ?? [],

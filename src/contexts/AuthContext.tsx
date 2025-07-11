@@ -20,8 +20,8 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType>({
   user: null,
   loading: true,
-  refresh: async () => {},
-  logout: async () => {},
+  refresh: async () => { },
+  logout: async () => { },
 });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
