@@ -9,22 +9,39 @@ export function formatCurrency(value: string | null | undefined) {
   }).format(number);
 }
 
+function extractFirstAndLastNumber(
+  value: string | null | undefined
+): [number | null, number | null] {
+  if (!value) return [null, null];
+
+  const plainText = value.replace(/&nbsp;/g, ' ').replace(/[^\d.-]/g, ' ');
+  const parts = plainText.split(/\s+/).filter(Boolean);
+  const firstNum = parseFloat(parts[0]);
+  const lastNum = parseFloat(parts[parts.length - 1]);
+
+  return [isNaN(firstNum) ? null : firstNum, isNaN(lastNum) ? null : lastNum];
+}
+
 export const getPriceInfo = (
   price?: string | null,
-  regularPrice?: string | null
+  _regularPrice?: string | null
 ) => {
-  const priceNum = parseFloat(price ?? '');
-  const regularNum = parseFloat(regularPrice ?? '');
+  const [priceNum, regularNum] = extractFirstAndLastNumber(price);
 
   const hasDiscount =
-    !isNaN(priceNum) && !isNaN(regularNum) && priceNum < regularNum;
+    priceNum !== null && regularNum !== null && priceNum < regularNum;
+
   const discountPercent = hasDiscount
     ? `${Math.round(((regularNum - priceNum) / regularNum) * 100)}%`
     : null;
 
   return {
-    displayPrice: formatCurrency(price),
-    oldPrice: hasDiscount ? formatCurrency(regularPrice) : null,
+    displayPrice:
+      priceNum !== null ? formatCurrency(priceNum.toString()) : null,
+    oldPrice:
+      hasDiscount && regularNum !== null
+        ? formatCurrency(regularNum.toString())
+        : null,
     discountPercent,
   };
 };

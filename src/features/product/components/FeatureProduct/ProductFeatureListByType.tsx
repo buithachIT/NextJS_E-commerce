@@ -15,13 +15,17 @@ export default async function ProductFeatureList({ type }: Props) {
   return (
     <div className="flex gap-4 overflow-x-auto overflow-y-visible md:px-6 scrollbar-hide pb-4">
       {Array.isArray(products) &&
-        products.map((product: Product) => (
-          <ProductCard
-            className=""
-            product={product}
-            key={product.id ?? product.slug}
-          />
-        ))}
+        products.map((product: Product) => {
+          if (product.__typename === 'VariableProduct') {
+            return (
+              <ProductCard
+                className=""
+                product={product}
+                key={product.id ?? product.slug}
+              />
+            );
+          }
+        })}
     </div>
   );
 }

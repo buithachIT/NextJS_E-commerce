@@ -51,7 +51,7 @@ export default function ComboboxSelect({
             <ChevronsUpDown className="h-4 w-4 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-full p-0">
+        <PopoverContent className="md:w-[600px] p-0">
           <Command className="w-full">
             <CommandInput placeholder={placeholder} className="h-9 w-full" />
             <CommandList className="w-full">

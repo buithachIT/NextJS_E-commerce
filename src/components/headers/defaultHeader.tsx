@@ -5,6 +5,7 @@ import MobileNav from './mobileNav';
 import Link from 'next/link';
 import { ROUTES } from '@/config/routes';
 import UserHeader from './userNav';
+import { Suspense } from 'react';
 
 const DefaultHeader = () => {
   return (
@@ -23,7 +24,9 @@ const DefaultHeader = () => {
           </Link>
         </div>
         <div className="hidden md:flex items-center ">
-          <NavLink />
+          <Suspense fallback={<p>Loading...</p>}>
+            <NavLink />
+          </Suspense>
         </div>
         <div className="flex items-center w-full">
           <SearchBox />
@@ -32,9 +35,6 @@ const DefaultHeader = () => {
           <span className="md:hidden">
             <SearchIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
           </span>
-          <Link href={ROUTES.CART}>
-            <CartIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
-          </Link>
           <UserHeader />
         </div>
       </div>

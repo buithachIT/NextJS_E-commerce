@@ -101,6 +101,7 @@ export const GET_PRODUCT_BY_SLUG = gql`
   query GetProductBySlug($slug: ID!) {
     product(id: $slug, idType: SLUG) {
       id
+      databaseId
       name
       slug
       description
@@ -124,6 +125,7 @@ export const GET_PRODUCT_BY_SLUG = gql`
         }
       }
       ... on VariableProduct {
+        id
         price
         regularPrice
         salePrice
@@ -137,10 +139,60 @@ export const GET_PRODUCT_BY_SLUG = gql`
         }
         variations(first: 100) {
           nodes {
+            id
             name
             price
+            image {
+              altText
+              sourceUrl
+            }
             sku
             stockStatus
+          }
+        }
+      }
+    }
+  }
+`;
+export const GET_LATEST_PRODUCTS = gql`
+  query GetLatestProducts {
+    products(first: 10, where: { orderby: { field: DATE, order: DESC } }) {
+      nodes {
+        ... on SimpleProduct {
+          id
+          name
+          date
+          slug
+          price
+          regularPrice
+          image {
+            sourceUrl
+          }
+        }
+        ... on VariableProduct {
+          averageRating
+          id
+          name
+          date
+          slug
+          price
+          image {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`;
+export const GET_VARIATIONS = gql`
+  query GetVariations($id: ID!) {
+    product(id: $id) {
+      ... on VariableProduct {
+        variations {
+          nodes {
+            databaseId
+            name
+            price
           }
         }
       }

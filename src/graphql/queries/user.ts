@@ -1,10 +1,51 @@
+import { gql } from '@apollo/client';
 
 export const VIEWER_QUERY = `
-  query GetViewer {
+  query GetCurrentUser {
+  viewer {
+    id
+    databaseId
+    email
+    username
+    name
+    firstName
+    lastName
+    roles {
+      nodes {
+        name
+      }
+    }
+  }
+}
+`;
+export const TYPE_VIEWER_QUERY = gql`
+  query GetCurrentUser {
     viewer {
       id
-      username
+      databaseId
       email
+      username
+      name
+      firstName
+      lastName
+      roles {
+        nodes {
+          name
+        }
+      }
+    }
+  }
+`;
+export const UPDATE_USER_MUTATION = gql`
+  mutation UpdateUser($input: UpdateUserInput!) {
+    updateUser(input: $input) {
+      user {
+        id
+        email
+        username
+        firstName
+        lastName
+      }
     }
   }
 `;

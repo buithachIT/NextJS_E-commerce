@@ -53,13 +53,13 @@ export default async function FeatureCategory({ params, searchParams }: Props) {
           </h2>
 
           <div className="flex items-end justify-between">
-            <p className="pb-1 text-[#666666] text-sm mr-4">
+            <span className="pb-1 text-[#666666] text-sm mr-4">
               <p className="text-[#666666] text-sm mr-4">
                 Showing {sortedProducts.length === 0 ? 0 : start + 1}-
                 {Math.min(end, sortedProducts.length)} of{' '}
                 {sortedProducts.length} products
               </p>
-            </p>
+            </span>
 
             <span className="relative cursor-pointer md:hidden h-10 w-10 rounded-full ml-3 bg-gray-100 flex items-center justify-center">
               <FilterToggle filterValues={filters} />
@@ -84,7 +84,7 @@ export default async function FeatureCategory({ params, searchParams }: Props) {
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
-          basePath={`/category/${params.slug}`}
+          basePath={ROUTES.PRODUCT_CATEGORY(params.slug)}
         />
       </div>
     </div>

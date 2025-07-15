@@ -1,12 +1,12 @@
 import {
+  GetLatestProductsQuery,
   GetProductBySlugQuery,
   GetProductsByCategoryQuery,
-  GetProductsByTagQuery,
 } from '@/__generated__/graphql';
 import { GetProductByIdQuery, StockStatusEnum } from '@/__generated__/types';
 
 export type ProductList = NonNullable<
-  NonNullable<GetProductsByTagQuery['products']>['nodes']
+  NonNullable<GetLatestProductsQuery['products']>['nodes']
 >;
 
 export type Product = ProductList[number];
@@ -28,3 +28,4 @@ export type VariationType = {
   sku?: string | null | undefined;
   stockStatus?: StockStatusEnum | null | undefined;
 };
+export type ProductDetailType = NonNullable<GetProductByIdQuery['product']>;

@@ -1,5 +1,4 @@
 import { BStar, SStar } from '@/components/ui/icons';
-import SigninForm from '@/features/auth/components/LoginForm/LoginForm';
 import RegisterForm from '@/features/auth/components/RegisterForm/RegisterForm';
 import Image from 'next/image';
 const RegisterPage = () => {

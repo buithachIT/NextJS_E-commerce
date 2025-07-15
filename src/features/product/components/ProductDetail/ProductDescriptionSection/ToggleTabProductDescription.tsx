@@ -1,17 +1,15 @@
 'use client';
 import { useState } from 'react';
-// import ProductDetailsSection from "./ProductDetailsSection";
-import ProductReviewSection from './ProductReview';
-import { CUSTOMER_REVIEWS } from '@/types/rating';
 import ProductDetailsSection from './ProductDescription';
 import { Product } from '@/types/product';
-// import ProductFAQSection from "./ProductFAQSection";
+import { ReviewNode } from '@/types/review';
+import ProductReviewSection from './ProductReview/ProductReview';
 
 export default function ProductTabs({
   reviews,
   product,
 }: {
-  reviews: CUSTOMER_REVIEWS[];
+  reviews: ReviewNode[];
   product: Product;
 }) {
   const [tab, setTab] = useState<'details' | 'reviews' | 'faqs'>('reviews');

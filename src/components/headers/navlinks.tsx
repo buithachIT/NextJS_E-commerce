@@ -10,10 +10,12 @@ import {
 } from '../ui/navigation-menu';
 import { getCategory } from '@/lib/action/category';
 import { ROUTES } from '@/config/routes';
-
+import { CategoryNode } from '@/types/category';
 export default async function NavLinks() {
   const links = await getCategory();
-  const navLinks = links?.slice(0, 6);
+  const navLinks = links?.filter(
+    (cat: CategoryNode) => cat.display === 'DEFAULT'
+  );
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -33,7 +35,7 @@ export default async function NavLinks() {
             <ul className="grid z-50 gap-4 p-4 md:w-full lg:w-[500px] lg:grid-cols-[0.8fr_1.2fr] bg-white shadow-md rounded-md">
               {/* Các danh mục */}
               {navLinks &&
-                navLinks.map((link) => (
+                navLinks.map((link: CategoryNode) => (
                   <li key={link.id}>
                     <NavigationMenuLink asChild>
                       <Link

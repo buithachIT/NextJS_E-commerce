@@ -1,5 +1,7 @@
 export function parseColorAndSize(name: string) {
-  const match = name.match(/- (.+),\s*(\w+)$/);
-  if (!match) return { color: '', size: '' };
-  return { color: match[1], size: match[2] };
+  const lastDash = name.lastIndexOf('-');
+  if (lastDash === -1) return { color: '', size: '' };
+  const attrs = name.slice(lastDash + 1).trim();
+  const [size, color] = attrs.split(',').map((s) => s.trim());
+  return { color, size };
 }

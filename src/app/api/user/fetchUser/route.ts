@@ -28,7 +28,10 @@ export async function GET(req: NextRequest) {
     const isExpired = debugMessage === 'Expired token';
 
     if (isExpired) {
-      return NextResponse.json({ error: 'Token expired or invalid' }, { status: 401 });
+      return NextResponse.json(
+        { error: 'Token expired or invalid' },
+        { status: 401 }
+      );
     }
 
     if (data.errors) {
@@ -47,10 +50,14 @@ export async function GET(req: NextRequest) {
       id: viewer.id,
       username: viewer.username,
       email: viewer.email,
+      lastName: viewer.lastName,
+      firstName: viewer.firstName,
     });
   } catch (err) {
     console.error('Unexpected error in /api/user/fetchUser:', err);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 }
+    );
   }
 }
-
