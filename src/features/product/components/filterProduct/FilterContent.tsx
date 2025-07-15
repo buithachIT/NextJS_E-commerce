@@ -1,34 +1,26 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChevronDown, ChevronUp, ChevronRight } from 'lucide-react';
 import { DualRangeSlider } from '@/components/ui/dual-range-slider';
 import { isLightColor } from '@/helper/islight';
 import { FilterValues } from './FilterProduct';
+import { getSizeColor } from '@/lib/action/product';
 
-const colors = [
-  '#36454F',
-  '#FF1744',
-  '#FFD600',
-  '#FF9100',
-  '#2979FF',
-  '#651FFF',
-  '#F500A3',
-  '#F5F5F5',
-  '#000000',
-];
+type ColorNode = { name?: string | null; slug?: string | null };
+type SizeNode = { name?: string | null; slug?: string | null };
 
-const sizes = [
-  'XX-Small',
-  'X-Small',
-  'Small',
-  'Medium',
-  'Large',
-  'X-Large',
-  'XX-Large',
-  '3X-Large',
-  '4X-Large',
+const DEFAULT_COLORS = [
+  'red',
+  'blue',
+  'green',
+  'yellow',
+  'black',
+  'white',
+  'purple',
+  'orange',
 ];
+const DEFAULT_SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 
 export default function FilterContent({
   values,
@@ -43,6 +35,30 @@ export default function FilterContent({
     Size: true,
     'Dress Style': true,
   });
+  const [colors, setColors] = useState<string[]>(DEFAULT_COLORS);
+  const [sizes, setSizes] = useState<string[]>(DEFAULT_SIZES);
+
+  useEffect(() => {
+    const fetchSizeColor = async () => {
+      try {
+        const result = await getSizeColor();
+
+        const fetchedColors =
+          result?.colors?.map((c: ColorNode) => c.name ?? '').filter(Boolean) ??
+          [];
+        const fetchedSizes =
+          result?.sizes?.map((s: SizeNode) => s.name ?? '').filter(Boolean) ??
+          [];
+
+        setColors(fetchedColors.length > 0 ? fetchedColors : DEFAULT_COLORS);
+        setSizes(fetchedSizes.length > 0 ? fetchedSizes : DEFAULT_SIZES);
+      } catch (error) {
+        setColors(DEFAULT_COLORS);
+        setSizes(DEFAULT_SIZES);
+      }
+    };
+    fetchSizeColor();
+  }, []);
 
   function toggleArrayValue<T>(value: T, array: T[]) {
     return array.includes(value)
@@ -168,11 +184,10 @@ export default function FilterContent({
               <button
                 key={size}
                 onClick={() => handleSizeChange(size)}
-                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${
-                  (values.size ?? []).includes(size)
-                    ? 'bg-black text-white'
-                    : 'bg-gray-100 text-gray-800'
-                }`}
+                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
+                  ? 'bg-black text-white'
+                  : 'bg-gray-100 text-gray-800'
+                  }`}
               >
                 {size}
               </button>

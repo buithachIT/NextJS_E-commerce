@@ -1,14 +1,15 @@
 'use client';
-import { Product } from '@/__generated__/types';
+import { GetProductsByCategoryQuery } from '@/__generated__/graphql';
 import ProductCard from '../productCard';
 import useIsMobile from '@/hooks/useIsMobile';
 import { useMemo } from 'react';
+import { ProductCategoryListType } from '@/types/product';
 
 export default function ProductList({
   products,
   className,
 }: {
-  products: Product[];
+  products: ProductCategoryListType[];
   className: string;
 }) {
   const isMobile = useIsMobile();
@@ -19,7 +20,7 @@ export default function ProductList({
 
   return (
     <div className={`pt-5 md:pt-0 grid gap-4 ${className}`}>
-      {displayed.map((product: Product) => (
+      {displayed.map((product: ProductCategoryListType) => (
         <div className="fade-in-up" key={product.id}>
           <ProductCard className="w-full" product={product} />
         </div>

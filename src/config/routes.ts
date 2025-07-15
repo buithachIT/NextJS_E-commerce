@@ -16,7 +16,7 @@ export const ROUTES = {
   FAQ: '/faq',
   TERMS: '/terms',
   PRIVACY: '/privacy',
-  PRODUCT_CATEGORY: '/category/:slug',
+  PRODUCT_CATEGORY: (slug: string) => `/category/${slug}`,
   HOME: '/',
   //Category
   CAT_GUCCI: '/gucci',

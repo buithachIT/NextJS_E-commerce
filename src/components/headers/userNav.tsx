@@ -18,7 +18,7 @@ const UserHeader = () => {
   const { user, logout } = useAuth();
   const handleLogout = () => {
     logout();
-  }
+  };
   return (
     <>
       {!user?.id ? (
@@ -32,16 +32,20 @@ const UserHeader = () => {
           <DropdownMenuTrigger asChild>
             <div className="hidden md:flex">
               <UserIcon className="w-10 h-6 cursor-pointer hover:scale-110" />
-              Chào Thạch
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56" align="start">
-            <DropdownMenuLabel>Bạn cần gì?</DropdownMenuLabel>
-            <DropdownMenuGroup>
+          Hi, {user.username}
+          <DropdownMenuContent className="w-56 mr-10" align="start">
+            <DropdownMenuLabel>Hi, there!</DropdownMenuLabel>
+            <DropdownMenuGroup className='flex-col'>
               <DropdownMenuSeparator />
-              <DropdownMenuItem><Link href={ROUTES.PROFILE}></Link>Xem Profile</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href={ROUTES.PROFILE}></Link>Profile
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={handleLogout}>Đăng xuất</DropdownMenuItem>
+              <DropdownMenuItem className='ml-2' onClick={handleLogout}>
+                Log out
+              </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>

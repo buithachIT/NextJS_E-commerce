@@ -32,7 +32,11 @@ export const REFRESH_TOKEN_MUTATION = `
 `;
 
 export const REGISTER_USER = gql`
-  mutation RegisterUser($username: String!, $email: String!, $password: String!) {
+  mutation RegisterUser(
+    $username: String!
+    $email: String!
+    $password: String!
+  ) {
     registerUser(
       input: {
         username: $username

@@ -3,7 +3,13 @@ import type { NextRequest } from 'next/server';
 import { ROUTES } from '@/config/routes';
 import { STORAGE_KEY } from './config/storage';
 
-const publicPages = [ROUTES.ABOUT, ROUTES.HOME, ROUTES.LOGIN, ROUTES.REGISTER];
+const publicPages = [
+  ROUTES.ABOUT,
+  ROUTES.HOME,
+  ROUTES.LOGIN,
+  ROUTES.REGISTER,
+  ROUTES.PRODUCT_DETAIL,
+];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;

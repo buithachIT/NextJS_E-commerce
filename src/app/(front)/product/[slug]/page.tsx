@@ -11,13 +11,14 @@ export default async function ProductDetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const product: Product = await getProductBySlug((await params).slug);
+  const product = await getProductBySlug((await params).slug);
+
   const { data: reviews } = await getRatingByProductId((await params).slug);
   return (
     <>
       <Breadcrumb />
-      <ProductDetail product={product} />
-      <ProductTabs reviews={reviews} product={product} />
+      <ProductDetail product={product as Product} />
+      <ProductTabs reviews={reviews} product={product as Product} />
       <ProductFeatureByType
         title="YOU MIGHT ALSO LIKE"
         type="bestseller"

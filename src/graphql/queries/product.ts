@@ -40,12 +40,55 @@ export const GET_PRODUCTS_BY_TAG = gql`
               slug
             }
           }
-          variations(first: 10) {
+        }
+      }
+    }
+  }
+`;
+export const GET_PRODUCTS_BY_CATEGORY = gql`
+  query GetProductsByCategory($categoryIn: [String]) {
+    products(where: { categoryIn: $categoryIn }) {
+      nodes {
+        id
+        name
+        slug
+        description
+        averageRating
+        shortDescription
+        image {
+          sourceUrl
+          altText
+        }
+
+        ... on SimpleProduct {
+          price
+          regularPrice
+          salePrice
+          sku
+          stockStatus
+          productTags {
             nodes {
               name
-              price
-              sku
-              stockStatus
+              slug
+            }
+          }
+        }
+        ... on VariableProduct {
+          price
+          regularPrice
+          salePrice
+          sku
+          stockStatus
+          productTags {
+            nodes {
+              name
+              slug
+            }
+          }
+          attributes {
+            nodes {
+              name
+              options
             }
           }
         }

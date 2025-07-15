@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Product } from '@/types/product';
 import StarRating from '@/components/starRating';
 import { Button } from '@/components/ui/button';
 import { QuantityPicker } from '@/components/ui/customQuantityPicker';
@@ -13,18 +12,19 @@ import {
   isSimpleProduct,
   isVariableProduct,
 } from '@/helper/isTypeProduct';
+import { ProductTypeBySlugQuery, VariationType } from '@/types/product';
 
 export default function ProductDetailVariant({
   product,
 }: {
-  product: Product;
+  product: ProductTypeBySlugQuery;
 }) {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const colorMap: Record<string, string[]> = {};
 
-  if (product.__typename === 'VariableProduct' && product.variations) {
-    product.variations.nodes.forEach((variation) => {
+  if (product.__typename === 'VariableProduct' && product.variations?.nodes) {
+    product.variations.nodes.forEach((variation: VariationType) => {
       const { color, size } = parseColorAndSize(variation.name || '');
       if (!colorMap[color]) colorMap[color] = [];
       if (!colorMap[color].includes(size)) {
@@ -129,10 +129,11 @@ export default function ProductDetailVariant({
                 <Button
                   key={size}
                   onClick={() => setSelectedSize(size)}
-                  className={`px-4 cursor-pointer md:h-[50px] py-2 rounded-full border text-sm ${selectedSize === size
-                    ? 'bg-black text-white border-black'
-                    : 'bg-[#f0f0f0] text-gray-500 border-gray-300'
-                    } hover:border-black`}
+                  className={`px-4 cursor-pointer md:h-[50px] py-2 rounded-full border text-sm ${
+                    selectedSize === size
+                      ? 'bg-black text-white border-black'
+                      : 'bg-[#f0f0f0] text-gray-500 border-gray-300'
+                  } hover:border-black`}
                 >
                   {size}
                 </Button>
