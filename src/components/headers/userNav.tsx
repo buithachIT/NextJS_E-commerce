@@ -23,10 +23,10 @@ const UserHeader = () => {
   };
   return (
     <>
-      <Link href={ROUTES.CART} className='relative'>
+      <Link href={ROUTES.CART} className="relative">
         {quantity > 0 && (
           <span className="absolute left-3 bottom-4 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-            <p className='text-[10px]'>{quantity}</p>
+            <p className="text-[10px]">{quantity}</p>
           </span>
         )}
         <CartIcon className="w-10 h-6 cursor-pointer hover:scale-110" />

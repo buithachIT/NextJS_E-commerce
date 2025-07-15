@@ -14,12 +14,11 @@ import {
 } from '@/__generated__/graphql';
 import { GET_SIZE_COLOR } from '@/graphql/queries/sizeColor';
 
-export async function getBestSellerProducts() {
+export async function getNewProducts() {
   const client = getClient();
   const { data, error } = await safeQuery<GetLatestProductsQuery>(
     client,
-    GET_LATEST_PRODUCTS,
-    { tag: 'bestseller' }
+    GET_LATEST_PRODUCTS
   );
 
   if (error || !data) return [];
@@ -27,17 +26,17 @@ export async function getBestSellerProducts() {
   return data.products?.nodes.slice(0, 4);
 }
 
-export async function getNewProducts() {
+export async function getBestSellerProducts() {
   const client = getClient();
   const { data, error } = await safeQuery<GetProductsByTagQuery>(
     client,
     GET_PRODUCTS_BY_TAG,
-    { tag: 'new' }
+    { tag: 'bestseller' }
   );
 
   if (error || !data) return [];
 
-  return data.products?.nodes.slice(0, 4);
+  return data.products?.nodes;
 }
 
 export const getProductBySlug = async (slug: string) => {
