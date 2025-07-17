@@ -14,13 +14,14 @@ import {
   UpdateUserFormValues,
   updateUserSchema,
 } from '@/features/user/components/UpdateUser/UpdateUserFormSchema';
+import { updateUser } from '@/lib/action/user';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
 const Profile = () => {
-  const { user, refresh } = useAuth();
+  const { user } = useAuth();
 
   const form = useForm<UpdateUserFormValues>({
     resolver: zodResolver(updateUserSchema),
@@ -42,23 +43,13 @@ const Profile = () => {
         lastName: user.lastName || '',
       });
     }
-  }, [user]);
+  }, [form, user]);
 
   const onSubmit = async (values: UpdateUserFormValues) => {
-    console.log(values);
     try {
-      const res = await fetch('/api/user/update', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify(values),
-      });
-
-      if (res.ok) {
-        refresh();
-        toast.success('Successful');
-      } else {
-        toast.error('Update fail');
+      const res = await updateUser(values);
+      if (res && res.data) {
+        toast.success('Update successful!');
       }
     } catch (err) {
       console.error(err);

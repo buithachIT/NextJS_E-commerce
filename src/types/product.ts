@@ -27,5 +27,17 @@ export type VariationType = {
   price?: string | null | undefined;
   sku?: string | null | undefined;
   stockStatus?: StockStatusEnum | null | undefined;
+  regularPrice?: string | null | undefined;
 };
 export type ProductDetailType = NonNullable<GetProductByIdQuery['product']>;
+export type VariationNode = {
+  id: string;
+  name?: string | null;
+  price?: string | null;
+  sku?: string | null;
+  stockStatus?: StockStatusEnum | null;
+  image?: {
+    sourceUrl?: string | null;
+    altText?: string | null;
+  } | null;
+};

@@ -1,6 +1,6 @@
 import { QuantityPicker } from '@/components/ui/customQuantityPicker';
 import { TrashIconSVG } from '@/components/ui/icons';
-import { getPriceInfo } from '@/features/product/utils/formatCurrency';
+import { extractPriceInfo } from '@/features/product/utils/formatCurrency';
 import { CartItem } from '@/types/cartItem';
 import Image from 'next/image';
 
@@ -15,7 +15,10 @@ export default function CartItemCard({
   onQuantityChange,
   onRemoveItem,
 }: CartItemCardProps) {
-  const { displayPrice } = getPriceInfo(cartItem.price.toString());
+  const { salePrice } = extractPriceInfo(
+    cartItem.price.toString(),
+    cartItem.price.toString()
+  );
   return (
     <div className="w-full py-5">
       <div key={cartItem.id} className="flex w-full relative">
@@ -44,7 +47,7 @@ export default function CartItemCard({
             </div>
           </div>
           <div className="mt-2 flex items-center justify-between">
-            <h2 className="text-xl font-bold md:text-2xl">{displayPrice}</h2>
+            <h2 className="text-xl font-bold md:text-2xl">{salePrice}</h2>
             <QuantityPicker
               className="w-1/2 h-[30px] md:w-1/5 md:h-[40px]"
               value={cartItem.quantity}

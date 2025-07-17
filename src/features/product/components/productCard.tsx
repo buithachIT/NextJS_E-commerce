@@ -2,8 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import StarRating from '@/components/starRating';
 import { ROUTES } from '@/config/routes';
-import { getPriceInfo } from '../utils/formatCurrency';
+import { extractPriceInfo } from '../utils/formatCurrency';
 import { Product } from '@/types/product';
+import { isSimpleProduct, isVariableProduct } from '@/helper/isTypeProduct';
 
 interface Props {
   product: Product;
@@ -16,11 +17,14 @@ export default function ProductCard({ product, className = '' }: Props) {
     product.__typename === 'VariableProduct';
   if (!isProduct) return null;
 
+  const isSimple = isSimpleProduct(product);
+  const isVariable = isVariableProduct(product);
+  const regularPrice = isSimple || isVariable ? product.regularPrice : null;
   const { price, image, slug, name } = product;
   const imageUrl = image?.sourceUrl || '/placeholder.jpg';
-  const { displayPrice, oldPrice, discountPercent } = getPriceInfo(
+  const { salePrice, oldPrice, discountPercentage } = extractPriceInfo(
     price,
-    price
+    regularPrice
   );
   let averageRating = 5;
   if ('averageRating' in product && product.averageRating !== null) {
@@ -52,19 +56,19 @@ export default function ProductCard({ product, className = '' }: Props) {
       </div>
 
       <div className="flex gap-2 items-center">
-        {displayPrice && (
+        {salePrice && (
           <h3 className="md:text-2xl text-xl font-bold text-primary">
-            {displayPrice}
+            ${salePrice}
           </h3>
         )}
         {oldPrice && (
           <h3 className="line-through text-gray-400 md:text-2xl text-xl font-bold">
-            {oldPrice}
+            ${oldPrice}
           </h3>
         )}
-        {discountPercent && (
+        {discountPercentage && (
           <span className="bg-red-100 text-red-500 text-xs rounded-full px-2 py-1">
-            -{discountPercent}
+            -{discountPercentage}
           </span>
         )}
       </div>

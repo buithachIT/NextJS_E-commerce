@@ -9,39 +9,45 @@ export function formatCurrency(value: string | null | undefined) {
   }).format(number);
 }
 
-function extractFirstAndLastNumber(
-  value: string | null | undefined
-): [number | null, number | null] {
-  if (!value) return [null, null];
+export function extractPriceInfo(
+  price: string | null | undefined,
+  regularPrice: string | null | undefined
+): {
+  salePrice: string | null;
+  oldPrice: string | null;
+  discountPercentage: string | null;
+} {
+  const normalize = (value: string | null | undefined): number[] => {
+    if (!value) return [];
 
-  const plainText = value.replace(/&nbsp;/g, ' ').replace(/[^\d.-]/g, ' ');
-  const parts = plainText.split(/\s+/).filter(Boolean);
-  const firstNum = parseFloat(parts[0]);
-  const lastNum = parseFloat(parts[parts.length - 1]);
-
-  return [isNaN(firstNum) ? null : firstNum, isNaN(lastNum) ? null : lastNum];
-}
-
-export const getPriceInfo = (
-  price?: string | null,
-  _regularPrice?: string | null
-) => {
-  const [priceNum, regularNum] = extractFirstAndLastNumber(price);
-
-  const hasDiscount =
-    priceNum !== null && regularNum !== null && priceNum < regularNum;
-
-  const discountPercent = hasDiscount
-    ? `${Math.round(((regularNum - priceNum) / regularNum) * 100)}%`
-    : null;
-
-  return {
-    displayPrice:
-      priceNum !== null ? formatCurrency(priceNum.toString()) : null,
-    oldPrice:
-      hasDiscount && regularNum !== null
-        ? formatCurrency(regularNum.toString())
-        : null,
-    discountPercent,
+    const plainText = value.replace(/&nbsp;/g, ' ').replace(/[^\d.-]/g, ' ');
+    return plainText
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((p) => parseFloat(p))
+      .filter((n) => !isNaN(n));
   };
-};
+
+  const priceNumbers = normalize(price);
+  const regularNumbers = normalize(regularPrice);
+
+  const sale = priceNumbers.length > 0 ? priceNumbers[0] : null;
+  const regular = regularNumbers.length > 0 ? regularNumbers[0] : null;
+
+  const discountPercentage =
+    regular !== null && sale !== null && sale < regular
+      ? `${Math.round(((regular - sale) / regular) * 100)}%`
+      : null;
+  if (sale == regular) {
+    return {
+      salePrice: sale?.toString() ?? null,
+      oldPrice: null,
+      discountPercentage,
+    };
+  }
+  return {
+    salePrice: sale?.toString() ?? null,
+    oldPrice: regular?.toString() ?? null,
+    discountPercentage,
+  };
+}

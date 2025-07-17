@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast';
 import { enableServerMocking } from '@/mocks/enableServerMocking';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { CartProvider } from '@/contexts/CartContext';
+import { ProductProvider } from '@/contexts/ProductVariantContext';
 
 (async () => {
   await enableServerMocking();
@@ -30,14 +31,16 @@ export default function RootLayout({
       <body>
         <MSWProvider>
           <AuthProvider>
-            <CartProvider>
-              <div className="min-h-screen lg:px-0">
-                <div className="max-w-[1440x] mx-auto">
-                  <ProgressBarProvider>{children}</ProgressBarProvider>
-                  <Toaster />
+            <ProductProvider>
+              <CartProvider>
+                <div className="min-h-screen lg:px-0">
+                  <div className="max-w-[1440x] mx-auto">
+                    <ProgressBarProvider>{children}</ProgressBarProvider>
+                    <Toaster />
+                  </div>
                 </div>
-              </div>
-            </CartProvider>
+              </CartProvider>
+            </ProductProvider>
           </AuthProvider>
         </MSWProvider>
       </body>

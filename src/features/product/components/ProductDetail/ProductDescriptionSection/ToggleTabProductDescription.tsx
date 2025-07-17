@@ -2,15 +2,14 @@
 import { useState } from 'react';
 import ProductDetailsSection from './ProductDescription';
 import { Product } from '@/types/product';
-import { ReviewNode } from '@/types/review';
 import ProductReviewSection from './ProductReview/ProductReview';
 
 export default function ProductTabs({
-  reviews,
   product,
+  slug,
 }: {
-  reviews: ReviewNode[];
   product: Product;
+  slug: string;
 }) {
   const [tab, setTab] = useState<'details' | 'reviews' | 'faqs'>('reviews');
 
@@ -40,7 +39,9 @@ export default function ProductTabs({
       </div>
       <div>
         {tab === 'details' && <ProductDetailsSection product={product} />}
-        {tab === 'reviews' && <ProductReviewSection reviews={reviews} />}
+        {tab === 'reviews' && (
+          <ProductReviewSection slug={slug} product={product} />
+        )}
         {/* {tab === "faqs" && <ProductFAQSection product={product} />} */}
       </div>
     </div>

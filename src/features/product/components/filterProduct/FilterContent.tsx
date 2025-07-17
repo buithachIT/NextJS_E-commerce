@@ -9,6 +9,7 @@ import { getSizeColor } from '@/lib/action/product';
 import { getCategory } from '@/lib/action/category';
 import { CategoryNode } from '@/types/category';
 import { Button } from '@/components/ui/button';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 type ColorNode = { name?: string | null; slug?: string | null };
 type SizeNode = { name?: string | null; slug?: string | null };
@@ -38,7 +39,8 @@ export default function FilterContent({
     Size: true,
     'Dress Style': true,
   });
-  const [colors, setColors] = useState<string[]>(DEFAULT_COLORS);
+  const router = useRouter();
+  const searchParams = useSearchParams(); const [colors, setColors] = useState<string[]>(DEFAULT_COLORS);
   const [sizes, setSizes] = useState<string[]>(DEFAULT_SIZES);
   const [categories, setCategories] = useState<CategoryNode[]>([]);
   useEffect(() => {
@@ -120,7 +122,12 @@ export default function FilterContent({
       price: val,
     });
   };
+  const handleCategoryChange = (newCategorySlug: string) => {
+    const newPath = `/category/${newCategorySlug}`;
+    const currentParams = searchParams.toString();
 
+    router.replace(`${newPath}?${currentParams}`);
+  };
   return (
     <div className="pb-18 md:pb-5">
       <div className="space-y-1 mb-4">
@@ -129,6 +136,7 @@ export default function FilterContent({
             return (
               <div
                 key={cat.id}
+                onClick={() => handleCategoryChange(cat.slug ?? '')}
                 className="flex text-[#666666] justify-between py-2 cursor-pointer hover:underline"
               >
                 <span>{cat.name}</span>
@@ -201,11 +209,10 @@ export default function FilterContent({
               <Button
                 key={size}
                 onClick={() => handleSizeChange(size)}
-                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${
-                  (values.size ?? []).includes(size)
-                    ? 'bg-black text-white'
-                    : 'bg-gray-100 text-gray-800'
-                }`}
+                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
+                  ? 'bg-black text-white'
+                  : 'bg-gray-100 text-gray-800'
+                  }`}
               >
                 {size}
               </Button>
@@ -224,6 +231,7 @@ export default function FilterContent({
                   <div
                     key={cat?.id}
                     className="cursor-pointer text-[#666666] hover:underline"
+                    onClick={() => handleCategoryChange(cat.slug ?? '')}
                   >
                     {cat.name}
                   </div>

@@ -3,9 +3,7 @@ import ProductFeatureByType from '@/features/product/components/FeatureProduct/P
 import ProductTabs from '@/features/product/components/ProductDetail/ProductDescriptionSection/ToggleTabProductDescription';
 import ProductDetail from '@/features/product/components/ProductDetail/ProductDetail';
 import { getProductBySlug } from '@/lib/action/product';
-import { getReviewsByProduct } from '@/lib/action/review';
 import { Product, ProductTypeBySlugQuery } from '@/types/product';
-import { ReviewNode } from '@/types/review';
 
 export default async function ProductDetailPage({
   params,
@@ -13,15 +11,11 @@ export default async function ProductDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const product = await getProductBySlug((await params).slug);
-  const reviews = await getReviewsByProduct((await params).slug);
   return (
     <>
       <Breadcrumb />
       <ProductDetail product={product as ProductTypeBySlugQuery} />
-      <ProductTabs
-        reviews={reviews as ReviewNode[]}
-        product={product as Product}
-      />
+      <ProductTabs product={product as Product} slug={(await params).slug} />
       <ProductFeatureByType
         title="YOU MIGHT ALSO LIKE"
         type="bestseller"

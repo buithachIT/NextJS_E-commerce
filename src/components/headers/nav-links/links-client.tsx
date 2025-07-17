@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -7,15 +10,18 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '../ui/navigation-menu';
-import { getCategory } from '@/lib/action/category';
-import { ROUTES } from '@/config/routes';
+} from '@/components/ui/navigation-menu';
 import { CategoryNode } from '@/types/category';
-export default async function NavLinks() {
-  const links = await getCategory();
-  const navLinks = links?.filter(
-    (cat: CategoryNode) => cat.display === 'DEFAULT'
-  );
+import { ROUTES } from '@/config/routes';
+import { cn } from '@/lib/utils';
+
+type Props = {
+  navLinks: CategoryNode[];
+};
+
+export default function NavLinksClient({ navLinks }: Props) {
+  const pathname = usePathname();
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -32,28 +38,43 @@ export default async function NavLinks() {
                 </p>
               </div>
             </div>
-            <ul className="grid z-50 gap-4 p-4 md:w-full lg:w-[500px] lg:grid-cols-[0.8fr_1.2fr] bg-white shadow-md rounded-md">
-              {/* Các danh mục */}
-              {navLinks &&
-                navLinks.map((link: CategoryNode) => (
+
+            <ul className="grid gap-4 p-4 md:w-full lg:w-[500px] lg:grid-cols-[0.8fr_1.2fr] bg-white shadow-md rounded-md">
+              {navLinks.map((link) => {
+                const href = ROUTES.PRODUCT_CATEGORY(link.slug || '');
+                const isActive = pathname.startsWith(href);
+
+                return (
                   <li key={link.id}>
                     <NavigationMenuLink asChild>
                       <Link
-                        href={ROUTES.PRODUCT_CATEGORY(link.slug || '')}
-                        className="block p-2 hover:bg-accent hover:text-accent-foreground rounded-md text-sm"
+                        href={href}
+                        className={cn(
+                          'block p-2 rounded-md text-sm transition',
+                          isActive
+                            ? 'bg-accent text-accent-foreground font-medium'
+                            : 'hover:bg-accent hover:text-accent-foreground'
+                        )}
                       >
                         {link.name}
                       </Link>
                     </NavigationMenuLink>
                   </li>
-                ))}
+                );
+              })}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/" className="text-md">
+            <Link
+              href="/"
+              className={cn(
+                'text-md',
+                pathname === '/' ? 'text-primary font-semibold' : ''
+              )}
+            >
               On Sale
             </Link>
           </NavigationMenuLink>
@@ -61,14 +82,28 @@ export default async function NavLinks() {
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/" className="text-md">
+            <Link
+              href="/new-arrivals"
+              className={cn(
+                'text-md',
+                pathname === '/new-arrivals' ? 'text-primary font-semibold' : ''
+              )}
+            >
               New Arrivals
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/">Brands</Link>
+            <Link
+              href="/brands"
+              className={cn(
+                pathname === '/brands' ? 'text-primary font-semibold' : ''
+              )}
+            >
+              Brands
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
