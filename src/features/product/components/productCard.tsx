@@ -11,19 +11,21 @@ interface Props {
 }
 
 export default function ProductCard({ product, className = '' }: Props) {
-  const isSimple = product.__typename === 'SimpleProduct';
-  const isVariable = product.__typename === 'VariableProduct';
+  const isProduct =
+    product.__typename === 'SimpleProduct' ||
+    product.__typename === 'VariableProduct';
+  if (!isProduct) return null;
 
-  const price = isSimple || isVariable ? product.price : null;
-  const regularPrice = isSimple || isVariable ? product.regularPrice : null;
+  const { price, image, slug, name } = product;
+  const imageUrl = image?.sourceUrl || '/placeholder.jpg';
   const { displayPrice, oldPrice, discountPercent } = getPriceInfo(
     price,
-    regularPrice
+    price
   );
-
-  const imageUrl = product.image?.sourceUrl || '/placeholder.jpg';
-  const altText = product.image?.altText || product.name || 'Product image';
-
+  let averageRating = 5;
+  if ('averageRating' in product && product.averageRating !== null) {
+    averageRating = Number(product.averageRating) || 5;
+  }
   return (
     <div
       className={`${className} min-w-[160px] md:max-w-[400px] flex flex-col items-start md:mb-5 md:mt-5 rounded-xl md:p-4 transition-transform duration-500 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-md`}
@@ -31,7 +33,7 @@ export default function ProductCard({ product, className = '' }: Props) {
       <div className="aspect-square overflow-hidden rounded-xl bg-[#f2f2f2] w-full">
         <Image
           src={imageUrl}
-          alt={altText}
+          alt={name || 'Product image'}
           width={800}
           height={800}
           className="object-cover w-full h-full"
@@ -39,14 +41,14 @@ export default function ProductCard({ product, className = '' }: Props) {
       </div>
 
       <div className="block w-full text-start mt-3">
-        <Link href={`${ROUTES.PRODUCT}/${product.slug}`}>
-          <h4 className="text-xl font-bold mb-2 truncate">{product.name}</h4>
+        <Link href={`${ROUTES.PRODUCT}/${slug}`}>
+          <h4 className="text-xl font-bold mb-2 truncate">{name}</h4>
         </Link>
       </div>
 
       <div className="flex items-center justify-start gap-2 text-xs mb-2">
-        <StarRating rating={product.averageRating || 5} />
-        <p>{product.averageRating || 5}/5</p>
+        <StarRating rating={averageRating || 5} />
+        <p>{averageRating || 5}/5</p>
       </div>
 
       <div className="flex gap-2 items-center">

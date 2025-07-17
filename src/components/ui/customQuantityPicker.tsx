@@ -2,32 +2,49 @@
 
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
-import { ClipLoader } from "react-spinners";
+import { ClipLoader } from 'react-spinners';
 
 type QuantityPickerProps = {
   min?: number;
   max?: number;
   value?: number;
+  onChange: (value: number) => void;
   className?: string;
 };
 
 export function QuantityPicker({
   min = 1,
   max = 10,
-  className = '',
   value = 0,
+  onChange,
+  className = '',
 }: QuantityPickerProps) {
   const [quantity, setQuantity] = useState(min);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    setIsLoading(true);
     if (value !== 0) {
       setQuantity(value);
-    };
-  }, [value])
+    }
+    setIsLoading(false);
+  }, [value]);
 
-  const decrement = () => setQuantity((q) => Math.max(min, q - 1));
-  const increment = () => setQuantity((q) => Math.min(max, q + 1));
+  const handleChange = (newQuantity: number) => {
+    setQuantity(newQuantity);
+    onChange(newQuantity);
+  };
+
+  const decrement = () => {
+    if (quantity > min) {
+      handleChange(quantity - 1);
+    }
+  };
+
+  const increment = () => {
+    if (quantity < max) {
+      handleChange(quantity + 1);
+    }
+  };
 
   return (
     <div
@@ -41,11 +58,15 @@ export function QuantityPicker({
       >
         –
       </Button>
-      <span className="w-6 text-center font-medium">{isLoading ? <p>{quantity}</p> : <ClipLoader
-        size={10}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />}</span>
+
+      <span className="w-6 text-center font-medium">
+        {isLoading ? (
+          <ClipLoader size={10} aria-label="Loading Spinner" />
+        ) : (
+          quantity
+        )}
+      </span>
+
       <Button
         variant="ghost"
         size="icon"

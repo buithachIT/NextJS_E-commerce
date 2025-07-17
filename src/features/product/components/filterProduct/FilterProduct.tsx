@@ -10,6 +10,7 @@ import ActiveFilters from './ActiveFilters';
 
 export type FilterValues = {
   categoryId?: string;
+  subCategory?: string;
   price: [number, number];
   color?: string[];
   size?: string[];

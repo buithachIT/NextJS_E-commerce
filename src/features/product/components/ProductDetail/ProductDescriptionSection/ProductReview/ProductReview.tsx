@@ -1,9 +1,9 @@
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Suspense } from 'react';
 import RatingCardSkeleton from '@/components/skeletons/ratingSkeleton';
 import ProductRating from '@/features/rating/components/productRating/PoductRating';
-import { CUSTOMER_REVIEWS } from '@/types/rating';
-import FilterTrigger from './FilterPanel/FilterTrigger';
+import FilterTrigger from '../FilterPanel/FilterTrigger';
 import {
   Select,
   SelectContent,
@@ -11,12 +11,38 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { ReviewNode } from '@/types/review';
+import { useForm } from 'react-hook-form';
+import ProductReviewForm from './ProductReviewForm';
+
+type FormData = {
+  name: string;
+  content: string;
+  rating: number;
+};
 
 export default function ProductReviewSection({
   reviews,
 }: {
-  reviews: CUSTOMER_REVIEWS[];
+  reviews: ReviewNode[];
 }) {
+  const [showForm, setShowForm] = useState(false);
+  const {
+    reset,
+    formState: { errors },
+  } = useForm<FormData>({
+    defaultValues: { name: '', content: '', rating: 5 },
+  });
+
+  const onSubmit = (data: FormData) => {
+    console.log('Comment submitted:', data);
+    setShowForm(false);
+    reset();
+  };
+
+  const onCancel = () => {
+    setShowForm(false);
+  };
   const handleFilterChange = (filter: string) => {
     console.log(filter);
   };
@@ -24,11 +50,9 @@ export default function ProductReviewSection({
   return (
     <>
       <div className="px-5 md:px-25 md:pt-5">
-        {/* Review */}
         <div>
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-bold text-md">All Reviews</h2>
-            {/* Filter */}
             <div className="flex md:gap-4 w-2/3 justify-end items-center gap-2  py-1 rounded-full">
               <FilterTrigger onFilterChange={handleFilterChange} />
               <Select
@@ -48,13 +72,21 @@ export default function ProductReviewSection({
                   <SelectItem value="lowest">Lowest rating</SelectItem>
                 </SelectContent>
               </Select>
-              {/* Write a Review */}
-              <Button className="px-4 md:h-[50px] cursor-pointer py-2 rounded-full text-sm">
+              <Button
+                className="px-4 md:h-[50px] cursor-pointer py-2 rounded-full text-sm"
+                onClick={() => setShowForm((s) => !s)}
+              >
                 Write a Review
               </Button>
             </div>
           </div>
-          {/* Review list*/}
+          <div
+            className={`transition-all duration-300 origin-top ${showForm ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none h-0'}`}
+          >
+            {showForm && (
+              <ProductReviewForm onCancel={onCancel} onSubmit={onSubmit} />
+            )}
+          </div>
           <div>
             <Suspense fallback={<RatingCardSkeleton />}>
               <ProductRating reviews={reviews} />

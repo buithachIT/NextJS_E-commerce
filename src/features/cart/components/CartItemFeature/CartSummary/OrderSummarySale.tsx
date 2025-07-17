@@ -6,8 +6,17 @@ import toast from 'react-hot-toast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { SaleTicket } from '@/components/ui/icons';
+import Link from 'next/link';
+import { useCart } from '@/contexts/CartContext';
 
-export default function CartSummary({ subtotal }: { subtotal: number }) {
+export default function CartSummary({
+  subtotal,
+  className,
+}: {
+  subtotal: number;
+  className: string;
+}) {
+  const { cart } = useCart();
   const [promoCode, setPromoCode] = useState('');
   const [applied, setApplied] = useState<null | (typeof PROMO_CODES)[0]>(null);
 
@@ -24,7 +33,9 @@ export default function CartSummary({ subtotal }: { subtotal: number }) {
   };
 
   return (
-    <div className="p-6 mb-5 bg-white rounded-xl border space-y-4">
+    <div
+      className={`p-6 mb-5 bg-white rounded-xl border space-y-4 ${className}`}
+    >
       <h2 className="text-xl md:text-2xl font-semibold">Order Summary</h2>
 
       <div className="flex justify-between md:text-[20px]">
@@ -77,10 +88,13 @@ export default function CartSummary({ subtotal }: { subtotal: number }) {
           Apply
         </Button>
       </div>
-
-      <Button className=" w-full py-3 rounded-full text-center mt-2 md:h-[50px]">
-        Go to Checkout →
-      </Button>
+      {cart && cart.length > 0 ? (
+        <Button className="w-full py-3 rounded-full text-center mt-2 md:h-[50px]">
+          <Link href="/checkout">Go to Checkout →</Link>
+        </Button>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

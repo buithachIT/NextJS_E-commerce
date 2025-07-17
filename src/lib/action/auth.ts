@@ -1,3 +1,5 @@
+import { GetCurrentUserQuery } from '@/__generated__/graphql';
+
 export async function loginUser({
   email,
   password,
@@ -17,11 +19,11 @@ export async function loginUser({
     msg = msg.replace(/<[^>]*>?/gm, '');
     throw new Error(msg.trim());
   }
-
   return { success: true };
 }
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function fetchUserWithAutoRefresh(): Promise<any | null> {
+export async function fetchUserWithAutoRefresh(): Promise<
+  GetCurrentUserQuery['viewer'] | null
+> {
   try {
     let res = await fetch('/api/user/fetchUser', {
       credentials: 'include',
@@ -44,8 +46,7 @@ export async function fetchUserWithAutoRefresh(): Promise<any | null> {
     }
     if (res.ok) {
       const data = await res.json();
-      console.log(data)
-      return data;
+      return data as GetCurrentUserQuery['viewer'];
     }
 
     return null;
@@ -54,6 +55,7 @@ export async function fetchUserWithAutoRefresh(): Promise<any | null> {
     return null;
   }
 }
+
 export async function registerUser({
   username,
   email,

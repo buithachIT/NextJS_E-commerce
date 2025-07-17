@@ -1,12 +1,8 @@
 import { Button } from '@/components/ui/button';
 import FeatureRatingList from '../FeatureRating/FeatureRatingList';
-import { CUSTOMER_REVIEWS } from '@/types/rating';
+import { ReviewNode } from '@/types/review';
 
-export default function ProductRating({
-  reviews,
-}: {
-  reviews: CUSTOMER_REVIEWS[];
-}) {
+export default function ProductRating({ reviews }: { reviews: ReviewNode[] }) {
   return (
     <div className="flex flex-col">
       <div className="flex md:grid md:gap-4 md:grid-cols-2 flex-col justify-center">

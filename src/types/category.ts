@@ -1,6 +1,5 @@
-export type Category = {
-  id: string;
-  name: string;
-  description: string;
-  href: string;
-};
+import { GetAllCategoriesQuery } from '@/__generated__/graphql';
+
+export type CategoryNode = NonNullable<
+  GetAllCategoriesQuery['productCategories']
+>['nodes'][number];

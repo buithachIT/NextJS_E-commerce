@@ -5,10 +5,15 @@ export default function ProductDetailsSection({
 }: {
   product: Product;
 }) {
+  function renderDescription() {
+    if (product.__typename === 'SimpleProduct') {
+      return <div>{parse(product.description || '')}</div>;
+    }
+  }
   return (
     <div className="space-y-4 py-5 px-5 md:px-25">
       <h2 className="font-bold text-lg">Product Details</h2>
-      <div>{parse(product.description || '')}</div>
+      {renderDescription}
     </div>
   );
 }

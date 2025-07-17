@@ -1,6 +1,6 @@
-import { cache } from 'react';
 import { getClient } from '../apollo/apollo-client';
 import {
+  GET_LATEST_PRODUCTS,
   GET_PRODUCT_BY_SLUG,
   GET_PRODUCTS_BY_CATEGORY,
   GET_PRODUCTS_BY_TAG,
@@ -10,8 +10,21 @@ import {
   GetProductsByTagQuery,
   GetProductBySlugQuery,
   GetProductsByCategoryQuery,
+  GetLatestProductsQuery,
 } from '@/__generated__/graphql';
 import { GET_SIZE_COLOR } from '@/graphql/queries/sizeColor';
+
+export async function getNewProducts() {
+  const client = getClient();
+  const { data, error } = await safeQuery<GetLatestProductsQuery>(
+    client,
+    GET_LATEST_PRODUCTS
+  );
+
+  if (error || !data) return [];
+
+  return data.products?.nodes.slice(0, 4);
+}
 
 export async function getBestSellerProducts() {
   const client = getClient();
@@ -23,20 +36,7 @@ export async function getBestSellerProducts() {
 
   if (error || !data) return [];
 
-  return data.products?.nodes.slice(0, 4);
-}
-
-export async function getNewProducts() {
-  const client = getClient();
-  const { data, error } = await safeQuery<GetProductsByTagQuery>(
-    client,
-    GET_PRODUCTS_BY_TAG,
-    { tag: 'new' }
-  );
-
-  if (error || !data) return [];
-
-  return data.products?.nodes.slice(0, 4);
+  return data.products?.nodes;
 }
 
 export const getProductBySlug = async (slug: string) => {

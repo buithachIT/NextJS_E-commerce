@@ -38,6 +38,7 @@ export const getClient = cache(() => {
         uri:
           process.env.NEXT_PUBLIC_CLIENT_URI! ||
           'http://localhost:8000/graphql',
+        credentials: 'include',
       }),
     ]),
   });

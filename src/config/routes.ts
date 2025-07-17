@@ -6,7 +6,7 @@ export const ROUTES = {
   CHECKOUT: '/checkout',
   CHECKOUT_SHIPPING: '/checkout/shipping',
   CHECKOUT_PAYMENT: '/checkout/payment',
-  PROFILE: '/profile',
+  PROFILE: '/my-account',
   PROFILE_ORDERS: '/profile/orders',
   PROFILE_SETTINGS: '/profile/settings',
   ABOUT: '/about',

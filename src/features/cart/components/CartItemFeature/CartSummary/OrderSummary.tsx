@@ -1,18 +1,18 @@
-import { CartItem } from '@/types/cartItem';
+'use client';
 import CartSummary from './OrderSummarySale';
-import { getCartData } from '@/lib/action/cart';
+import { useCart } from '@/contexts/CartContext';
 
-export default async function OrderSummary() {
-  const { data: cartItems }: { data: CartItem[] } = await getCartData();
+export default function OrderSummary() {
+  const { cart } = useCart();
 
-  const subtotal = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
-  console.log(subtotal);
+  const subtotal = cart.reduce((sum, item) => {
+    const priceNum =
+      typeof item.price === 'string' ? parseFloat(item.price) : item.price;
+    return sum + priceNum * item.quantity;
+  }, 0);
   return (
     <div className="my-5 md:max-h-[400px] md:my-0 md:w-2/5 grid gap-6">
-      <CartSummary subtotal={subtotal} />
+      <CartSummary subtotal={subtotal} className="" />
     </div>
   );
 }

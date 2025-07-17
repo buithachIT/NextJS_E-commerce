@@ -1,5 +1,4 @@
 'use client';
-import { GetProductsByCategoryQuery } from '@/__generated__/graphql';
 import ProductCard from '../productCard';
 import useIsMobile from '@/hooks/useIsMobile';
 import { useMemo } from 'react';

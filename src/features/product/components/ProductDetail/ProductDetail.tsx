@@ -1,10 +1,12 @@
+import { ProductTypeBySlugQuery } from '@/types/product';
 import ProductImage from './ProductImage';
-import ProductDetailVariant from './ProductVariant';
-import { GetProductByIdQuery } from '@/__generated__/types';
+import ProductDetailVariant from './ProductVariant/ProductVariant';
 
-type ProductType = NonNullable<GetProductByIdQuery['product']>;
-
-export default function ProductDetail({ product }: { product: ProductType }) {
+export default function ProductDetail({
+  product,
+}: {
+  product: ProductTypeBySlugQuery;
+}) {
   return (
     <>
       <div className="md:px-25 px-5 w-full pb-5 md:px-auto md:justify-between md:flex rounded-2xl">

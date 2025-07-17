@@ -32,7 +32,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Áp dụng cho mọi đường dẫn trừ static, images, favicon, public folder
     '/((?!api|_next/static|_next/image|favicon.ico|public|mockServiceWorker.js).*)',
   ],
 };

@@ -1,14 +1,13 @@
 import { z } from 'zod';
 
 export const billingFormSchema = z.object({
-  detailAddress: z
-    .string()
-    .min(5, 'Detailed address must be at least 5 characters'),
-
-  country: z.string().min(1, 'Please select country'),
-
-  state: z.string().min(1, 'Please select state'),
-
+  firstName: z.string().min(1, 'Required'),
+  lastName: z.string().min(1, 'Required'),
+  email: z.string().email('Invalid email'),
+  phone: z.string().min(10, 'Invalid phone'),
+  country: z.string().min(1, 'Required'),
+  state: z.string().min(1, 'Required'),
+  detailAddress: z.string().min(1, 'Required'),
   note: z.string().optional(),
 });
 

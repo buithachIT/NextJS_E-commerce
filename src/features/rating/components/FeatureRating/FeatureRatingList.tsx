@@ -1,8 +1,8 @@
 import RatingCard from '../ratingCard';
-import { CUSTOMER_REVIEWS } from '@/types/rating';
+import { ReviewNode } from '@/types/review';
 
 type FeatureRatingListProps = {
-  reviews: CUSTOMER_REVIEWS[];
+  reviews: ReviewNode[];
 };
 
 const FeatureRatingList = ({ reviews }: FeatureRatingListProps) => {
@@ -11,8 +11,8 @@ const FeatureRatingList = ({ reviews }: FeatureRatingListProps) => {
   }
   return (
     <>
-      {reviews.map((review: CUSTOMER_REVIEWS) => (
-        <RatingCard review={review} key={review.id} />
+      {reviews.map((review: ReviewNode) => (
+        <RatingCard review={review} key={review?.id} />
       ))}
     </>
   );

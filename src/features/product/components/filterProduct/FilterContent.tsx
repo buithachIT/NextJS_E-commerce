@@ -6,6 +6,9 @@ import { DualRangeSlider } from '@/components/ui/dual-range-slider';
 import { isLightColor } from '@/helper/islight';
 import { FilterValues } from './FilterProduct';
 import { getSizeColor } from '@/lib/action/product';
+import { getCategory } from '@/lib/action/category';
+import { CategoryNode } from '@/types/category';
+import { Button } from '@/components/ui/button';
 
 type ColorNode = { name?: string | null; slug?: string | null };
 type SizeNode = { name?: string | null; slug?: string | null };
@@ -37,7 +40,7 @@ export default function FilterContent({
   });
   const [colors, setColors] = useState<string[]>(DEFAULT_COLORS);
   const [sizes, setSizes] = useState<string[]>(DEFAULT_SIZES);
-
+  const [categories, setCategories] = useState<CategoryNode[]>([]);
   useEffect(() => {
     const fetchSizeColor = async () => {
       try {
@@ -58,6 +61,17 @@ export default function FilterContent({
       }
     };
     fetchSizeColor();
+  }, []);
+
+  useEffect(() => {
+    const fetchStyle = async () => {
+      const data = await getCategory();
+      if (data) {
+        const data = await getCategory();
+        setCategories(data ?? []);
+      }
+    };
+    fetchStyle();
   }, []);
 
   function toggleArrayValue<T>(value: T, array: T[]) {
@@ -110,15 +124,18 @@ export default function FilterContent({
   return (
     <div className="pb-18 md:pb-5">
       <div className="space-y-1 mb-4">
-        {['T-shirts', 'Shorts', 'Shirts', 'Hoodie', 'Jeans'].map((cat) => (
-          <div
-            key={cat}
-            className="flex text-[#666666] justify-between py-2 cursor-pointer hover:underline"
-          >
-            <span>{cat}</span>
-            <ChevronRight className="w-4 h-4" />
-          </div>
-        ))}
+        {categories.map((cat: CategoryNode) => {
+          if (cat.display === 'SUBCATEGORIES')
+            return (
+              <div
+                key={cat.id}
+                className="flex text-[#666666] justify-between py-2 cursor-pointer hover:underline"
+              >
+                <span>{cat.name}</span>
+                <ChevronRight className="w-4 h-4" />
+              </div>
+            );
+        })}
       </div>
 
       <div className="border-t pt-4">
@@ -147,7 +164,7 @@ export default function FilterContent({
               const isLight = isLightColor(color);
               const isSelected = (values.color ?? []).includes(color);
               return (
-                <button
+                <Button
                   key={color}
                   onClick={() => handleColorChange(color)}
                   className={`w-10 h-10 rounded-full cursor-pointer border flex items-center justify-center`}
@@ -169,7 +186,7 @@ export default function FilterContent({
                       />
                     </svg>
                   )}
-                </button>
+                </Button>
               );
             })}
           </div>
@@ -181,16 +198,17 @@ export default function FilterContent({
         {openSections.Size && (
           <div className="flex flex-wrap gap-2 mt-4">
             {sizes.map((size) => (
-              <button
+              <Button
                 key={size}
                 onClick={() => handleSizeChange(size)}
-                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-gray-800'
-                  }`}
+                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${
+                  (values.size ?? []).includes(size)
+                    ? 'bg-black text-white'
+                    : 'bg-gray-100 text-gray-800'
+                }`}
               >
                 {size}
-              </button>
+              </Button>
             ))}
           </div>
         )}
@@ -200,14 +218,17 @@ export default function FilterContent({
         {renderSectionHeader('Dress Style')}
         {openSections['Dress Style'] && (
           <div className="mt-4 space-y-2">
-            {['Casual', 'Formal', 'Party', 'Gym'].map((style) => (
-              <div
-                key={style}
-                className="cursor-pointer text-[#666666] hover:underline"
-              >
-                {style}
-              </div>
-            ))}
+            {categories.map((cat) => {
+              if (cat.display === 'DEFAULT')
+                return (
+                  <div
+                    key={cat?.id}
+                    className="cursor-pointer text-[#666666] hover:underline"
+                  >
+                    {cat.name}
+                  </div>
+                );
+            })}
           </div>
         )}
       </div>
