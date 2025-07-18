@@ -77,6 +77,12 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
           price
           regularPrice
           salePrice
+          productCategories {
+            nodes {
+              name
+              slug
+            }
+          }
           sku
           stockStatus
           productTags {
@@ -111,19 +117,6 @@ export const GET_PRODUCT_BY_SLUG = gql`
         sourceUrl
         altText
       }
-      ... on SimpleProduct {
-        price
-        regularPrice
-        salePrice
-        sku
-        stockStatus
-        galleryImages {
-          nodes {
-            sourceUrl
-            altText
-          }
-        }
-      }
       ... on VariableProduct {
         id
         price
@@ -142,6 +135,8 @@ export const GET_PRODUCT_BY_SLUG = gql`
             id
             name
             price
+            regularPrice
+            description
             image {
               altText
               sourceUrl
@@ -175,6 +170,7 @@ export const GET_LATEST_PRODUCTS = gql`
           name
           date
           slug
+          regularPrice
           price
           image {
             sourceUrl

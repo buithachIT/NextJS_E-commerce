@@ -8,6 +8,14 @@ export function filterProducts(
 ) {
   return products.filter((product) => {
     if (
+      Array.isArray(filters.size) &&
+      filters.size.length > 0 &&
+      product.__typename !== 'VariableProduct'
+    ) {
+      return false;
+    }
+
+    if (
       product.__typename !== 'SimpleProduct' &&
       product.__typename !== 'VariableProduct'
     ) {
@@ -32,29 +40,24 @@ export function filterProducts(
         ? attrs.some(
             (attr: ProductAttribute) =>
               attr &&
-              (attr.name?.toLowerCase() === 'color' ||
-                attr.name?.toLowerCase() === 'pa_color') &&
+              attr.name?.toLowerCase().trim() === 'pa_color' &&
               Array.isArray(attr.options) &&
               attr.options.some((opt) =>
                 filters
-                  .color!.map((c) => c.toLowerCase())
-                  .includes(opt || ''.toLowerCase())
+                  .color!.map((c) => c.toLowerCase().trim())
+                  .includes((opt || '').toLowerCase().trim())
               )
           )
         : true;
-
     const sizeMatch =
       Array.isArray(filters.size) && filters.size.length > 0
         ? attrs.some(
-            (attr: ProductAttribute) =>
-              attr &&
-              (attr.name?.toLowerCase() === 'size' ||
-                attr.name?.toLowerCase() === 'pa_size') &&
-              Array.isArray(attr.options) &&
-              attr.options.some((opt) =>
+            (attr) =>
+              attr.name?.toLowerCase().trim() === 'pa_size' &&
+              attr.options?.some((opt) =>
                 filters
-                  .size!.map((s) => s.toLowerCase())
-                  .includes(opt || ''.toLowerCase())
+                  .size!.map((s) => s.toLowerCase().trim())
+                  .includes((opt || '').toLowerCase().trim())
               )
           )
         : true;

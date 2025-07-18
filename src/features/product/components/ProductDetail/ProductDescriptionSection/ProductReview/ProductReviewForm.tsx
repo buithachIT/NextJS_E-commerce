@@ -11,23 +11,34 @@ import {
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
-
-type FormData = {
-  name: string;
-  content: string;
-  rating: number;
-};
+import { Product } from '@/types/product';
+import { isSimpleProduct, isVariableProduct } from '@/helper/isTypeProduct';
+import { ReviewFormData } from './ProductReview';
 
 type Props = {
-  onSubmit: (data: FormData) => void;
+  onSubmit: (data: ReviewFormData) => void;
   onCancel: () => void;
+  product: Product;
 };
 
-export default function ProductReviewForm({ onSubmit, onCancel }: Props) {
+export default function ProductReviewForm({
+  onSubmit,
+  onCancel,
+  product,
+}: Props) {
   const { user } = useAuth();
-  const form = useForm<FormData>({
-    defaultValues: { name: '', content: '', rating: 5 },
+  const form = useForm<ReviewFormData>({
+    defaultValues: {
+      productId: isVariableProduct(product) ? product.databaseId : 0,
+      authorName: user?.username || '',
+      content: '',
+      rating: 5,
+    },
   });
+  let pdId: number;
+  if (isSimpleProduct(product)) {
+    pdId = product.databaseId;
+  }
 
   return (
     <Form {...form}>
@@ -40,11 +51,28 @@ export default function ProductReviewForm({ onSubmit, onCancel }: Props) {
       >
         <FormField
           control={form.control}
-          name="name"
-          disabled
+          name="productId"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{user?.username}</FormLabel>
+              <FormLabel hidden>{pdId}</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  hidden
+                  value={user?.username || ''}
+                  placeholder="Your name"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="authorName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel hidden>{user?.username}</FormLabel>
               <FormControl>
                 <Input
                   {...field}

@@ -1,9 +1,8 @@
-import { CartIcon, SearchIcon } from '../ui/icons';
-import NavLink from './navlinks';
+import { SearchIcon } from '../ui/icons';
+import NavLink from './nav-links/navlinks';
 import SearchBox from '@/components/headers/search';
 import MobileNav from './mobileNav';
 import Link from 'next/link';
-import { ROUTES } from '@/config/routes';
 import UserHeader from './userNav';
 import { Suspense } from 'react';
 

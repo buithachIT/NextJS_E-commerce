@@ -19,3 +19,14 @@ export const GET_REVIEWS_BY_PRODUCT = gql`
     }
   }
 `;
+export const CREATE_REVIEW = gql`
+  mutation CreateProductReview($input: CreateProductReviewInput!) {
+    createProductReview(input: $input) {
+      comment {
+        id
+        content
+        rating
+      }
+    }
+  }
+`;

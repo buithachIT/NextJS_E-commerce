@@ -14,7 +14,7 @@ export default function CartSummary({
   className,
 }: {
   subtotal: number;
-  className: string;
+  className?: string;
 }) {
   const { cart } = useCart();
   const [promoCode, setPromoCode] = useState('');

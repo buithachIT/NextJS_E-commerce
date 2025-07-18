@@ -12,7 +12,7 @@ export default function OrderSummary() {
   }, 0);
   return (
     <div className="my-5 md:max-h-[400px] md:my-0 md:w-2/5 grid gap-6">
-      <CartSummary subtotal={subtotal} className="" />
+      <CartSummary subtotal={subtotal} />
     </div>
   );
 }
