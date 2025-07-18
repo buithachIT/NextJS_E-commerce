@@ -1,147 +1,95 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
 import { useAuth } from '@/contexts/AuthContext';
-import {
-  UpdateUserFormValues,
-  updateUserSchema,
-} from '@/features/user/components/UpdateUser/UpdateUserFormSchema';
-import { updateUser } from '@/lib/action/user';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
+import ChangePasswordTab from '@/features/user/components/ChangePassword/ChangePasswordTab';
+import OrderHistoryTab from '@/features/user/components/OrderHistory/OrderHistory';
+import UpdateUserTab from '@/features/user/components/UpdateUser/UpdateUserTab';
+import { useState } from 'react';
+import { User, Lock, ShoppingCart } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const Profile = () => {
+const UserPage = () => {
+  const [tab, setTab] = useState<'profile' | 'orderHistory' | 'changePassword'>(
+    'profile'
+  );
   const { user } = useAuth();
-
-  const form = useForm<UpdateUserFormValues>({
-    resolver: zodResolver(updateUserSchema),
-    defaultValues: {
-      id: user?.id || '',
-      email: user?.email || '',
-      username: user?.username || '',
-      firstName: user?.firstName || '',
-      lastName: user?.lastName || '',
-    },
-  });
-  useEffect(() => {
-    if (user) {
-      form.reset({
-        id: user.id,
-        email: user.email || '',
-        username: user.username || '',
-        firstName: user.firstName || '',
-        lastName: user.lastName || '',
-      });
-    }
-  }, [form, user]);
-
-  const onSubmit = async (values: UpdateUserFormValues) => {
-    try {
-      const res = await updateUser(values);
-      if (res && res.data) {
-        toast.success('Update successful!');
-      }
-    } catch (err) {
-      console.error(err);
-      toast.error('Undefined error');
-    }
-  };
   return (
-    <>
+    <div className="md:mt-5">
       <p className="font-display text-xl underline md:pb-2">
-        Hi, {user?.firstName}!
+        Hi, {user?.firstName} !
       </p>
-      <hr />
-      <div className="md:grid pt-5 md:grid-cols-2">
-        <div className="mx-auto w-5/6">
-          <p className="font-bold text-xl">Your information</p>
-          <hr className="pb-3" />
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              <FormField
-                control={form.control}
-                name="id"
-                render={({ field }) => (
-                  <FormItem hidden>
-                    <FormLabel>ID</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Username</FormLabel>
-                    <FormControl>
-                      <Input {...field} disabled />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="firstName"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>First Name</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="lastName"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Last Name</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              <Button type="submit" className="w-full">
-                Update
-              </Button>
-            </form>
-          </Form>
-        </div>
-        <div>
-          <p className="font-bold text-xl">Your address</p>
-          <hr className="pb-3" />
+      <div className="flex md:px-25 px-5 gap-8 text-[16px] text-gray-500 md:justify-between md:w-full mb-6">
+        <div className="md:px-0 w-full flex justify-between border-b">
+          <button
+            className={`relative flex justify-center items-center py-3 md:w-full border-b transition-all duration-200 
+    ${tab === 'profile' ? 'text-black font-bold border-black' : 'text-gray-500 border-transparent hover:text-black'} 
+    after:absolute after:bottom-0 after:left-1/2 after:translate-x-[-50%] after:w-0 after:h-[2px] 
+    after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
+            onClick={() => setTab('profile')}
+          >
+            <User />
+            <p className="ml-2">Profile</p>
+          </button>
+
+          <button
+            className={`relative flex justify-center items-center py-3 md:w-full border-b transition-all duration-200 
+    ${tab === 'orderHistory' ? 'text-black font-bold border-black' : 'text-gray-500 border-transparent hover:text-black'} 
+    after:absolute after:bottom-0 after:left-1/2 after:translate-x-[-50%] after:w-0 after:h-[2px] 
+    after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
+            onClick={() => setTab('orderHistory')}
+          >
+            <ShoppingCart />
+            <p className="ml-2">Order History</p>
+          </button>
+          <button
+            className={`relative flex justify-center items-center py-3 md:w-full border-b transition-all duration-200 
+    ${tab === 'changePassword' ? 'text-black font-bold border-black' : 'text-gray-500 border-transparent hover:text-black'} 
+    after:absolute after:bottom-0 after:left-1/2 after:translate-x-[-50%] after:w-0 after:h-[2px] 
+    after:bg-black after:transition-all after:duration-300 hover:after:w-full`}
+            onClick={() => setTab('changePassword')}
+          >
+            <Lock />
+            <p className="ml-2">Change Password</p>
+          </button>
         </div>
       </div>
-    </>
+      <div className="min-h-[70vh]">
+        <AnimatePresence mode="wait">
+          {tab === 'profile' && (
+            <motion.div
+              key="profile"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <UpdateUserTab />
+            </motion.div>
+          )}
+          {tab === 'orderHistory' && (
+            <motion.div
+              key="orderHistory"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <OrderHistoryTab />
+            </motion.div>
+          )}
+          {tab === 'changePassword' && (
+            <motion.div
+              key="changePassword"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ChangePasswordTab />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
   );
 };
-export default Profile;
+export default UserPage;

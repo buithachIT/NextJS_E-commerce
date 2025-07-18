@@ -7,7 +7,6 @@ export default function ProductDetail({
 }: {
   product: ProductTypeBySlugQuery;
 }) {
-  console.log(product);
   return (
     <>
       <div className="md:px-25 px-5 w-full pb-5 md:px-auto md:justify-between md:flex rounded-2xl">

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import StarRating from '@/components/starRating';
 import { ROUTES } from '@/config/routes';
-import { extractPriceInfo } from '../utils/formatCurrency';
+import { extractPriceInfo } from '@/helper/formatCurrency';
 import { Product } from '@/types/product';
 import { isSimpleProduct, isVariableProduct } from '@/helper/isTypeProduct';
 
