@@ -48,37 +48,71 @@ src/
    ```
 
 ## 🐳 WooCommerce Backend (Optional)
-1. **Set-up:**
-      Prepare WordPress source
-   Put your WordPress files (with wp-config.php, wp-content/, etc.) anywhere on your computer, e.g.:
-   /path/to/your/wordpress/html
 
-   Edit docker-compose.yml
-   Set volume mount in wordpress service:
+If you want to use WooCommerce as the backend, follow these steps:
 
-   ```bash
-   volumes:
-   - /path/to/your/wordpress/html:/var/www/html
-   Replace with your actual path.
+### 1. Prepare Your WordPress Source
 
-   Start containers and import database
-
-   ```bash
-   docker-compose up -d
-   docker exec -i db-test sh -c 'mysql -u root -prootpass wpdb' < /path/to/your/wpdb_backup.sql
-   On Windows PowerShell:
-
-   ```bash
-   Get-Content C:\path\to\your\wpdb_backup.sql | docker exec -i db-test sh -c 'mysql -u root -prootpass wpdb'
-   Access WordPress at: http://localhost:8000
-  
-   GraphQL endpoint: http://localhost:8000/graphql
+- Make sure you have your WordPress source files (including `wp-config.php`, the `wp-content/` folder, etc.).
+- Example path:
   ```
-- Install WPGraphQL & WPGraphQL for WooCommerce plugins in WP Admin
-- Add products, categories, payment methods as needed
+  /path/to/your/wordpress/html
+  ```
 
-## 🔗 Environment Variables
-```
+### 2. Edit `docker-compose.yml`
+
+- Open your `docker-compose.yml` file.
+- Find the `wordpress` service and update the volume section:
+  ```yaml
+  volumes:
+    - /path/to/your/wordpress/html:/var/www/html
+  ```
+  > **Note:** Replace `/path/to/your/wordpress/html` with your actual local path.
+
+### 3. Start Containers & Import Database
+
+- **Start Docker containers:**
+  ```bash
+  docker-compose up -d
+  ```
+
+- **Import your database backup:**
+
+  - **On Linux/macOS:**
+    ```bash
+    docker exec -i db-test sh -c 'mysql -u root -prootpass wpdb' < /path/to/your/wpdb_backup.sql
+    ```
+
+  - **On Windows PowerShell:**
+    ```powershell
+    Get-Content C:\path\to\your\wpdb_backup.sql | docker exec -i db-test sh -c 'mysql -u root -prootpass wpdb'
+    ```
+
+### 4. Access WordPress
+
+- Open your browser and go to:
+  [http://localhost:8000](http://localhost:8000)
+
+### 5. Install GraphQL Plugins
+
+- Log in to your WordPress admin dashboard.
+- Install and activate the following plugins:
+  - [WPGraphQL](https://wordpress.org/plugins/wp-graphql/)
+  - [WPGraphQL for WooCommerce](https://github.com/wp-graphql/wp-graphql-woocommerce)
+
+### 6. Add Sample Data
+
+- Add products, categories, and payment methods as needed in your WordPress admin.
+
+### 7. Verify GraphQL Endpoint
+
+- Make sure your GraphQL endpoint is available at:
+  [http://localhost:8000/graphql](http://localhost:8000/graphql)
+
+---
+
+**Relevant environment variables:**
+```env
 NEXT_PUBLIC_CLIENT_URI=http://localhost:8000/graphql
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
