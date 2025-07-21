@@ -16,14 +16,6 @@ export async function POST(req: NextRequest) {
     const { userId, userName } = body;
     const { currentPassword, newPassword } = parsed.data;
 
-    const token = req.cookies.get(STORAGE_KEY.AUTH_TOKEN)?.value;
-
-    if (!token) {
-      return NextResponse.json(
-        { error: 'Authentication token missing' },
-        { status: 401 }
-      );
-    }
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const response = await fetch(`${baseUrl}/api/user/login`, {
       method: 'POST',
@@ -37,18 +29,33 @@ export async function POST(req: NextRequest) {
         { status: 401 }
       );
     }
-
+    const token = req.cookies.get(STORAGE_KEY.AUTH_TOKEN)?.value;
+    console.log(token)
+    if (!token) {
+      return NextResponse.json(
+        { error: 'Authentication token missing' },
+        { status: 401 }
+      );
+    }
     const client = getClient();
-
-    const data = await client.mutate({
-      mutation: UPDATE_USER_PASSWORD,
-      variables: { id: userId, password: newPassword },
-      context: {
-        headers: {
-          Authorization: `Bearer ${token}`,
+    let data;
+    try {
+      data = await client.mutate({
+        mutation: UPDATE_USER_PASSWORD,
+        variables: { id: userId, password: newPassword },
+        context: {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      },
-    });
+      });
+    } catch (apolloError) {
+      console.error('GraphQL error:', apolloError);
+      return NextResponse.json(
+        { error: 'Can not change your password, please try again!' },
+        { status: 403 }
+      );
+    }
 
     if (!data?.data?.updateUser?.user) {
       return NextResponse.json(
@@ -62,7 +69,7 @@ export async function POST(req: NextRequest) {
       user: data.data.updateUser.user,
     });
   } catch (error) {
-    console.error('Lỗi đổi mật khẩu:', error);
+    console.error('Failed to update password:', error);
     return NextResponse.json(
       { error: (error as Error).message || 'Internal server error' },
       { status: 500 }

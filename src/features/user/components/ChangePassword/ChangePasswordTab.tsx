@@ -115,7 +115,7 @@ const ChangePasswordTab = () => {
             <Button
               type="submit"
               disabled={form.formState.isSubmitting}
-              className="w-full"
+              className="w-full cursor-pointer"
             >
               {form.formState.isSubmitting ? 'Changing...' : 'Change Password'}
             </Button>

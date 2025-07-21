@@ -1,0 +1,23 @@
+.et-db #et-boc .et-l .et-fb-modules-list .et_fb_berocket_modules:before {
+    content: "";
+    background:url("ico.png");
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.et-db #et-boc .et-l .et-fb-modules-list .et_fb_brbrand_alphabet_brand:before {
+    content:"\002C"
+}
+.et-db #et-boc .et-l .et-fb-modules-list .et_fb_brands_list_2:before {
+    content:"\002C"
+}
+.et-db #et-boc .et-l .et-fb-modules-list .et_fb_brands_products_list:before {
+    content:"\e90e"
+}
+.et-db #et-boc .et-l .et-fb-modules-list .et_fb_product_brands_info_2:before {
+    content:"("
+}
+.et-db #et-boc .et-l .et-fb-modules-list .et_fb_brands_description:before {
+    content:"3"
+}

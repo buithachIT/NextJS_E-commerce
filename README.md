@@ -48,12 +48,31 @@ src/
    ```
 
 ## 🐳 WooCommerce Backend (Optional)
-- Requires Docker for local WooCommerce + WPGraphQL
-- Start backend:
-  ```bash
-  docker-compose up -d
-  # WordPress: http://localhost:8000
-  # GraphQL:   http://localhost:8000/graphql
+1. **Set-up:**
+      Prepare WordPress source
+   Put your WordPress files (with wp-config.php, wp-content/, etc.) anywhere on your computer, e.g.:
+   /path/to/your/wordpress/html
+
+   Edit docker-compose.yml
+   Set volume mount in wordpress service:
+
+   ```bash
+   volumes:
+   - /path/to/your/wordpress/html:/var/www/html
+   Replace with your actual path.
+
+   Start containers and import database
+
+   ```bash
+   docker-compose up -d
+   docker exec -i db-test sh -c 'mysql -u root -prootpass wpdb' < /path/to/your/wpdb_backup.sql
+   On Windows PowerShell:
+
+   ```bash
+   Get-Content C:\path\to\your\wpdb_backup.sql | docker exec -i db-test sh -c 'mysql -u root -prootpass wpdb'
+   Access WordPress at: http://localhost:8000
+  
+   GraphQL endpoint: http://localhost:8000/graphql
   ```
 - Install WPGraphQL & WPGraphQL for WooCommerce plugins in WP Admin
 - Add products, categories, payment methods as needed
