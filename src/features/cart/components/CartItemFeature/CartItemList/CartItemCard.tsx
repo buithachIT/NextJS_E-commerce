@@ -1,6 +1,6 @@
 import { QuantityPicker } from '@/components/ui/customQuantityPicker';
 import { TrashIconSVG } from '@/components/ui/icons';
-import { extractPriceInfo } from '@/features/product/utils/formatCurrency';
+import { extractPriceInfo } from '@/helper/formatCurrency';
 import { CartItem } from '@/types/cartItem';
 import Image from 'next/image';
 

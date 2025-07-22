@@ -38,7 +38,6 @@ export default async function FeatureCategory({ params, searchParams }: Props) {
 
   const paginatedProducts = sortedProducts.slice(start, end);
   const totalPages = Math.ceil(sortedProducts.length / DEFAULT_PAGE_SIZE);
-  console.log('Check filter in FeatureCategory', sortedProducts);
 
   return (
     <div className="md:flex gap-6">

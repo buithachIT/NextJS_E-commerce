@@ -1,27 +1,28 @@
+import { REQUIRED_MESSAGE, WEAK_PASSWORD_MESSAGE } from '@/consts/validation';
 import * as z from 'zod';
 
 export const registerFormSchema = z
   .object({
-    username: z.string().min(3, 'Username is required'),
+    username: z.string().min(3, REQUIRED_MESSAGE),
     email: z
       .string({
-        required_error: 'required field',
+        required_error: REQUIRED_MESSAGE,
       })
-      .min(1, { message: 'required field' })
+      .min(1, { message: REQUIRED_MESSAGE })
       .email({
-        message: 'required field',
+        message: REQUIRED_MESSAGE,
       }),
     password: z
       .string({
-        required_error: 'required field',
+        required_error: REQUIRED_MESSAGE,
       })
-      .min(1, { message: 'required field' })
-      .min(8, { message: 'weak password' })
-      .max(16, { message: 'weak password' })
-      .refine((password) => /[A-Z]/.test(password), 'weak password')
-      .refine((password) => /[a-z]/.test(password), 'weak password')
-      .refine((password) => /[0-9]/.test(password), 'weak password')
-      .refine((password) => /[!@#$%^&*]/.test(password), 'weak password'),
+      .min(1, { message: REQUIRED_MESSAGE })
+      .min(8, { message: WEAK_PASSWORD_MESSAGE })
+      .max(16, { message: WEAK_PASSWORD_MESSAGE })
+      .refine((password) => /[A-Z]/.test(password), WEAK_PASSWORD_MESSAGE)
+      .refine((password) => /[a-z]/.test(password), WEAK_PASSWORD_MESSAGE)
+      .refine((password) => /[0-9]/.test(password), WEAK_PASSWORD_MESSAGE)
+      .refine((password) => /[!@#$%^&*]/.test(password), WEAK_PASSWORD_MESSAGE),
     confirmPassword: z.string(),
     acceptTerms: z.literal(true, {
       errorMap: () => ({ message: 'You must accept the terms' }),

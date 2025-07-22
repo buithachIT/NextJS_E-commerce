@@ -9,7 +9,7 @@ import { getSizeColor } from '@/lib/action/product';
 import { getCategory } from '@/lib/action/category';
 import { CategoryNode } from '@/types/category';
 import { Button } from '@/components/ui/button';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 type ColorNode = { name?: string | null; slug?: string | null };
 type SizeNode = { name?: string | null; slug?: string | null };
@@ -40,7 +40,8 @@ export default function FilterContent({
     'Dress Style': true,
   });
   const router = useRouter();
-  const searchParams = useSearchParams(); const [colors, setColors] = useState<string[]>(DEFAULT_COLORS);
+  const searchParams = useSearchParams();
+  const [colors, setColors] = useState<string[]>(DEFAULT_COLORS);
   const [sizes, setSizes] = useState<string[]>(DEFAULT_SIZES);
   const [categories, setCategories] = useState<CategoryNode[]>([]);
   useEffect(() => {
@@ -209,10 +210,11 @@ export default function FilterContent({
               <Button
                 key={size}
                 onClick={() => handleSizeChange(size)}
-                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-gray-800'
-                  }`}
+                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${
+                  (values.size ?? []).includes(size)
+                    ? 'bg-black text-white'
+                    : 'bg-gray-100 text-gray-800'
+                }`}
               >
                 {size}
               </Button>

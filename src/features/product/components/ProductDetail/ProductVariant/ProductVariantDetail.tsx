@@ -11,7 +11,7 @@ import toast from 'react-hot-toast';
 import { CartItem } from '@/types/cartItem';
 import { useCart } from '@/contexts/CartContext';
 import { useProductContext } from '@/contexts/ProductVariantContext';
-import { extractPriceInfo } from '@/features/product/utils/formatCurrency';
+import { extractPriceInfo } from '@/helper/formatCurrency';
 import parse from 'html-react-parser';
 
 export default function ProductDetailVariant({

@@ -27,6 +27,9 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL(ROUTES.LOGIN, request.url));
   }
 
+  if (pathname.startsWith('/api')) {
+    return NextResponse.next();
+  }
   return NextResponse.next();
 }
 
