@@ -1,0 +1,410 @@
+.arrow-rotate {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+
+/*.colorpicker_field_brand {
+    width: 2em;
+    height: 1.5em;
+    border: 1px solid black;
+}*/
+
+.br_nowrap_label label {
+    white-space: nowrap;
+}
+
+.br_nowrap_label input[type=number], 
+.br_nowrap_label select {
+  margin: 3px 0;
+}
+
+.br_image_options > td > label:nth-of-type(2) .br_label_for,
+.br_image_options > td > label:nth-of-type(4) .br_label_for {
+    margin: 0;
+}
+
+.br_image_options > td > .br_line_delimiter:nth-of-type(2),
+.br_image_options > td > .br_line_delimiter:nth-of-type(4) {
+    display: none !important;
+}
+
+.br_brand_product_categories_container {
+  margin-bottom: 0;
+}
+
+.br_brand_product_categories {
+    background: #FFF;
+    border: 1px solid #444;
+    border-radius: 3px;
+    margin-top: 0;
+    max-height: 150px;
+    overflow: auto;
+    padding: 5px;
+}
+
+.br_brand_product_categories.width100 {
+  width: 100%;
+}
+
+.br_brand_product_categories .children {
+  margin-left: 20px;
+}
+
+.br_brand_hide_option {
+    display: none !important;
+}
+
+/*.br_brand_number {
+    height: 30px;
+    width: 65px;
+}*/
+
+.br_brand_widget_oprions p.br_brands_order,
+.br_brand_widget_oprions p.br_brands_orderby,
+.br_brand_widget_oprions p.br_brands_checkbox_block,
+.br_brand_widget_oprions p.width50,
+.br_brand_widget_oprions p.width50 input,
+.br_brand_widget_oprions p.width50 label,
+.br_brand_widget_oprions p.width50 select {
+    float: left;
+}
+
+.br_brand_widget_oprions p.br_brands_checkbox_block {
+    margin-right: 10px !important;
+}
+
+.br_brand_widget_oprions p.br_brands_checkbox_block.br_brands_first_checkbox {
+    clear:  both;
+}
+
+.br_brand_widget_oprions p.width50 {
+    padding: 0 2px;
+    width:  50%;
+}
+
+.br_brand_widget_oprions p.br_brands_orderby,
+.br_brand_widget_oprions .br_brand_fieldset p.width50 input.br_brand_number,
+.br_brand_widget_oprions .br_brand_fieldset p.width50 select {
+    width:  80%;
+}
+
+.br_brand_widget_oprions p.br_brands_order,
+.br_brand_widget_oprions .br_brand_fieldset p.width50.br_brands_sizebox select,
+.br_brand_widget_oprions .br_brand_fieldset p.width50 label {
+    width:  20%;
+}
+
+.br_brand_widget_oprions p.width50.br_brands_sizebox input.br_brand_number {
+    width:  60%;
+}
+
+.wp-block-legacy-widget__edit-form .widget-inside.widget-inside .br_brand_widget_oprions .br_brand_fieldset p.width50.br_brands_sizebox select,
+.wp-block-legacy-widget__edit-form .widget-inside.widget-inside .br_brand_widget_oprions p.br_brands_selectbox select {
+    padding: 0;
+}
+
+.br_brand_widget_oprions > .br_brand_autocomplete_container,
+.br_brand_widget_oprions > .br_brands_numberbox,
+.br_brand_widget_oprions > .br_brands_textfield,
+.br_brand_widget_oprions > .br_brands_selectbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.br_brand_widget_oprions > .br_brand_autocomplete_container label,
+.br_brand_widget_oprions > .br_brands_colorbox label,
+.br_brand_widget_oprions > .br_brands_numberbox label,
+.br_brand_widget_oprions > .br_brands_textfield label,
+.br_brand_widget_oprions > .br_brands_selectbox label {
+    margin-right:  3px;
+    white-space:  nowrap;
+}
+
+.br_brand_widget_oprions > .br_brand_autocomplete_container{
+    position: relative;
+}
+
+.br_brand_widget_oprions > .br_brands_colorbox .wp-picker-container {
+    width:  75%;
+}
+
+.br_brand_widget_oprions > .br_brands_colorbox .wp-picker-input-wrap label {
+    width:  70%;
+}
+
+.br_brand_widget_oprions > .br_brands_colorbox .wp-picker-input-wrap label,
+.br_brand_widget_oprions > .br_brands_colorbox .wp-picker-input-wrap .wp-picker-clear {
+    float: left;
+}
+
+.br_brand_widget_oprions > .br_brands_colorbox.br_brand_colorpalette .wp-picker-holder {
+    position: relative;
+}
+
+.br_brand_widget_oprions p.br_brands_numberbox label,
+.br_brand_widget_oprions p.br_brands_selectbox label,
+.br_brand_widget_oprions p.br_brands_sizebox label {
+    line-height: 30px;
+}
+
+.br_brand_widget_oprions input[type=number],
+.br_brand_widget_oprions input[type=text],
+.br_brand_widget_oprions select {
+    height: 30px;
+}
+
+.br_brand_fieldset p {
+    margin: 3px 0;
+}
+
+.br_brand_widget_oprions p.width100 {
+    clear: both;
+}
+
+.br_brand_fieldset {
+    border: 1px solid #777;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    padding: 5px;
+    width: 100%;
+}
+
+.br_brand_fieldset legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.br_brand_widget_color .brand_label {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding-right: 1em;
+}
+
+.br_shortcode_info ul{
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 0.3em;
+}
+
+.br_brands_image img {
+    border: 1px solid #7e8993;
+    border-radius: 3px;
+    margin: 0 3px;
+    max-height: 100px;
+    max-width: 200px;
+}
+
+.column-taxonomy-berocket_brand {
+    width: 10%;
+}
+
+.product_brand_submit_form .br_label_be_for { 
+    /*margin-right: 5px;*/
+    white-space: nowrap;
+}
+
+.product_brand_submit_form input[type=checkbox] {
+  margin: 0 5px;
+}
+
+#br_brands_clear_cache.active {
+    opacity: 0.5;
+}
+
+.br-sortable-placeholder {
+    border: 1px solid #CCC;
+}
+
+.taxonomy-berocket_brand #brand_description {
+    width: 30%;
+}
+
+.taxonomy-berocket_brand .column-order {
+    width: 131px;
+}
+
+.taxonomy-berocket_brand .column-slug {
+    width: auto;
+}
+
+.taxonomy-berocket_brand .column-order .berocket_post_set_new_sortable_input {
+    display: inline-block;
+    position: relative;
+}
+
+.taxonomy-berocket_brand .column-order .berocket_post_set_new_sortable_input input {
+    padding-right: 20px;
+    width: 65px;
+}
+
+.taxonomy-berocket_brand .column-order .berocket_post_set_new_sortable_input .berocket_post_set_new_sortable_set {
+    position: absolute;
+    right: 9px;
+    top: 9px;
+}
+
+.taxonomy-berocket_brand .column-order .berocket_post_set_new_sortable_input .br_brand_order_wait {
+    background: rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    color: #777;
+    display: none;
+    left: 0;
+    line-height: 2em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.br_toggleswitch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.br_toggleswitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.br_toggleswitch_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.br_toggleswitch_slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .br_toggleswitch_slider {
+  background-color: #2196F3;
+}
+
+input:focus + .br_toggleswitch_slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .br_toggleswitch_slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.br_toggleswitch_slider_container {
+    display: inline-block;
+    height: 34px;
+    margin: 0 5px;
+    position: relative;
+    top: 12px;
+    width: 60px;
+}
+
+.br_toggleswitch input {
+    display: none;
+}
+
+.berocket_framework_menu_slider .berocket_color .colpick {
+  left: auto !important;
+  top: auto !important;
+} 
+
+.berocket_framework_menu_slider-block {
+  min-height: 730px;
+}
+
+.br_use_cache .button.action {
+  margin: 0;
+}
+
+.br_use_cache label:first-of-type {
+  line-height: 50px;
+}
+
+.br_shortcode_title {
+  cursor: pointer;
+}
+
+.br_shortcode_attributes {
+  display: none;
+}
+
+.br_brand_colorpalette .wp-picker-holder {
+  position: absolute;
+}
+
+.version-5-8 .br_brand_colorpalette .wp-picker-holder {
+  position: relative;
+}
+
+.taxonomy-berocket_brand #the-list .column-order {
+  cursor: move;
+}
+
+.br-brands-ui-autocomplete {
+    height: 100px;
+    max-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.br-brands-ui-autocomplete li:hover {
+    background: #EEE;
+}
+
+.br_crosssign,
+.br_crosssign_stem1,
+.br_crosssign_stem2 {
+  display: block;
+  position: absolute;
+}
+
+.br_crosssign {
+  border: 1px solid #000;
+  border-radius: 11px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  right: 4px;
+  top: 5px;
+}
+
+.br_crosssign_stem1,
+.br_crosssign_stem2 {
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.br_crosssign_stem1 {
+  width: 2px;
+  height: 9px;
+}
+
+.br_crosssign_stem2 {
+  width: 9px;
+  height: 2px;
+}

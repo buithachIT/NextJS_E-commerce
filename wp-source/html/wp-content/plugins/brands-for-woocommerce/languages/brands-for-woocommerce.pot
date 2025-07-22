@@ -1,0 +1,1490 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Brands\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-27 13:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-5.2"
+
+#: includes/base-widget_ordered.php:58 includes/base-widget_product_list.php:43
+msgid "&nbsp;"
+msgstr ""
+
+#: main.php:1658
+msgid "1 for slider mode"
+msgstr ""
+
+#: main.php:1659
+msgid "1 to hide brands"
+msgstr ""
+
+#: includes/base-widget_ordered.php:40
+msgid "Above name"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:97
+msgid "Above text"
+msgstr ""
+
+#: main.php:593
+msgid "Add New Brand"
+msgstr ""
+
+#: main.php:1227
+msgid "Addons"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:185
+msgid "After \"Categories\" and \"Tags\""
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:120
+#: addons/show_brands/show_brands_include.php:183
+msgid "After Add to cart button"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:117
+#: addons/show_brands/show_brands_include.php:180
+msgid "After Image"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:119
+#: addons/show_brands/show_brands_include.php:182
+msgid "After Price"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:118
+#: addons/show_brands/show_brands_include.php:181
+msgid "After Title"
+msgstr ""
+
+#: includes/base-widget.php:168 includes/functions.php:76
+msgid "Align"
+msgstr ""
+
+#: main.php:1692 main.php:1718
+msgid "align:"
+msgstr ""
+
+#: main.php:1331 includes/base-widget_product_list.php:22
+#: includes/widget-list.php:57 templates/catalog.php:36
+msgid "All"
+msgstr ""
+
+#: main.php:1676
+msgid "all brand options"
+msgstr ""
+
+#: main.php:588 main.php:1791
+msgid "All Brands"
+msgstr ""
+
+#: includes/base-widget_ordered.php:95
+msgid "All brands without hierarchy"
+msgstr ""
+
+#: main.php:1555 main.php:1625
+msgid "All brands without hierarchy (default)"
+msgstr ""
+
+#: includes/base-widget_ordered.php:51 includes/widget-catalog.php:35
+msgid "Alphabet"
+msgstr ""
+
+#: main.php:1144
+msgid "Any brand"
+msgstr ""
+
+#: main.php:1350 includes/base-widget_ordered.php:61
+#: includes/base-widget_product_list.php:47
+msgid "Asc"
+msgstr ""
+
+#: includes/visual-composer.php:200 includes/visual-composer.php:252
+msgid "Ascending"
+msgstr ""
+
+#: includes/divi-builder.php:287
+msgid "ascending"
+msgstr ""
+
+#: main.php:1526 main.php:1597 main.php:1654
+msgid "ascending (default)"
+msgstr ""
+
+#: main.php:1373
+msgid "Autoplay"
+msgstr ""
+
+#: main.php:1381
+msgid "Autoplay Speed"
+msgstr ""
+
+#: main.php:584
+msgid "Back to Brands"
+msgstr ""
+
+#: main.php:97 main.php:1278
+msgid "Banner"
+msgstr ""
+
+#: main.php:1671
+msgid "banner"
+msgstr ""
+
+#: includes/widget-description.php:69
+msgid "Banner:"
+msgstr ""
+
+#: main.php:1702
+msgid "banner=\"width:50%,height:50px\""
+msgstr ""
+
+#: main.php:1701
+msgid "banner=\"width:50%,height:50px,fit:contain,align:center\""
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:116
+#: addons/show_brands/show_brands_include.php:179
+msgid "Before all"
+msgstr ""
+
+#. Author of the plugin
+#: includes/visual-composer.php:11 includes/visual-composer.php:73
+#: includes/visual-composer.php:161 includes/visual-composer.php:213
+msgid "BeRocket"
+msgstr ""
+
+#: includes/divi-builder.php:209 includes/visual-composer.php:141
+#: includes/widget-list.php:76
+msgid "Border color"
+msgstr ""
+
+#: main.php:1511
+msgid "border color in HEX (#FFFFFF - white, #000000 - black)"
+msgstr ""
+
+#: includes/divi-builder.php:213 includes/visual-composer.php:147
+msgid "Border width"
+msgstr ""
+
+#: main.php:1512
+msgid "border width in pixels"
+msgstr ""
+
+#: includes/widget-list.php:71
+msgid "Border width, px"
+msgstr ""
+
+#: main.php:586 includes/widget-description.php:43
+msgid "Brand"
+msgstr ""
+
+#: main.php:1680
+msgid "brand banner options: width, height, fit, align:"
+msgstr ""
+
+#: main.php:1581
+msgid "brand category"
+msgstr ""
+
+#: main.php:1521 main.php:1592 main.php:1773
+msgid "brand description"
+msgstr ""
+
+#: includes/divi-builder.php:371
+msgid "Brand ID"
+msgstr ""
+
+#: main.php:1667
+msgid "brand ID"
+msgstr ""
+
+#: includes/visual-composer.php:166 includes/visual-composer.php:218
+msgid "Brand ID(s)"
+msgstr ""
+
+#: includes/divi-builder.php:261
+msgid "brand ID(s)"
+msgstr ""
+
+#: main.php:1540 main.php:1549 main.php:1611 main.php:1619
+msgid "brand image align to name:"
+msgstr ""
+
+#: main.php:1533 main.php:1604
+msgid "brand image fit:"
+msgstr ""
+
+#: main.php:1747
+msgid "brand image for product page"
+msgstr ""
+
+#: main.php:1531
+msgid "brand image height in px or % (i.e. 50%, 100px; default is 64px)"
+msgstr ""
+
+#: main.php:1602
+msgid "brand image height, in px or % (i.e. 50%, 100px; default is 64px)"
+msgstr ""
+
+#: main.php:1532
+msgid "brand image width in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+
+#: main.php:1603
+msgid "brand image width, in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+
+#: includes/visual-composer.php:211
+msgid "Brand Info"
+msgstr ""
+
+#: includes/divi-builder.php:350
+msgid "Brand info"
+msgstr ""
+
+#: includes/divi-builder.php:309
+msgid "Brand info for product page"
+msgstr ""
+
+#: includes/divi-builder.php:200 includes/visual-composer.php:129
+msgid "Brand name"
+msgstr ""
+
+#: main.php:1771
+msgid "brand name"
+msgstr ""
+
+#: main.php:1516 main.php:1580 main.php:1587
+msgid "brand name (default)"
+msgstr ""
+
+#: main.php:1518 main.php:1589
+msgid "brand order"
+msgstr ""
+
+#: main.php:1215
+msgid "Brand Page"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:112
+#: addons/show_brands/show_brands_include.php:176
+msgid "Brand Position"
+msgstr ""
+
+#: includes/visual-composer.php:159
+msgid "Brand Products"
+msgstr ""
+
+#: main.php:1520 main.php:1591
+msgid "brand slug"
+msgstr ""
+
+#: includes/visual-composer.php:172 includes/visual-composer.php:224
+msgid "Brand slug(s)"
+msgstr ""
+
+#: includes/divi-builder.php:265
+msgid "brand slug(s)"
+msgstr ""
+
+#: includes/divi-builder.php:391
+msgid "Brand thumbnail"
+msgstr ""
+
+#: main.php:1772
+msgid "brand thumbnail"
+msgstr ""
+
+#: main.php:1706
+msgid "brand thumbnail options: width, height, fit, align:"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:388
+msgid "Brand:"
+msgid_plural "Brands:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main.php:581 main.php:583 main.php:1783 main.php:2035 main.php:2047
+#: main.php:2070 includes/widget-product-list.php:18
+msgid "Brands"
+msgstr ""
+
+#: main.php:610 templates/permalink_option.php:9
+msgid "brands"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Brands are a guarantee for quality, they assure product recognition in "
+"customers. WooCommerce Product Brands will help you to showcase them."
+msgstr ""
+
+#: includes/divi-builder.php:6 includes/visual-composer.php:9
+msgid "Brands by Name"
+msgstr ""
+
+#. Name of the plugin
+msgid "Brands for WooCommerce"
+msgstr ""
+
+#: main.php:1564
+msgid "brands grouped by name or category"
+msgstr ""
+
+#: includes/widget-list.php:54
+msgid "Brands in list"
+msgstr ""
+
+#: includes/divi-builder.php:114 includes/visual-composer.php:71
+msgid "Brands List"
+msgstr ""
+
+#: includes/divi-builder.php:189 includes/visual-composer.php:114
+#: includes/widget-list.php:42
+msgid "Brands per row"
+msgstr ""
+
+#: includes/divi-builder.php:238
+msgid "Brands Products"
+msgstr ""
+
+#: main.php:1558 main.php:1629
+msgid "brands to display (id list, i.e. include='45,47,52,61')"
+msgstr ""
+
+#: main.php:1559 main.php:1630
+msgid "brands to exclude from display (i.e. exclude='45,47,52,61')"
+msgstr ""
+
+#: main.php:1408
+msgid "Brands to Scroll"
+msgstr ""
+
+#: main.php:103
+msgid "Categories"
+msgstr ""
+
+#: includes/widget-catalog.php:36
+msgid "Category"
+msgstr ""
+
+#: includes/widget-description.php:75
+msgid "Center"
+msgstr ""
+
+#: main.php:1696
+msgid "center"
+msgstr ""
+
+#: main.php:1415
+msgid "Change slide mode"
+msgstr ""
+
+#: main.php:1255
+msgid "Clear"
+msgstr ""
+
+#: main.php:1251
+msgid "Clear cache after update shortcodes and widgets"
+msgstr ""
+
+#: main.php:1253
+msgid "Cleared"
+msgstr ""
+
+#: main.php:1253
+msgid "Clearing..."
+msgstr ""
+
+#: includes/divi-builder.php:78
+msgid "Color"
+msgstr ""
+
+#: main.php:1320 includes/divi-builder.php:56 includes/visual-composer.php:40
+#: includes/visual-composer.php:178 includes/visual-composer.php:230
+msgid "Columns"
+msgstr ""
+
+#: includes/base-widget_product_list.php:25 includes/widget-catalog.php:50
+msgid "Columns:"
+msgstr ""
+
+#: includes/base-widget.php:161 includes/functions.php:70
+msgid "Contain"
+msgstr ""
+
+#: includes/divi-builder.php:269
+msgid "count of columns for product list"
+msgstr ""
+
+#: includes/divi-builder.php:201 includes/visual-composer.php:130
+msgid "Count of products"
+msgstr ""
+
+#: includes/base-widget.php:160 includes/functions.php:69
+msgid "Cover"
+msgstr ""
+
+#: main.php:1223
+msgid "CSS"
+msgstr ""
+
+#: main.php:1432
+msgid "Cubic Bezier 1"
+msgstr ""
+
+#: main.php:1433
+msgid "Cubic Bezier 2"
+msgstr ""
+
+#: main.php:1434
+msgid "Cubic Bezier 3"
+msgstr ""
+
+#: main.php:1435
+msgid "Cubic Bezier 4"
+msgstr ""
+
+#: main.php:1436
+msgid "Cubic Bezier 5"
+msgstr ""
+
+#: main.php:1437
+msgid "Cubic Bezier 6"
+msgstr ""
+
+#: main.php:1484
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/divi-builder.php:326 includes/divi-builder.php:367
+#: includes/divi-builder.php:417 includes/divi-builder.php:421
+msgid "Data type"
+msgstr ""
+
+#: includes/visual-composer.php:189 includes/visual-composer.php:241
+msgid "Date"
+msgstr ""
+
+#: main.php:1340 includes/base-widget_product_list.php:37
+msgid "Date of creation"
+msgstr ""
+
+#: main.php:1647
+msgid "date of creation"
+msgstr ""
+
+#: main.php:1535 main.php:1606 main.php:1686 main.php:1712
+msgid "default"
+msgstr ""
+
+#: main.php:1351 includes/base-widget_ordered.php:62
+#: includes/base-widget_product_list.php:48
+msgid "Desc"
+msgstr ""
+
+#: includes/visual-composer.php:199 includes/visual-composer.php:251
+msgid "Descending"
+msgstr ""
+
+#: main.php:1527 main.php:1598 main.php:1655 includes/divi-builder.php:288
+msgid "descending"
+msgstr ""
+
+#: main.php:789
+msgid "Description"
+msgstr ""
+
+#: main.php:1673
+msgid "description"
+msgstr ""
+
+#: main.php:1465
+msgid "Disable Font Awesome"
+msgstr ""
+
+#: main.php:1313 includes/base-widget.php:144 includes/functions.php:39
+#: includes/widget-description.php:83
+#: addons/show_brands/show_brands_include.php:149
+#: addons/show_brands/show_brands_include.php:214
+msgid "Display"
+msgstr ""
+
+#: main.php:1288
+msgid "Display (if URL for the brand is set)"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:126
+#: addons/show_brands/show_brands_include.php:191
+msgid "Display As Link"
+msgstr ""
+
+#: includes/divi-builder.php:181 includes/visual-composer.php:110
+msgid "Display as slider"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:105
+#: addons/show_brands/show_brands_include.php:169
+msgid "Display Brand"
+msgstr ""
+
+#: includes/widget-description.php:54
+msgid "Display brand description"
+msgstr ""
+
+#: main.php:1601
+msgid "display brand image"
+msgstr ""
+
+#: main.php:1530
+msgid "display brand image (1 or 0)"
+msgstr ""
+
+#: main.php:1759
+msgid "display brand image, if available (1 or 0, default is 1)"
+msgstr ""
+
+#: main.php:1568
+msgid "display brand name"
+msgstr ""
+
+#: main.php:1506
+msgid "display brand name (1 or 0)"
+msgstr ""
+
+#: includes/widget-description.php:49
+msgid "Display brand title"
+msgstr ""
+
+#: addons/show_brands/show_brands.php:10
+msgid "Display brands text and image on shop page and product page"
+msgstr ""
+
+#: main.php:1266
+msgid "Display description"
+msgstr ""
+
+#: includes/widget-description.php:91
+msgid "Display external link"
+msgstr ""
+
+#: includes/divi-builder.php:32 includes/divi-builder.php:153
+#: includes/visual-composer.php:18
+msgid "Display image"
+msgstr ""
+
+#: main.php:1760
+msgid "display image as link (1 or 0, default is 0)"
+msgstr ""
+
+#: includes/widget-description.php:96
+msgid "Display last created featured brand"
+msgstr ""
+
+#: main.php:1742
+msgid ""
+"display last created featured brand (1 or 0); <b>if featured=1, id is "
+"ignored</b>"
+msgstr ""
+
+#: includes/divi-builder.php:48 includes/divi-builder.php:165
+#: includes/visual-composer.php:98
+msgid "Display name"
+msgstr ""
+
+#: includes/base-widget_ordered.php:31
+msgid "Display text"
+msgstr ""
+
+#: main.php:1469
+msgid ""
+"Don't loading css file for Font Awesome on site front end. Use it only if "
+"you doesn't uses Font Awesome icons in widgets or you have Font Awesome in "
+"your theme."
+msgstr ""
+
+#: main.php:1457
+msgid "Dots color"
+msgstr ""
+
+#: main.php:1428
+msgid "Ease"
+msgstr ""
+
+#: main.php:1429
+msgid "Ease in"
+msgstr ""
+
+#: main.php:1431
+msgid "Ease in-out"
+msgstr ""
+
+#: main.php:1430
+msgid "Ease out"
+msgstr ""
+
+#: main.php:1424
+msgid "Easing"
+msgstr ""
+
+#: main.php:591
+msgid "Edit Brand"
+msgstr ""
+
+#: main.php:1700 main.php:1726 main.php:1736
+msgid "Examples:"
+msgstr ""
+
+#: main.php:1158
+msgid "Exclude brands"
+msgstr ""
+
+#: main.php:1554 main.php:1624 includes/base-widget_ordered.php:94
+msgid "Expand by click"
+msgstr ""
+
+#: main.php:1283
+msgid "External link"
+msgstr ""
+
+#: main.php:1674
+msgid "external link"
+msgstr ""
+
+#: main.php:1417
+msgid "Fade"
+msgstr ""
+
+#: main.php:135
+msgid "Featured"
+msgstr ""
+
+#: main.php:136
+msgid ""
+"Featured brands can be output first or you may select to show featured "
+"brands only"
+msgstr ""
+
+#: includes/base-widget_ordered.php:77
+msgid "Featured first"
+msgstr ""
+
+#: includes/base-widget.php:162 includes/functions.php:71
+msgid "Fill"
+msgstr ""
+
+#: includes/base-widget.php:157 includes/functions.php:64
+msgid "Fit"
+msgstr ""
+
+#: main.php:1684 main.php:1710
+msgid "fit:"
+msgstr ""
+
+#: main.php:1753
+msgid "float style for element (default is right)"
+msgstr ""
+
+#: main.php:1476
+msgid "Font Awesome 4"
+msgstr ""
+
+#: main.php:1477
+msgid "Font Awesome 5"
+msgstr ""
+
+#: main.php:1472
+msgid "Font Awesome Version"
+msgstr ""
+
+#: main.php:1211
+msgid "General"
+msgstr ""
+
+#: main.php:58
+msgid "Go to the brand website >>"
+msgstr ""
+
+#: main.php:1578
+msgid "group brands by:"
+msgstr ""
+
+#: includes/widget-catalog.php:31
+msgid "Group by:"
+msgstr ""
+
+#: includes/base-widget.php:153 includes/functions.php:56
+msgid "Height"
+msgstr ""
+
+#: main.php:1683 main.php:1709
+msgid "height in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+
+#: main.php:1363 includes/base-widget_product_list.php:57
+msgid "Hide brands"
+msgstr ""
+
+#: includes/divi-builder.php:173
+msgid "Hide brands without products"
+msgstr ""
+
+#: main.php:1508 main.php:1576
+msgid "hide brands without products (1 or 0)"
+msgstr ""
+
+#: includes/base-widget_ordered.php:72
+msgid "Hide empty"
+msgstr ""
+
+#: includes/visual-composer.php:86
+msgid "Hide image"
+msgstr ""
+
+#: includes/visual-composer.php:24
+msgid "Hide name"
+msgstr ""
+
+#: includes/divi-builder.php:74 includes/divi-builder.php:82
+#: includes/visual-composer.php:60 includes/widget-catalog.php:46
+msgid "Horizontal"
+msgstr ""
+
+#: main.php:1572
+msgid "horizontally"
+msgstr ""
+
+#. Author URI of the plugin
+msgid ""
+"https://berocket.com?"
+"utm_source=free_plugin&utm_medium=plugins&utm_campaign=product_brand"
+msgstr ""
+
+#. URI of the plugin
+msgid ""
+"https://wordpress.org/plugins/brands-for-woocommerce/?"
+"utm_source=free_plugin&utm_medium=plugins&utm_campaign=product_brand"
+msgstr ""
+
+#: includes/visual-composer.php:16 includes/visual-composer.php:84
+#: addons/show_brands/show_brands_include.php:133
+#: addons/show_brands/show_brands_include.php:198
+msgid "Image"
+msgstr ""
+
+#: main.php:1545 main.php:1616
+msgid "image above name (default)"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:143
+#: addons/show_brands/show_brands_include.php:207
+msgid "Image custom CSS"
+msgstr ""
+
+#: includes/divi-builder.php:161 includes/visual-composer.php:90
+msgid "Image height"
+msgstr ""
+
+#: main.php:1752
+msgid "image height (optionally)"
+msgstr ""
+
+#: main.php:1542 main.php:1613
+msgid "image left to name"
+msgstr ""
+
+#: main.php:1543 main.php:1614
+msgid "image right to name"
+msgstr ""
+
+#: main.php:1544 main.php:1615
+msgid "image under name"
+msgstr ""
+
+#: main.php:1751
+msgid "image width (default is 35%)"
+msgstr ""
+
+#: includes/base-widget_ordered.php:36
+msgid "Image:"
+msgstr ""
+
+#: main.php:1728 main.php:1738
+msgid "image=\"width:50%,height:50px\""
+msgstr ""
+
+#: main.php:1727
+msgid "image=\"width:50%,height:50px,fit:contain,align:right\""
+msgstr ""
+
+#: main.php:1396
+msgid "Infinite"
+msgstr ""
+
+#: main.php:1341 includes/base-widget_product_list.php:38
+msgid "Last modified date"
+msgstr ""
+
+#: main.php:1648
+msgid "last modified date"
+msgstr ""
+
+#: includes/widget-catalog.php:41
+msgid "Layout:"
+msgstr ""
+
+#: main.php:1203 includes/widget-description.php:73
+#: addons/show_brands/show_brands_include.php:95
+msgid "Left"
+msgstr ""
+
+#: main.php:1694 includes/divi-builder.php:429
+msgid "left"
+msgstr ""
+
+#: main.php:1720
+msgid "left to description"
+msgstr ""
+
+#: includes/base-widget_ordered.php:41
+msgid "Left to name"
+msgstr ""
+
+#: includes/widget-description.php:63
+msgid "Left to text"
+msgstr ""
+
+#: main.php:1756
+msgid "left to text"
+msgstr ""
+
+#: main.php:810
+msgid "Level down"
+msgstr ""
+
+#: main.php:809
+msgid "Level up"
+msgstr ""
+
+#: main.php:1231
+msgid "License"
+msgstr ""
+
+#: main.php:1427
+msgid "Linear"
+msgstr ""
+
+#: main.php:142
+msgid "Link to the brand page or to the external website"
+msgstr ""
+
+#: main.php:1502
+msgid "list of brands"
+msgstr ""
+
+#: includes/widget-list.php:66
+msgid "Margin, px"
+msgstr ""
+
+#: main.php:1409
+msgid ""
+"maximum brands to scroll for the widget is number of brands per page for "
+"this widget"
+msgstr ""
+
+#: includes/divi-builder.php:40 includes/visual-composer.php:28
+msgid "Maximum image height"
+msgstr ""
+
+#: includes/divi-builder.php:44 includes/visual-composer.php:34
+msgid "Maximum image width"
+msgstr ""
+
+#: main.php:1509 main.php:1577
+msgid "maximum number of brands"
+msgstr ""
+
+#: includes/visual-composer.php:190 includes/visual-composer.php:242
+msgid "Modified date"
+msgstr ""
+
+#: main.php:1382 main.php:1390
+msgid "ms"
+msgstr ""
+
+#: includes/visual-composer.php:22 includes/visual-composer.php:96
+#: addons/show_brands/show_brands_include.php:148
+#: addons/show_brands/show_brands_include.php:213
+msgid "Name"
+msgstr ""
+
+#: main.php:1670
+msgid "name"
+msgstr ""
+
+#: includes/divi-builder.php:63 includes/visual-composer.php:49
+msgid "Name after image"
+msgstr ""
+
+#: includes/divi-builder.php:64 includes/visual-composer.php:50
+msgid "Name before image"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:160
+#: addons/show_brands/show_brands_include.php:224
+msgid "Name custom CSS"
+msgstr ""
+
+#: includes/divi-builder.php:65 includes/visual-composer.php:51
+msgid "Name under image"
+msgstr ""
+
+#: main.php:594
+msgid "New Brand Name"
+msgstr ""
+
+#: main.php:1722
+msgid "no align"
+msgstr ""
+
+#: main.php:1159
+msgid "No brands"
+msgstr ""
+
+#: main.php:585
+msgid "No brands found."
+msgstr ""
+
+#: main.php:1582
+msgid "no group"
+msgstr ""
+
+#: includes/base-widget.php:163 includes/functions.php:72
+#: includes/widget-catalog.php:37 includes/widget-description.php:65
+msgid "None"
+msgstr ""
+
+#: main.php:1202 includes/divi-builder.php:428
+#: addons/show_brands/show_brands_include.php:94
+msgid "none"
+msgstr ""
+
+#: includes/divi-builder.php:193 includes/visual-composer.php:120
+msgid "Number of brands"
+msgstr ""
+
+#: main.php:1575
+msgid "number of columns"
+msgstr ""
+
+#: main.php:1507
+msgid "number of columns for brands list (number of brands per slider)"
+msgstr ""
+
+#: main.php:1641
+msgid ""
+"number of columns for product list (4 by default). May not work with some "
+"themes or plugins"
+msgstr ""
+
+#: includes/base-widget_ordered.php:52
+msgid "Number of products"
+msgstr ""
+
+#: main.php:1517 main.php:1588
+msgid "number of products"
+msgstr ""
+
+#: main.php:1642
+msgid "number of products per page; if not set, all products are shown"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:184
+msgid "On the \"Brands\" tab"
+msgstr ""
+
+#: main.php:1638
+msgid "one or more brand ID (example: brand_id='12,34,35')"
+msgstr ""
+
+#: main.php:1639
+msgid "one or more brand slugs (example: brand_slug='brand1,brand2,brand3')"
+msgstr ""
+
+#: includes/base-widget_ordered.php:82
+msgid "Only brands of this category (on category page)"
+msgstr ""
+
+#: main.php:1552 main.php:1622 includes/base-widget_ordered.php:92
+msgid "Only children (without hierarchy)"
+msgstr ""
+
+#: main.php:1551 main.php:1621 includes/base-widget_ordered.php:91
+msgid "Only top level"
+msgstr ""
+
+#: main.php:1301
+msgid "Open in new tab"
+msgstr ""
+
+#: main.php:110
+msgid "Optional message to pop up on hover or on click"
+msgstr ""
+
+#: main.php:790 main.php:796 includes/base-widget_ordered.php:53
+msgid "Order"
+msgstr ""
+
+#: includes/divi-builder.php:197 includes/divi-builder.php:273
+#: includes/visual-composer.php:126 includes/visual-composer.php:184
+#: includes/visual-composer.php:196 includes/visual-composer.php:236
+#: includes/visual-composer.php:248
+msgid "Order By"
+msgstr ""
+
+#: main.php:1335
+msgid "Order by"
+msgstr ""
+
+#: includes/divi-builder.php:278
+msgid "Order by date"
+msgstr ""
+
+#: includes/divi-builder.php:279
+msgid "Order by last modified date"
+msgstr ""
+
+#: includes/divi-builder.php:277
+msgid "Order by post name (post slug)"
+msgstr ""
+
+#: includes/divi-builder.php:276
+msgid "Order by title"
+msgstr ""
+
+#: includes/base-widget_ordered.php:47 includes/base-widget_product_list.php:31
+msgid "Order by:"
+msgstr ""
+
+#: main.php:1643
+msgid "order products by:"
+msgstr ""
+
+#: includes/divi-builder.php:284
+msgid "Order Type"
+msgstr ""
+
+#: main.php:1513
+msgid "output mode: slider (1) or list (0)"
+msgstr ""
+
+#: includes/divi-builder.php:205 includes/visual-composer.php:135
+msgid "Padding around brands"
+msgstr ""
+
+#: main.php:1510
+msgid "padding around image and name in pixels (default is 3)"
+msgstr ""
+
+#: includes/widget-list.php:61
+msgid "Padding, px"
+msgstr ""
+
+#: main.php:589
+msgid "Parent Brand"
+msgstr ""
+
+#: main.php:590
+msgid "Parent Brand:"
+msgstr ""
+
+#: includes/base-widget_product_list.php:18
+msgid "Per page:"
+msgstr ""
+
+#: main.php:1569
+msgid "placement of brands:"
+msgstr ""
+
+#: includes/divi-builder.php:60 includes/divi-builder.php:425
+#: includes/visual-composer.php:46
+msgid "Position"
+msgstr ""
+
+#: includes/visual-composer.php:188 includes/visual-composer.php:240
+msgid "Post name (post slug)"
+msgstr ""
+
+#: main.php:1143
+msgid "Product brands"
+msgstr ""
+
+#: main.php:104
+msgid "Product categories"
+msgstr ""
+
+#: includes/divi-builder.php:330 includes/divi-builder.php:413
+msgid "Product ID"
+msgstr ""
+
+#: main.php:1750
+msgid "product id"
+msgstr ""
+
+#: main.php:1768
+msgid "product ID; on single product page can get it automatically"
+msgstr ""
+
+#: main.php:1635
+msgid "product list for given brands (by ids or slugs)"
+msgstr ""
+
+#: main.php:1339 includes/base-widget_product_list.php:36
+msgid "Product name"
+msgstr ""
+
+#: main.php:1646
+msgid "product name (post slug)"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:86
+msgid "Product Page"
+msgstr ""
+
+#: main.php:1338 includes/base-widget_product_list.php:35
+msgid "Product title"
+msgstr ""
+
+#: main.php:1645
+msgid "product title (default)"
+msgstr ""
+
+#: main.php:1327
+msgid "Products per page (blank for all)"
+msgstr ""
+
+#: main.php:116
+msgid "Products that may be related to this brand"
+msgstr ""
+
+#: main.php:1154
+msgid "Products with these brands will be discounted"
+msgstr ""
+
+#: main.php:1170
+msgid "Products with these brands will not be discounted"
+msgstr ""
+
+#: main.php:1342 includes/base-widget_ordered.php:54
+#: includes/base-widget_product_list.php:39 includes/visual-composer.php:191
+#: includes/visual-composer.php:243
+msgid "Random"
+msgstr ""
+
+#: includes/divi-builder.php:280
+msgid "Random order"
+msgstr ""
+
+#: main.php:1519 main.php:1590 main.php:1649
+msgid "random order"
+msgstr ""
+
+#: main.php:115 main.php:1308 includes/widget-description.php:79
+#: templates/description.php:46
+msgid "Related products"
+msgstr ""
+
+#: main.php:1675
+msgid "related products"
+msgstr ""
+
+#: main.php:1732
+msgid ""
+"related products options: per_page, columns, orderby, order, slider, "
+"hide_brands:"
+msgstr ""
+
+#: main.php:1737
+msgid "related=\"width:50%,height:50px,fit:contain,align:right\""
+msgstr ""
+
+#: main.php:1204 includes/widget-description.php:74
+#: addons/show_brands/show_brands_include.php:96
+msgid "Right"
+msgstr ""
+
+#: main.php:1695 includes/divi-builder.php:430
+msgid "right"
+msgstr ""
+
+#: main.php:1721
+msgid "right to description"
+msgstr ""
+
+#: includes/base-widget_ordered.php:42
+msgid "Right to name"
+msgstr ""
+
+#: includes/widget-description.php:64
+msgid "Right to text"
+msgstr ""
+
+#: main.php:1755
+msgid "right to text (default)"
+msgstr ""
+
+#: main.php:808
+msgid "Save"
+msgstr ""
+
+#: main.php:807
+msgid "Saving..."
+msgstr ""
+
+#: main.php:587
+msgid "Search Brands"
+msgstr ""
+
+#: main.php:1131
+msgid "Select a brand"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:82
+msgid "Shop Page"
+msgstr ""
+
+#: main.php:1497
+msgid "Shortcodes: click to expand"
+msgstr ""
+
+#: includes/widget-catalog.php:22
+msgid "Show \"All\" tab"
+msgstr ""
+
+#: main.php:1402
+msgid "Show Arrows"
+msgstr ""
+
+#: addons/show_brands/show_brands.php:9
+msgid "Show Brands"
+msgstr ""
+
+#: includes/base-widget_ordered.php:87
+msgid "Show brands hierarchy:"
+msgstr ""
+
+#: includes/visual-composer.php:104
+msgid "Show brands without products"
+msgstr ""
+
+#: main.php:1449
+msgid "Show dots"
+msgstr ""
+
+#: includes/visual-composer.php:102
+msgid "Show empty"
+msgstr ""
+
+#: main.php:1548 main.php:1628
+msgid "show featured brands first (0 or 1)"
+msgstr ""
+
+#: main.php:1553 main.php:1623 includes/base-widget_ordered.php:93
+msgid "Show full hierarchy"
+msgstr ""
+
+#: main.php:1664
+msgid "show information about brand"
+msgstr ""
+
+#: includes/base-widget_ordered.php:67
+msgid "Show number of products"
+msgstr ""
+
+#: includes/divi-builder.php:66
+msgid "Show only on letter click"
+msgstr ""
+
+#: includes/base-widget_ordered.php:99
+msgid "Show only selected brand(s)"
+msgstr ""
+
+#. %d: total results
+#: templates/result-count.php:31
+#, php-format
+msgid "Showing all %d result, including child brands"
+msgid_plural "Showing all %d results, including child brands"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main.php:1765
+msgid "single brand info for single product"
+msgstr ""
+
+#: main.php:1416
+msgid "Slide"
+msgstr ""
+
+#: main.php:1389
+msgid "Slide change speed"
+msgstr ""
+
+#: main.php:1219 main.php:1357 includes/base-widget_product_list.php:52
+#: includes/visual-composer.php:108 includes/widget-list.php:27
+msgid "Slider"
+msgstr ""
+
+#: main.php:1514 main.php:1585
+msgid "sort brands by:"
+msgstr ""
+
+#: main.php:1524 main.php:1595 main.php:1652
+msgid "sorting order:"
+msgstr ""
+
+#: main.php:1443
+msgid "Stop Autoscroll on Focus"
+msgstr ""
+
+#: includes/divi-builder.php:70 includes/visual-composer.php:56
+msgid "Style"
+msgstr ""
+
+#: main.php:1295
+msgid "Text"
+msgstr ""
+
+#: main.php:91 main.php:1272
+msgid "Thumbnail"
+msgstr ""
+
+#: main.php:1672
+msgid "thumbnail"
+msgstr ""
+
+#: includes/widget-description.php:59
+msgid "Thumbnail:"
+msgstr ""
+
+#: includes/divi-builder.php:149 includes/visual-composer.php:78
+#: includes/visual-composer.php:187 includes/visual-composer.php:239
+msgid "Title"
+msgstr ""
+
+#: main.php:1567
+msgid "title of the brand catalog"
+msgstr ""
+
+#: main.php:1505
+msgid "title of the brand list"
+msgstr ""
+
+#: includes/base-widget.php:12
+msgid "Title:"
+msgstr ""
+
+#: main.php:109
+msgid "Tooltip"
+msgstr ""
+
+#: includes/widget-catalog.php:59
+msgid "Uncategorized"
+msgstr ""
+
+#: includes/base-widget_ordered.php:43
+msgid "Under name"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:98
+msgid "Under text"
+msgstr ""
+
+#: main.php:592
+msgid "Update Brand"
+msgstr ""
+
+#: main.php:141
+msgid "URL"
+msgstr ""
+
+#: main.php:1238
+msgid "Use cache"
+msgstr ""
+
+#: main.php:1640
+msgid "Use only one of these options: brand_id or brand_slug"
+msgstr ""
+
+#: main.php:1480
+msgid ""
+"Version of Font Awesome that will be used on front end. Please select "
+"version that you have in your theme"
+msgstr ""
+
+#: includes/divi-builder.php:73 includes/divi-builder.php:81
+#: includes/visual-composer.php:59 includes/widget-catalog.php:45
+msgid "Vertical"
+msgstr ""
+
+#: main.php:1571
+msgid "vertically (default)"
+msgstr ""
+
+#: main.php:1769
+msgid "what to display (all by default):"
+msgstr ""
+
+#: main.php:1668
+msgid "what to show:"
+msgstr ""
+
+#: includes/base-widget.php:149 includes/functions.php:48
+msgid "Width"
+msgstr ""
+
+#: main.php:1682 main.php:1708 main.php:1734
+msgid "width in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+
+#. 1: first result 2: last result 3: total results
+#: templates/result-count.php:36
+#, php-format
+msgctxt "with first and last result"
+msgid "Showing %1$d&ndash;%2$d of %3$d result, including child brands"
+msgid_plural "Showing %1$d&ndash;%2$d of %3$d results, including child brands"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/widget-catalog.php:8
+msgid "WooCommerce Brand Catalog"
+msgstr ""
+
+#: includes/widget-list.php:7
+msgid "WooCommerce Brand List"
+msgstr ""
+
+#: includes/widget-product-list.php:6
+msgid "WooCommerce Brands Product List"
+msgstr ""
+
+#: includes/widget-description.php:6
+msgid "WooCommerce Product Brands Description"
+msgstr ""
+
+#: main.php:1677
+msgid ""
+"You can use multiple brand properties, separated by comma. Example: "
+"type='image,name'"
+msgstr ""

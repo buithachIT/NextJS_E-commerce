@@ -1,0 +1,1526 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Brands\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-20 13:50+0000\n"
+"PO-Revision-Date: 2022-01-27 13:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.2; wp-5.7.1"
+
+#: includes/base-widget_ordered.php:58 includes/base-widget_product_list.php:43
+msgid "&nbsp;"
+msgstr "&nbsp;"
+
+#: main.php:1658
+msgid "1 for slider mode"
+msgstr ""
+
+#: main.php:1659
+msgid "1 to hide brands"
+msgstr ""
+
+#: includes/base-widget_ordered.php:40
+msgid "Above name"
+msgstr "Перед названием"
+
+#: addons/show_brands/show_brands_include.php:97
+msgid "Above text"
+msgstr "Перед текстом"
+
+#: main.php:593
+msgid "Add New Brand"
+msgstr "Добавить Новый Бренд"
+
+#: main.php:1227
+msgid "Addons"
+msgstr "Аддоны"
+
+#: addons/show_brands/show_brands_include.php:185
+msgid "After \"Categories\" and \"Tags\""
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:120
+#: addons/show_brands/show_brands_include.php:183
+msgid "After Add to cart button"
+msgstr "После кнопки Добавить в корзину"
+
+#: addons/show_brands/show_brands_include.php:117
+#: addons/show_brands/show_brands_include.php:180
+msgid "After Image"
+msgstr "После Изображения"
+
+#: addons/show_brands/show_brands_include.php:119
+#: addons/show_brands/show_brands_include.php:182
+msgid "After Price"
+msgstr "После Цены"
+
+#: addons/show_brands/show_brands_include.php:118
+#: addons/show_brands/show_brands_include.php:181
+msgid "After Title"
+msgstr "После Названия"
+
+#: includes/base-widget.php:168 includes/functions.php:76
+msgid "Align"
+msgstr "Выравнивание "
+
+#: main.php:1692 main.php:1718
+msgid "align:"
+msgstr ""
+
+#: main.php:1331 includes/base-widget_product_list.php:22
+#: includes/widget-list.php:57 templates/catalog.php:36
+msgid "All"
+msgstr "Все"
+
+#: main.php:1676
+msgid "all brand options"
+msgstr ""
+
+#: main.php:588 main.php:1791
+msgid "All Brands"
+msgstr "Все Бренды"
+
+#: includes/base-widget_ordered.php:95
+msgid "All brands without hierarchy"
+msgstr ""
+
+#: main.php:1555 main.php:1625
+msgid "All brands without hierarchy (default)"
+msgstr ""
+
+#: includes/base-widget_ordered.php:51 includes/widget-catalog.php:35
+msgid "Alphabet"
+msgstr "Алфавиту"
+
+#: main.php:1144
+msgid "Any brand"
+msgstr "Любой бренд"
+
+#: main.php:1350 includes/base-widget_ordered.php:61
+#: includes/base-widget_product_list.php:47
+msgid "Asc"
+msgstr "По возрастанию"
+
+#: includes/visual-composer.php:200 includes/visual-composer.php:252
+msgid "Ascending"
+msgstr "По возрастанию"
+
+#: includes/divi-builder.php:287
+msgid "ascending"
+msgstr "по возрастанию"
+
+#: main.php:1526 main.php:1597 main.php:1654
+msgid "ascending (default)"
+msgstr "по возрастанию (по умолчанию)"
+
+#: main.php:1373
+msgid "Autoplay"
+msgstr "Автозапуск"
+
+#: main.php:1381
+msgid "Autoplay Speed"
+msgstr "Скорость Автозапуск"
+
+#: main.php:584
+msgid "Back to Brands"
+msgstr "Назад к Брендам"
+
+#: main.php:97 main.php:1278
+msgid "Banner"
+msgstr "Баннер"
+
+#: main.php:1671
+msgid "banner"
+msgstr ""
+
+#: includes/widget-description.php:69
+msgid "Banner:"
+msgstr ""
+
+#: main.php:1702
+msgid "banner=\"width:50%,height:50px\""
+msgstr ""
+
+#: main.php:1701
+msgid "banner=\"width:50%,height:50px,fit:contain,align:center\""
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:116
+#: addons/show_brands/show_brands_include.php:179
+msgid "Before all"
+msgstr "После всего"
+
+#. Author of the plugin
+#: includes/visual-composer.php:11 includes/visual-composer.php:73
+#: includes/visual-composer.php:161 includes/visual-composer.php:213
+msgid "BeRocket"
+msgstr "BeRocket"
+
+#: includes/divi-builder.php:209 includes/visual-composer.php:141
+#: includes/widget-list.php:76
+msgid "Border color"
+msgstr "Цвет граници"
+
+#: main.php:1511
+msgid "border color in HEX (#FFFFFF - white, #000000 - black)"
+msgstr "цвет границы в HEX (#FFFFFF - белый, #000000 - черный)"
+
+#: includes/divi-builder.php:213 includes/visual-composer.php:147
+msgid "Border width"
+msgstr "Толщина границы"
+
+#: main.php:1512
+msgid "border width in pixels"
+msgstr "ширина границы в пикселях"
+
+#: includes/widget-list.php:71
+msgid "Border width, px"
+msgstr "Ширина границы, px"
+
+#: main.php:586 includes/widget-description.php:43
+msgid "Brand"
+msgstr "Бренд"
+
+#: main.php:1680
+msgid "brand banner options: width, height, fit, align:"
+msgstr ""
+
+#: main.php:1581
+msgid "brand category"
+msgstr "категория бренда"
+
+#: main.php:1521 main.php:1592 main.php:1773
+msgid "brand description"
+msgstr "описание бренда"
+
+#: includes/divi-builder.php:371
+msgid "Brand ID"
+msgstr "ID Бренда"
+
+#: main.php:1667
+msgid "brand ID"
+msgstr "ID бренда"
+
+#: includes/visual-composer.php:166 includes/visual-composer.php:218
+msgid "Brand ID(s)"
+msgstr "ID бренда"
+
+#: includes/divi-builder.php:261
+msgid "brand ID(s)"
+msgstr "ID(s) "
+
+#: main.php:1540 main.php:1549 main.php:1611 main.php:1619
+msgid "brand image align to name:"
+msgstr "выравнивание картинки бренда до названия"
+
+#: main.php:1533 main.php:1604
+msgid "brand image fit:"
+msgstr "подгонка изображения бренда:"
+
+#: main.php:1747
+msgid "brand image for product page"
+msgstr "картинка бренда для страницы продукта"
+
+#: main.php:1531
+msgid "brand image height in px or % (i.e. 50%, 100px; default is 64px)"
+msgstr ""
+"высота изображения бренда в px или % (пример: 50%, 100px; по умолчанию 64px)"
+
+#: main.php:1602
+msgid "brand image height, in px or % (i.e. 50%, 100px; default is 64px)"
+msgstr ""
+"высота изображения бренда в px или % (пример: 50%, 100px; по умолчанию 64px)"
+
+#: main.php:1532
+msgid "brand image width in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+"ширина изображения бренда в px или % (пример: 50%, 100px; по умолчанию 100%)"
+
+#: main.php:1603
+msgid "brand image width, in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+"ширина изображения бренда в px или % (пример: 50%, 100px; по умолчанию 100%)"
+
+#: includes/visual-composer.php:211
+msgid "Brand Info"
+msgstr "Информация о бренде"
+
+#: includes/divi-builder.php:350
+msgid "Brand info"
+msgstr "Информация о бренде"
+
+#: includes/divi-builder.php:309
+msgid "Brand info for product page"
+msgstr "Информация о бренде на странице продукта"
+
+#: includes/divi-builder.php:200 includes/visual-composer.php:129
+msgid "Brand name"
+msgstr "Название бренда"
+
+#: main.php:1771
+msgid "brand name"
+msgstr "название бренда"
+
+#: main.php:1516 main.php:1580 main.php:1587
+msgid "brand name (default)"
+msgstr "название бренда (по умолчанию)"
+
+#: main.php:1518 main.php:1589
+msgid "brand order"
+msgstr "сортировка бренда"
+
+#: main.php:1215
+msgid "Brand Page"
+msgstr "Страница Бренда"
+
+#: addons/show_brands/show_brands_include.php:112
+#: addons/show_brands/show_brands_include.php:176
+msgid "Brand Position"
+msgstr "Размещение бренда"
+
+#: includes/visual-composer.php:159
+msgid "Brand Products"
+msgstr "Брендовые продукты"
+
+#: main.php:1520 main.php:1591
+msgid "brand slug"
+msgstr "слаг бренда"
+
+#: includes/visual-composer.php:172 includes/visual-composer.php:224
+msgid "Brand slug(s)"
+msgstr "Ярлык(и) бренда"
+
+#: includes/divi-builder.php:265
+msgid "brand slug(s)"
+msgstr "ярлык(и) бренда"
+
+#: includes/divi-builder.php:391
+msgid "Brand thumbnail"
+msgstr "Иконка бренда"
+
+#: main.php:1772
+msgid "brand thumbnail"
+msgstr "иконка бренда"
+
+#: main.php:1706
+msgid "brand thumbnail options: width, height, fit, align:"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:388
+msgid "Brand:"
+msgid_plural "Brands:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: main.php:581 main.php:583 main.php:1783 main.php:2035 main.php:2047
+#: main.php:2070 includes/widget-product-list.php:18
+msgid "Brands"
+msgstr "Бренды"
+
+#: main.php:610 templates/permalink_option.php:9
+msgid "brands"
+msgstr "бренды"
+
+#. Description of the plugin
+msgid ""
+"Brands are a guarantee for quality, they assure product recognition in "
+"customers. WooCommerce Product Brands will help you to showcase them."
+msgstr ""
+"Бренды - это гарантия качества, они обеспечивают узнаваемость продукции у "
+"покупателей. WooCommerce Product Brands поможет вам их продемонстрировать."
+
+#: includes/divi-builder.php:6 includes/visual-composer.php:9
+msgid "Brands by Name"
+msgstr "Бренды по Названию"
+
+#. Name of the plugin
+msgid "Brands for WooCommerce"
+msgstr "Brands for WooCommerce"
+
+#: main.php:1564
+msgid "brands grouped by name or category"
+msgstr "группировка брендов по названию или категории"
+
+#: includes/widget-list.php:54
+msgid "Brands in list"
+msgstr "Брендов в списке"
+
+#: includes/divi-builder.php:114 includes/visual-composer.php:71
+msgid "Brands List"
+msgstr "Список Брендов"
+
+#: includes/divi-builder.php:189 includes/visual-composer.php:114
+#: includes/widget-list.php:42
+msgid "Brands per row"
+msgstr "Количество брендов в ряду"
+
+#: includes/divi-builder.php:238
+msgid "Brands Products"
+msgstr "Бренды Продуктов"
+
+#: main.php:1558 main.php:1629
+msgid "brands to display (id list, i.e. include='45,47,52,61')"
+msgstr "отображать бренд (список id, пример: include='45,47,52,61')"
+
+#: main.php:1559 main.php:1630
+msgid "brands to exclude from display (i.e. exclude='45,47,52,61')"
+msgstr "исключить отображение брендов (пример: exclude='45,47,52,61')"
+
+#: main.php:1408
+msgid "Brands to Scroll"
+msgstr "Бренды для прокрутки"
+
+#: main.php:103
+msgid "Categories"
+msgstr "Категории"
+
+#: includes/widget-catalog.php:36
+msgid "Category"
+msgstr "Категория"
+
+#: includes/widget-description.php:75
+msgid "Center"
+msgstr ""
+
+#: main.php:1696
+msgid "center"
+msgstr ""
+
+#: main.php:1415
+msgid "Change slide mode"
+msgstr "Режим смены слайдов"
+
+#: main.php:1255
+msgid "Clear"
+msgstr "Очистить"
+
+#: main.php:1251
+msgid "Clear cache after update shortcodes and widgets"
+msgstr "Очистить кеш после обновления шорткодов и виджетов"
+
+#: main.php:1253
+msgid "Cleared"
+msgstr "Очищено"
+
+#: main.php:1253
+msgid "Clearing..."
+msgstr "Очистка..."
+
+#: includes/divi-builder.php:78
+msgid "Color"
+msgstr "Цвет"
+
+#: main.php:1320 includes/divi-builder.php:56 includes/visual-composer.php:40
+#: includes/visual-composer.php:178 includes/visual-composer.php:230
+msgid "Columns"
+msgstr "Столбцы"
+
+#: includes/base-widget_product_list.php:25 includes/widget-catalog.php:50
+msgid "Columns:"
+msgstr "Количество столбцов:"
+
+#: includes/base-widget.php:161 includes/functions.php:70
+msgid "Contain"
+msgstr "Помещение внутрь блока"
+
+#: includes/divi-builder.php:269
+msgid "count of columns for product list"
+msgstr "количество столбцов для списка продуктов"
+
+#: includes/divi-builder.php:201 includes/visual-composer.php:130
+msgid "Count of products"
+msgstr "Количество продуктов"
+
+#: includes/base-widget.php:160 includes/functions.php:69
+msgid "Cover"
+msgstr "Покрытие блока"
+
+#: main.php:1223
+msgid "CSS"
+msgstr "CSS"
+
+#: main.php:1432
+msgid "Cubic Bezier 1"
+msgstr "Кубическая кривая Безье 1"
+
+#: main.php:1433
+msgid "Cubic Bezier 2"
+msgstr "Кубическая кривая Безье 2"
+
+#: main.php:1434
+msgid "Cubic Bezier 3"
+msgstr "Кубическая кривая Безье 3"
+
+#: main.php:1435
+msgid "Cubic Bezier 4"
+msgstr "Кубическая кривая Безье 4"
+
+#: main.php:1436
+msgid "Cubic Bezier 5"
+msgstr " Кубическая кривая Безье 5"
+
+#: main.php:1437
+msgid "Cubic Bezier 6"
+msgstr "Кубическая кривая Безье 6"
+
+#: main.php:1484
+msgid "Custom CSS"
+msgstr "Пользовательский CSS"
+
+#: includes/divi-builder.php:326 includes/divi-builder.php:367
+#: includes/divi-builder.php:417 includes/divi-builder.php:421
+msgid "Data type"
+msgstr "Тип данных"
+
+#: includes/visual-composer.php:189 includes/visual-composer.php:241
+msgid "Date"
+msgstr "Дата"
+
+#: main.php:1340 includes/base-widget_product_list.php:37
+msgid "Date of creation"
+msgstr ""
+
+#: main.php:1647
+msgid "date of creation"
+msgstr "дата создания"
+
+#: main.php:1535 main.php:1606 main.php:1686 main.php:1712
+#| msgid "Default"
+msgid "default"
+msgstr "По умолчанию"
+
+#: main.php:1351 includes/base-widget_ordered.php:62
+#: includes/base-widget_product_list.php:48
+msgid "Desc"
+msgstr "По убыванию"
+
+#: includes/visual-composer.php:199 includes/visual-composer.php:251
+msgid "Descending"
+msgstr "По убыванию"
+
+#: main.php:1527 main.php:1598 main.php:1655 includes/divi-builder.php:288
+msgid "descending"
+msgstr "по убыванию"
+
+#: main.php:789
+msgid "Description"
+msgstr "Описание"
+
+#: main.php:1673
+msgid "description"
+msgstr ""
+
+#: main.php:1465
+msgid "Disable Font Awesome"
+msgstr "Отключить Font Awesome"
+
+#: main.php:1313 includes/base-widget.php:144 includes/functions.php:39
+#: includes/widget-description.php:83
+#: addons/show_brands/show_brands_include.php:149
+#: addons/show_brands/show_brands_include.php:214
+msgid "Display"
+msgstr "Отобразить"
+
+#: main.php:1288
+msgid "Display (if URL for the brand is set)"
+msgstr "Отобразить (только если включена ссылка для бренда)"
+
+#: addons/show_brands/show_brands_include.php:126
+#: addons/show_brands/show_brands_include.php:191
+msgid "Display As Link"
+msgstr "Отобразить в виде ссылки"
+
+#: includes/divi-builder.php:181 includes/visual-composer.php:110
+msgid "Display as slider"
+msgstr "Отобразить в виде слайдера"
+
+#: addons/show_brands/show_brands_include.php:105
+#: addons/show_brands/show_brands_include.php:169
+msgid "Display Brand"
+msgstr "Отобразить Бренд"
+
+#: includes/widget-description.php:54
+msgid "Display brand description"
+msgstr ""
+
+#: main.php:1601
+msgid "display brand image"
+msgstr "показывать изображение бренда"
+
+#: main.php:1530
+msgid "display brand image (1 or 0)"
+msgstr "показывать изображение бренда (1 или 0)"
+
+#: main.php:1759
+msgid "display brand image, if available (1 or 0, default is 1)"
+msgstr "отображать изображение бренда, если доступно (1 или 0, по умолчанию 1)"
+
+#: main.php:1568
+msgid "display brand name"
+msgstr "отображение названия бренда"
+
+#: main.php:1506
+msgid "display brand name (1 or 0)"
+msgstr "отображение названия бренда (1 или 0)"
+
+#: includes/widget-description.php:49
+msgid "Display brand title"
+msgstr ""
+
+#: addons/show_brands/show_brands.php:10
+msgid "Display brands text and image on shop page and product page"
+msgstr ""
+
+#: main.php:1266
+msgid "Display description"
+msgstr "Отобразить описание"
+
+#: includes/widget-description.php:91
+msgid "Display external link"
+msgstr ""
+
+#: includes/divi-builder.php:32 includes/divi-builder.php:153
+#: includes/visual-composer.php:18
+msgid "Display image"
+msgstr "Отобразить изображение"
+
+#: main.php:1760
+msgid "display image as link (1 or 0, default is 0)"
+msgstr "отображать изображение как ссылку (1 или 0, по умолчанию 0)"
+
+#: includes/widget-description.php:96
+msgid "Display last created featured brand"
+msgstr ""
+
+#: main.php:1742
+msgid ""
+"display last created featured brand (1 or 0); <b>if featured=1, id is "
+"ignored</b>"
+msgstr ""
+
+#: includes/divi-builder.php:48 includes/divi-builder.php:165
+#: includes/visual-composer.php:98
+msgid "Display name"
+msgstr "Отобразить название"
+
+#: includes/base-widget_ordered.php:31
+msgid "Display text"
+msgstr "Отобразить текст"
+
+#: main.php:1469
+msgid ""
+"Don't loading css file for Font Awesome on site front end. Use it only if "
+"you doesn't uses Font Awesome icons in widgets or you have Font Awesome in "
+"your theme."
+msgstr ""
+"Не загружайте файл css для Font Awesome на интерфейсе сайта. Используйте его "
+"только в том случае, если вы не используете значки Font Awesome в виджетах "
+"или у вас есть Font Awesome в своей теме."
+
+#: main.php:1457
+msgid "Dots color"
+msgstr "Цвет точек"
+
+#: main.php:1428
+msgid "Ease"
+msgstr "Ускорение – замедление – ускорение"
+
+#: main.php:1429
+msgid "Ease in"
+msgstr "Ускорение"
+
+#: main.php:1431
+msgid "Ease in-out"
+msgstr "Замедление"
+
+#: main.php:1430
+msgid "Ease out"
+msgstr "Ускорение в начале – замедление в конце"
+
+#: main.php:1424
+msgid "Easing"
+msgstr "Сглаживание"
+
+#: main.php:591
+msgid "Edit Brand"
+msgstr "Изменить Бренд"
+
+#: main.php:1700 main.php:1726 main.php:1736
+msgid "Examples:"
+msgstr ""
+
+#: main.php:1158
+msgid "Exclude brands"
+msgstr "Исключить бренды"
+
+#: main.php:1554 main.php:1624 includes/base-widget_ordered.php:94
+msgid "Expand by click"
+msgstr ""
+
+#: main.php:1283
+msgid "External link"
+msgstr "Внешняя ссылка"
+
+#: main.php:1674
+msgid "external link"
+msgstr ""
+
+#: main.php:1417
+msgid "Fade"
+msgstr "Затухание"
+
+#: main.php:135
+msgid "Featured"
+msgstr "Рекомендуемые"
+
+#: main.php:136
+msgid ""
+"Featured brands can be output first or you may select to show featured "
+"brands only"
+msgstr ""
+"Рекомендуемые бренды могут быть выведены первыми, или вы можете выбрать "
+"отображение только рекомендуемых брендов"
+
+#: includes/base-widget_ordered.php:77
+msgid "Featured first"
+msgstr "Показать рекомендуемые товары вначале"
+
+#: includes/base-widget.php:162 includes/functions.php:71
+msgid "Fill"
+msgstr "Заполнение блока"
+
+#: includes/base-widget.php:157 includes/functions.php:64
+msgid "Fit"
+msgstr "Подгонка "
+
+#: main.php:1684 main.php:1710
+msgid "fit:"
+msgstr ""
+
+#: main.php:1753
+msgid "float style for element (default is right)"
+msgstr "стиль выравнивания элемента (по дефолту: справа)"
+
+#: main.php:1476
+msgid "Font Awesome 4"
+msgstr "Font Awesome 4"
+
+#: main.php:1477
+msgid "Font Awesome 5"
+msgstr "Font Awesome 5"
+
+#: main.php:1472
+msgid "Font Awesome Version"
+msgstr "Версия Font Awesome"
+
+#: main.php:1211
+msgid "General"
+msgstr "Главные"
+
+#: main.php:58
+msgid "Go to the brand website >>"
+msgstr "Перейти на сайт бренда >>"
+
+#: main.php:1578
+msgid "group brands by:"
+msgstr "группировка брендов по:"
+
+#: includes/widget-catalog.php:31
+msgid "Group by:"
+msgstr "Группировка по:"
+
+#: includes/base-widget.php:153 includes/functions.php:56
+msgid "Height"
+msgstr "Высота"
+
+#: main.php:1683 main.php:1709
+msgid "height in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+
+#: main.php:1363 includes/base-widget_product_list.php:57
+msgid "Hide brands"
+msgstr ""
+
+#: includes/divi-builder.php:173
+msgid "Hide brands without products"
+msgstr "Скрыть бренды без товаров"
+
+#: main.php:1508 main.php:1576
+msgid "hide brands without products (1 or 0)"
+msgstr "скрыть бренды без продуктов (1 или 0)"
+
+#: includes/base-widget_ordered.php:72
+msgid "Hide empty"
+msgstr "Скрыть бренды без товаров"
+
+#: includes/visual-composer.php:86
+msgid "Hide image"
+msgstr "Спрятать изображение"
+
+#: includes/visual-composer.php:24
+msgid "Hide name"
+msgstr "Спрятать название"
+
+#: includes/divi-builder.php:74 includes/divi-builder.php:82
+#: includes/visual-composer.php:60 includes/widget-catalog.php:46
+msgid "Horizontal"
+msgstr "Горизонтально"
+
+#: main.php:1572
+msgid "horizontally"
+msgstr "горизонтально"
+
+#. Author URI of the plugin
+msgid ""
+"https://berocket.com?"
+"utm_source=free_plugin&utm_medium=plugins&utm_campaign=product_brand"
+msgstr ""
+"https://berocket.com?"
+"utm_source=free_plugin&utm_medium=plugins&utm_campaign=product_brand"
+
+#. URI of the plugin
+msgid ""
+"https://wordpress.org/plugins/brands-for-woocommerce/?"
+"utm_source=free_plugin&utm_medium=plugins&utm_campaign=product_brand"
+msgstr ""
+"https://wordpress.org/plugins/brands-for-woocommerce/?"
+"utm_source=free_plugin&utm_medium=plugins&utm_campaign=product_brand"
+
+#: includes/visual-composer.php:16 includes/visual-composer.php:84
+#: addons/show_brands/show_brands_include.php:133
+#: addons/show_brands/show_brands_include.php:198
+msgid "Image"
+msgstr "Изображение"
+
+#: main.php:1545 main.php:1616
+msgid "image above name (default)"
+msgstr "изображение над названием (по умолчанию)"
+
+#: addons/show_brands/show_brands_include.php:143
+#: addons/show_brands/show_brands_include.php:207
+msgid "Image custom CSS"
+msgstr "Пользовательский CSS изображения"
+
+#: includes/divi-builder.php:161 includes/visual-composer.php:90
+msgid "Image height"
+msgstr "Высота изображения"
+
+#: main.php:1752
+msgid "image height (optionally)"
+msgstr "высота изображения (по выбору)"
+
+#: main.php:1542 main.php:1613
+msgid "image left to name"
+msgstr "изображение слева от названия"
+
+#: main.php:1543 main.php:1614
+msgid "image right to name"
+msgstr "изображение справа от названия"
+
+#: main.php:1544 main.php:1615
+msgid "image under name"
+msgstr "изображение под названием"
+
+#: main.php:1751
+msgid "image width (default is 35%)"
+msgstr "ширина иконки (по умолчанию 35%)"
+
+#: includes/base-widget_ordered.php:36
+msgid "Image:"
+msgstr "Изображение"
+
+#: main.php:1728 main.php:1738
+msgid "image=\"width:50%,height:50px\""
+msgstr ""
+
+#: main.php:1727
+msgid "image=\"width:50%,height:50px,fit:contain,align:right\""
+msgstr ""
+
+#: main.php:1396
+msgid "Infinite"
+msgstr "Бесконечный автозапуск"
+
+#: main.php:1341 includes/base-widget_product_list.php:38
+msgid "Last modified date"
+msgstr ""
+
+#: main.php:1648
+msgid "last modified date"
+msgstr "дата последних изменений"
+
+#: includes/widget-catalog.php:41
+msgid "Layout:"
+msgstr "Раскладка:"
+
+#: main.php:1203 includes/widget-description.php:73
+#: addons/show_brands/show_brands_include.php:95
+msgid "Left"
+msgstr "Слева"
+
+#: main.php:1694 includes/divi-builder.php:429
+msgid "left"
+msgstr "слева"
+
+#: main.php:1720
+msgid "left to description"
+msgstr ""
+
+#: includes/base-widget_ordered.php:41
+msgid "Left to name"
+msgstr "Слева от названия"
+
+#: includes/widget-description.php:63
+msgid "Left to text"
+msgstr ""
+
+#: main.php:1756
+msgid "left to text"
+msgstr "слева от текста"
+
+#: main.php:810
+msgid "Level down"
+msgstr "Уровень вниз"
+
+#: main.php:809
+msgid "Level up"
+msgstr "Уровень вверх"
+
+#: main.php:1231
+msgid "License"
+msgstr "Лицензия"
+
+#: main.php:1427
+msgid "Linear"
+msgstr "Линейное"
+
+#: main.php:142
+msgid "Link to the brand page or to the external website"
+msgstr "Ссылка на страницу бренда или на внешний сайт"
+
+#: main.php:1502
+msgid "list of brands"
+msgstr "список брендов"
+
+#: includes/widget-list.php:66
+msgid "Margin, px"
+msgstr "Отступ между, px"
+
+#: main.php:1409
+msgid ""
+"maximum brands to scroll for the widget is number of brands per page for "
+"this widget"
+msgstr ""
+
+#: includes/divi-builder.php:40 includes/visual-composer.php:28
+msgid "Maximum image height"
+msgstr "Максимальная высота изображения"
+
+#: includes/divi-builder.php:44 includes/visual-composer.php:34
+msgid "Maximum image width"
+msgstr "Максимальная ширина изображения"
+
+#: main.php:1509 main.php:1577
+msgid "maximum number of brands"
+msgstr "максимальное количество брендов"
+
+#: includes/visual-composer.php:190 includes/visual-composer.php:242
+msgid "Modified date"
+msgstr "Дата изменения"
+
+#: main.php:1382 main.php:1390
+msgid "ms"
+msgstr "мс"
+
+#: includes/visual-composer.php:22 includes/visual-composer.php:96
+#: addons/show_brands/show_brands_include.php:148
+#: addons/show_brands/show_brands_include.php:213
+msgid "Name"
+msgstr "Название"
+
+#: main.php:1670
+msgid "name"
+msgstr ""
+
+#: includes/divi-builder.php:63 includes/visual-composer.php:49
+msgid "Name after image"
+msgstr "Название после изображения"
+
+#: includes/divi-builder.php:64 includes/visual-composer.php:50
+msgid "Name before image"
+msgstr "Название перед изображением"
+
+#: addons/show_brands/show_brands_include.php:160
+#: addons/show_brands/show_brands_include.php:224
+msgid "Name custom CSS"
+msgstr "Пользовательский CSS названия"
+
+#: includes/divi-builder.php:65 includes/visual-composer.php:51
+msgid "Name under image"
+msgstr "Название под изображением"
+
+#: main.php:594
+msgid "New Brand Name"
+msgstr "Новое Название Бренда"
+
+#: main.php:1722
+msgid "no align"
+msgstr ""
+
+#: main.php:1159
+msgid "No brands"
+msgstr "Нет брендов"
+
+#: main.php:585
+msgid "No brands found."
+msgstr "Брендов не найдено."
+
+#: main.php:1582
+msgid "no group"
+msgstr "нет группы"
+
+#: includes/base-widget.php:163 includes/functions.php:72
+#: includes/widget-catalog.php:37 includes/widget-description.php:65
+msgid "None"
+msgstr "Нет"
+
+#: main.php:1202 includes/divi-builder.php:428
+#: addons/show_brands/show_brands_include.php:94
+msgid "none"
+msgstr "нет"
+
+#: includes/divi-builder.php:193 includes/visual-composer.php:120
+msgid "Number of brands"
+msgstr "Количество брендов"
+
+#: main.php:1575
+msgid "number of columns"
+msgstr "количество столбцов"
+
+#: main.php:1507
+msgid "number of columns for brands list (number of brands per slider)"
+msgstr "количество столбцов для списка брендов (количество брендов в слайдере)"
+
+#: main.php:1641
+#, fuzzy
+#| msgid ""
+#| "number of columns for product list. May not work with some themes or "
+#| "plugins"
+msgid ""
+"number of columns for product list (4 by default). May not work with some "
+"themes or plugins"
+msgstr ""
+"количество столбцов для списка товаров. Может не работать с некоторыми "
+"темами или плагинами"
+
+#: includes/base-widget_ordered.php:52
+msgid "Number of products"
+msgstr "Количеству товаров"
+
+#: main.php:1517 main.php:1588
+msgid "number of products"
+msgstr "количество продуктов"
+
+#: main.php:1642
+msgid "number of products per page; if not set, all products are shown"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:184
+msgid "On the \"Brands\" tab"
+msgstr ""
+
+#: main.php:1638
+msgid "one or more brand ID (example: brand_id='12,34,35')"
+msgstr "один или несколько id брендов (пример: brand_id='12,34,35')"
+
+#: main.php:1639
+msgid "one or more brand slugs (example: brand_slug='brand1,brand2,brand3')"
+msgstr ""
+"один или несколько ярлыков брендов (например: brand_slug='brand1,brand2,"
+"brand3')"
+
+#: includes/base-widget_ordered.php:82
+msgid "Only brands of this category (on category page)"
+msgstr ""
+
+#: main.php:1552 main.php:1622 includes/base-widget_ordered.php:92
+msgid "Only children (without hierarchy)"
+msgstr ""
+
+#: main.php:1551 main.php:1621 includes/base-widget_ordered.php:91
+msgid "Only top level"
+msgstr ""
+
+#: main.php:1301
+msgid "Open in new tab"
+msgstr "Открыть в новой вкладке"
+
+#: main.php:110
+msgid "Optional message to pop up on hover or on click"
+msgstr ""
+"Дополнительное сообщение, всплывающее при наведении курсора или при нажатии"
+
+#: main.php:790 main.php:796 includes/base-widget_ordered.php:53
+msgid "Order"
+msgstr "Рейтингу"
+
+#: includes/divi-builder.php:197 includes/divi-builder.php:273
+#: includes/visual-composer.php:126 includes/visual-composer.php:184
+#: includes/visual-composer.php:196 includes/visual-composer.php:236
+#: includes/visual-composer.php:248
+msgid "Order By"
+msgstr "Сортировать по"
+
+#: main.php:1335
+msgid "Order by"
+msgstr ""
+
+#: includes/divi-builder.php:278
+msgid "Order by date"
+msgstr "Сортировка по дате"
+
+#: includes/divi-builder.php:279
+msgid "Order by last modified date"
+msgstr "Сортировка по дате последнего изменения"
+
+#: includes/divi-builder.php:277
+msgid "Order by post name (post slug)"
+msgstr "Сортировка по названию поста (слаг поста)"
+
+#: includes/divi-builder.php:276
+msgid "Order by title"
+msgstr "Сортировка по заголовку"
+
+#: includes/base-widget_ordered.php:47 includes/base-widget_product_list.php:31
+msgid "Order by:"
+msgstr "Сортировка по:"
+
+#: main.php:1643
+msgid "order products by:"
+msgstr "сортировка продуктов по:"
+
+#: includes/divi-builder.php:284
+msgid "Order Type"
+msgstr "Тип сортировки"
+
+#: main.php:1513
+msgid "output mode: slider (1) or list (0)"
+msgstr "способ отображения: слайдер (1) или список (0)"
+
+#: includes/divi-builder.php:205 includes/visual-composer.php:135
+msgid "Padding around brands"
+msgstr "Отступ вокруг брендов"
+
+#: main.php:1510
+msgid "padding around image and name in pixels (default is 3)"
+msgstr "отступ вокруг изображения и названия в пикселях (по умолчанию 3)"
+
+#: includes/widget-list.php:61
+msgid "Padding, px"
+msgstr "Отступы вокруг, px"
+
+#: main.php:589
+msgid "Parent Brand"
+msgstr "Родительский Бренд"
+
+#: main.php:590
+msgid "Parent Brand:"
+msgstr "Родительский Бренд:"
+
+#: includes/base-widget_product_list.php:18
+msgid "Per page:"
+msgstr ""
+
+#: main.php:1569
+msgid "placement of brands:"
+msgstr "размещение брендов:"
+
+#: includes/divi-builder.php:60 includes/divi-builder.php:425
+#: includes/visual-composer.php:46
+msgid "Position"
+msgstr "Позиция"
+
+#: includes/visual-composer.php:188 includes/visual-composer.php:240
+msgid "Post name (post slug)"
+msgstr "Название поста (слаг поста)"
+
+#: main.php:1143
+msgid "Product brands"
+msgstr "Бренды продуктов"
+
+#: main.php:104
+msgid "Product categories"
+msgstr "Категории продуктов"
+
+#: includes/divi-builder.php:330 includes/divi-builder.php:413
+msgid "Product ID"
+msgstr "ID продукта"
+
+#: main.php:1750
+msgid "product id"
+msgstr "id продукта"
+
+#: main.php:1768
+msgid "product ID; on single product page can get it automatically"
+msgstr "ID продукта; на одной странице продукта можно получить автоматически"
+
+#: main.php:1635
+msgid "product list for given brands (by ids or slugs)"
+msgstr "список продуктов для определенных брендов (по id или ярлыкам)"
+
+#: main.php:1339 includes/base-widget_product_list.php:36
+msgid "Product name"
+msgstr ""
+
+#: main.php:1646
+msgid "product name (post slug)"
+msgstr "название продукта ()"
+
+#: addons/show_brands/show_brands_include.php:86
+msgid "Product Page"
+msgstr "Страница Продукта"
+
+#: main.php:1338 includes/base-widget_product_list.php:35
+#, fuzzy
+#| msgid "product title"
+msgid "Product title"
+msgstr "название продукта"
+
+#: main.php:1645
+msgid "product title (default)"
+msgstr ""
+
+#: main.php:1327
+msgid "Products per page (blank for all)"
+msgstr ""
+
+#: main.php:116
+msgid "Products that may be related to this brand"
+msgstr ""
+
+#: main.php:1154
+msgid "Products with these brands will be discounted"
+msgstr "Products with these brands will be discounted"
+
+#: main.php:1170
+msgid "Products with these brands will not be discounted"
+msgstr "Скидки на товары этих брендов не распространяются"
+
+#: main.php:1342 includes/base-widget_ordered.php:54
+#: includes/base-widget_product_list.php:39 includes/visual-composer.php:191
+#: includes/visual-composer.php:243
+msgid "Random"
+msgstr "Произвольно"
+
+#: includes/divi-builder.php:280
+msgid "Random order"
+msgstr "Произвольная сортировка"
+
+#: main.php:1519 main.php:1590 main.php:1649
+msgid "random order"
+msgstr "случайна сортировка"
+
+#: main.php:115 main.php:1308 includes/widget-description.php:79
+#: templates/description.php:46
+msgid "Related products"
+msgstr ""
+
+#: main.php:1675
+msgid "related products"
+msgstr ""
+
+#: main.php:1732
+msgid ""
+"related products options: per_page, columns, orderby, order, slider, "
+"hide_brands:"
+msgstr ""
+
+#: main.php:1737
+msgid "related=\"width:50%,height:50px,fit:contain,align:right\""
+msgstr ""
+
+#: main.php:1204 includes/widget-description.php:74
+#: addons/show_brands/show_brands_include.php:96
+msgid "Right"
+msgstr "Справа"
+
+#: main.php:1695 includes/divi-builder.php:430
+msgid "right"
+msgstr "справа"
+
+#: main.php:1721
+msgid "right to description"
+msgstr ""
+
+#: includes/base-widget_ordered.php:42
+msgid "Right to name"
+msgstr "Справа от названия"
+
+#: includes/widget-description.php:64
+msgid "Right to text"
+msgstr ""
+
+#: main.php:1755
+msgid "right to text (default)"
+msgstr "Справа от текста (по умолчанию)"
+
+#: main.php:808
+msgid "Save"
+msgstr "Сохранить"
+
+#: main.php:807
+msgid "Saving..."
+msgstr "Сохранение..."
+
+#: main.php:587
+msgid "Search Brands"
+msgstr "Поиск Брендов"
+
+#: main.php:1131
+msgid "Select a brand"
+msgstr "Выберите бренд"
+
+#: addons/show_brands/show_brands_include.php:82
+msgid "Shop Page"
+msgstr "Страница Магазина"
+
+#: main.php:1497
+msgid "Shortcodes: click to expand"
+msgstr "Шорткоды: нажмите, чтобы развернуть"
+
+#: includes/widget-catalog.php:22
+msgid "Show \"All\" tab"
+msgstr "Вкладка отобразить “Все”"
+
+#: main.php:1402
+msgid "Show Arrows"
+msgstr "Отображать стрелки"
+
+#: addons/show_brands/show_brands.php:9
+msgid "Show Brands"
+msgstr ""
+
+#: includes/base-widget_ordered.php:87
+msgid "Show brands hierarchy:"
+msgstr ""
+
+#: includes/visual-composer.php:104
+msgid "Show brands without products"
+msgstr "Показать бренды без товаров"
+
+#: main.php:1449
+msgid "Show dots"
+msgstr "Отобразить точки"
+
+#: includes/visual-composer.php:102
+msgid "Show empty"
+msgstr "Показывать пустые"
+
+#: main.php:1548 main.php:1628
+msgid "show featured brands first (0 or 1)"
+msgstr "С начало показывать рекомендуемые бренды (0 или 1)"
+
+#: main.php:1553 main.php:1623 includes/base-widget_ordered.php:93
+msgid "Show full hierarchy"
+msgstr ""
+
+#: main.php:1664
+#, fuzzy
+#| msgid "information about brand"
+msgid "show information about brand"
+msgstr "информация о бренде"
+
+#: includes/base-widget_ordered.php:67
+msgid "Show number of products"
+msgstr "Показать количество товаров"
+
+#: includes/divi-builder.php:66
+msgid "Show only on letter click"
+msgstr "Показывать только после нажатия на букву"
+
+#: includes/base-widget_ordered.php:99
+msgid "Show only selected brand(s)"
+msgstr ""
+
+#. %d: total results
+#: templates/result-count.php:31
+#, php-format
+msgid "Showing all %d result, including child brands"
+msgid_plural "Showing all %d results, including child brands"
+msgstr[0] "Показано все %d результат, включая дочерние бренды"
+msgstr[1] "Показано все %d результата, включая дочерние бренды"
+msgstr[2] "Показано все %d результатов, включая дочерние бренды"
+
+#: main.php:1765
+msgid "single brand info for single product"
+msgstr "информация об одном бренде для одного товара"
+
+#: main.php:1416
+msgid "Slide"
+msgstr "Слайдер"
+
+#: main.php:1389
+msgid "Slide change speed"
+msgstr "Скорость смены слайдов"
+
+#: main.php:1219 main.php:1357 includes/base-widget_product_list.php:52
+#: includes/visual-composer.php:108 includes/widget-list.php:27
+msgid "Slider"
+msgstr "Слайдер"
+
+#: main.php:1514 main.php:1585
+msgid "sort brands by:"
+msgstr "сортировка брендов по:"
+
+#: main.php:1524 main.php:1595 main.php:1652
+msgid "sorting order:"
+msgstr "порядок сортировки:"
+
+#: main.php:1443
+msgid "Stop Autoscroll on Focus"
+msgstr "Остановить автопрокрутку при наведении курсора"
+
+#: includes/divi-builder.php:70 includes/visual-composer.php:56
+msgid "Style"
+msgstr "Стиль"
+
+#: main.php:1295
+msgid "Text"
+msgstr "Текст"
+
+#: main.php:91 main.php:1272
+msgid "Thumbnail"
+msgstr "Иконка бренда"
+
+#: main.php:1672
+msgid "thumbnail"
+msgstr ""
+
+#: includes/widget-description.php:59
+msgid "Thumbnail:"
+msgstr ""
+
+#: includes/divi-builder.php:149 includes/visual-composer.php:78
+#: includes/visual-composer.php:187 includes/visual-composer.php:239
+msgid "Title"
+msgstr "Заголовок"
+
+#: main.php:1567
+msgid "title of the brand catalog"
+msgstr "название каталога бренда"
+
+#: main.php:1505
+msgid "title of the brand list"
+msgstr "название списка брендов"
+
+#: includes/base-widget.php:12
+msgid "Title:"
+msgstr "Название:"
+
+#: main.php:109
+msgid "Tooltip"
+msgstr "Подсказка"
+
+#: includes/widget-catalog.php:59
+msgid "Uncategorized"
+msgstr "Без категории"
+
+#: includes/base-widget_ordered.php:43
+msgid "Under name"
+msgstr "Под названием"
+
+#: addons/show_brands/show_brands_include.php:98
+msgid "Under text"
+msgstr "Под текстом"
+
+#: main.php:592
+msgid "Update Brand"
+msgstr "Обновить бренд"
+
+#: main.php:141
+msgid "URL"
+msgstr "URL"
+
+#: main.php:1238
+msgid "Use cache"
+msgstr "Использовать кеш"
+
+#: main.php:1640
+msgid "Use only one of these options: brand_id or brand_slug"
+msgstr "Используйте только один из этих вариантов: brand_id или brand_slug"
+
+#: main.php:1480
+msgid ""
+"Version of Font Awesome that will be used on front end. Please select "
+"version that you have in your theme"
+msgstr ""
+"Версия Font Awesome, которая будет использоваться в интерфейсе пользователя. "
+"Пожалуйста, выберите версию, которая у вас есть в вашей теме"
+
+#: includes/divi-builder.php:73 includes/divi-builder.php:81
+#: includes/visual-composer.php:59 includes/widget-catalog.php:45
+msgid "Vertical"
+msgstr "Вертикально"
+
+#: main.php:1571
+msgid "vertically (default)"
+msgstr "вертикально (по умолчанию)"
+
+#: main.php:1769
+msgid "what to display (all by default):"
+msgstr ""
+
+#: main.php:1668
+msgid "what to show:"
+msgstr ""
+
+#: includes/base-widget.php:149 includes/functions.php:48
+msgid "Width"
+msgstr "Ширина"
+
+#: main.php:1682 main.php:1708 main.php:1734
+msgid "width in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+
+#. 1: first result 2: last result 3: total results
+#: templates/result-count.php:36
+#, php-format
+msgctxt "with first and last result"
+msgid "Showing %1$d&ndash;%2$d of %3$d result, including child brands"
+msgid_plural "Showing %1$d&ndash;%2$d of %3$d results, including child brands"
+msgstr[0] ""
+"Показано %1$d&ndash;%2$d с %3$d результатов, включая дочерние бренды"
+msgstr[1] "Показано %1$d&ndash;%2$d с %3$d результата, включая дочерние бренды"
+msgstr[2] ""
+"Показано %1$d&ndash;%2$d с %3$d результатов, включая дочерние бренды"
+
+#: includes/widget-catalog.php:8
+msgid "WooCommerce Brand Catalog"
+msgstr "Каталог WooCommerce Brand"
+
+#: includes/widget-list.php:7
+msgid "WooCommerce Brand List"
+msgstr "Список WooCommerce Brand"
+
+#: includes/widget-product-list.php:6
+msgid "WooCommerce Brands Product List"
+msgstr ""
+
+#: includes/widget-description.php:6
+msgid "WooCommerce Product Brands Description"
+msgstr "Описание WooCommerce Product Brands"
+
+#: main.php:1677
+msgid ""
+"You can use multiple brand properties, separated by comma. Example: "
+"type='image,name'"
+msgstr ""

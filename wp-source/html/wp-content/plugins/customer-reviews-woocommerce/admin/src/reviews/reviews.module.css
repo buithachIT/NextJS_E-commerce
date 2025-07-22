@@ -1,0 +1,128 @@
+.topGrid {
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: 100%;
+  }
+}
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.icon {
+  color: var(--mantine-color-dimmed);
+}
+.iconReferrals {
+  color: #7B79E2;
+}
+.value {
+  font-size: rem(20px);
+  font-weight: 600;
+  line-height: 1;
+}
+.stat {
+  border-bottom: rem(3px) solid;
+  padding-bottom: rem(5px);
+  border-bottom-color: red;
+}
+.stat.chartColor1 {
+  border-bottom-color: #7B79E2;
+}
+.stat.chartColor2 {
+  border-bottom-color: #937FDD;
+}
+.stat.chartColor3 {
+  border-bottom-color: #AB84D7;
+}
+.stat.chartColor4 {
+  border-bottom-color: #C28AD2;
+}
+.stat.chartColor5 {
+  border-bottom-color: #DA8FCC;
+}
+.statCount {
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+}
+.statCount.chartColor1 {
+  color: #7B79E2;
+}
+.statCount.chartColor2 {
+  color: #DA8FCC;
+}
+.progressLabel {
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+  line-height: 1;
+  font-size: var(--mantine-font-size-xs);
+}
+.progressBox .chartColor1,
+.progressWithSegments .chartColor1 {
+  background-color: #7B79E2;
+}
+.progressBox .chartColor2,
+.progressWithSegments .chartColor2 {
+  background-color: #937FDD;
+}
+.progressBox .chartColor3,
+.progressWithSegments .chartColor3 {
+  background-color: #AB84D7;
+}
+.progressBox .chartColor4,
+.progressWithSegments .chartColor4 {
+  background-color: #C28AD2;
+}
+.progressBox .chartColor5,
+.progressWithSegments .chartColor5 {
+  background-color: #DA8FCC;
+}
+.card {
+  background: #F4F4F4;
+}
+.cardActive.card {
+  border-color: #A46498;
+}
+.skel::before {
+  background-color: #f9f9f9;
+}
+.skel::after {
+  background-color: #E1E1E1;
+}
+.skelDescr {
+  padding-bottom: rem(8px);
+}
+.channelDesc {
+  line-height: var(--mantine-line-height-xs);
+}
+.ratingSubTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 4px;
+}
+.statusTable {
+  tr:first-child td {
+    padding-bottom: 7px;
+  }
+}
+.helpIcon {
+  width: 11px;
+  height: 11px;
+}
+.helpIcon:hover {
+  cursor: pointer;
+}
+.statusCardBadgeIcon {
+  width: 12px;
+  height: 12px;
+}
+.settingsIcon {
+  width: 12px;
+  height: 12px;
+}
+.contReferrals {
+  display: flex;
+}
+.subContReferrals {
+  text-align: center;
+}

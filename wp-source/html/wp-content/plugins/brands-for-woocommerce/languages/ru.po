@@ -1,0 +1,1699 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-04-28 17:15+0300\n"
+"PO-Revision-Date: 2021-04-28 17:20+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: css\n"
+
+#: addons/show_brands/show_brands_include.php:63
+msgid "Shop Page"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:67
+msgid "Product Page"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:75 includes/divi-builder.php:428
+#: includes/widget-description.php:100 main.php:1129
+msgid "none"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:76
+#: includes/widget-description.php:101 main.php:1130
+msgid "Left"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:77
+#: includes/widget-description.php:102 main.php:1131
+msgid "Right"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:78
+msgid "Above text"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:79
+msgid "Under text"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:86
+#: addons/show_brands/show_brands_include.php:150
+msgid "Display Brand"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:93
+#: addons/show_brands/show_brands_include.php:157
+msgid "Brand Position"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:97
+#: addons/show_brands/show_brands_include.php:160
+msgid "Before all"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:98
+#: addons/show_brands/show_brands_include.php:161
+msgid "After Image"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:99
+#: addons/show_brands/show_brands_include.php:162
+msgid "After Title"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:100
+#: addons/show_brands/show_brands_include.php:163
+msgid "After Price"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:101
+#: addons/show_brands/show_brands_include.php:164
+msgid "After Add to cart button"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:107
+#: addons/show_brands/show_brands_include.php:170
+msgid "Display As Link"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:114
+#: addons/show_brands/show_brands_include.php:177
+#: includes/visual-composer.php:16 includes/visual-composer.php:84
+msgid "Image"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:124
+#: addons/show_brands/show_brands_include.php:186
+msgid "Image custom CSS"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:129
+#: addons/show_brands/show_brands_include.php:192
+#: berocket/includes/custom_post.php:192 includes/visual-composer.php:22
+#: includes/visual-composer.php:96
+msgid "Name"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:130
+#: addons/show_brands/show_brands_include.php:193 includes/base-widget.php:334
+#: includes/functions.php:39
+msgid "Display"
+msgstr ""
+
+#: addons/show_brands/show_brands_include.php:141
+#: addons/show_brands/show_brands_include.php:203
+msgid "Name custom CSS"
+msgstr ""
+
+#: berocket/framework.php:282
+msgid "View Plugin Settings"
+msgstr ""
+
+#: berocket/framework.php:283 berocket/framework.php:549
+#: berocket/templates/settings.php:17
+msgid "Settings"
+msgstr ""
+
+#: berocket/framework.php:303
+msgid "View Plugin Documentation"
+msgstr ""
+
+#: berocket/framework.php:304
+msgid "Docs"
+msgstr ""
+
+#: berocket/framework.php:309
+msgid "View Support Page"
+msgstr ""
+
+#: berocket/framework.php:310
+msgid "Support"
+msgstr ""
+
+#: berocket/framework.php:314
+msgid "View Premium Support Page"
+msgstr ""
+
+#: berocket/framework.php:315
+msgid "Premium Support"
+msgstr ""
+
+#: berocket/framework.php:318
+msgid "View Premium Version Page"
+msgstr ""
+
+#: berocket/framework.php:319
+msgid "Premium Version"
+msgstr ""
+
+#: berocket/framework.php:469
+msgid "Next"
+msgstr ""
+
+#: berocket/framework.php:470
+msgid "Close"
+msgstr ""
+
+#: berocket/framework.php:656 berocket/framework.php:885
+#: berocket/includes/updater.php:566
+msgid "Save Changes"
+msgstr ""
+
+#: berocket/framework.php:786
+msgid "Plugin key"
+msgstr ""
+
+#: berocket/framework.php:792
+msgid "Key for plugin from BeRocket.com"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:826
+msgid ""
+"Awesome, you've been using %plugin_name% Plugin for more than 1 week. May we "
+"ask you to give it a 5-star rating on WordPress?"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:827
+msgid "May we ask you to give our plugin %plugin_name% a 5-star rating?"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:838
+#: berocket/includes/admin_notices.php:980
+#: berocket/includes/admin_notices.php:1468
+msgid "Each good feedback is very important for plugin growth"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:840
+#: berocket/includes/admin_notices.php:982
+msgid "Ok, you deserved it"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:849
+msgid "Maybe later"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:850
+msgid "Later"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:860
+msgid "I already did"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:861
+msgid "Already"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:973
+msgid "May we ask you to give us a 5-star feedback?"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:983
+msgid "Support the plugin by setting good feedback.<br>We really need this."
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1218
+msgid "Get it now"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1445
+msgid "Feature Title"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1446
+msgid "Email (optional)"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1447
+msgid "Feature Description"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1448
+msgid "SEND FEATURE REQUEST"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1460
+msgid "While you're here, you could rate this plugin"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1470
+msgid "This plugin deserves 5 stars"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1472
+msgid "I'll rate it next time"
+msgstr ""
+
+#: berocket/includes/admin_notices.php:1479
+msgid "I already rated it"
+msgstr ""
+
+#: berocket/includes/conditions.php:85
+msgid "Product"
+msgstr ""
+
+#: berocket/includes/conditions.php:86
+msgid "On Sale"
+msgstr ""
+
+#: berocket/includes/conditions.php:87
+msgid "Bestsellers"
+msgstr ""
+
+#: berocket/includes/conditions.php:88
+msgid "Price"
+msgstr ""
+
+#: berocket/includes/conditions.php:89
+msgid "Stock status"
+msgstr ""
+
+#: berocket/includes/conditions.php:90
+msgid "Total sales"
+msgstr ""
+
+#: berocket/includes/conditions.php:91 includes/widget-catalog.php:30
+msgid "Category"
+msgstr ""
+
+#: berocket/includes/conditions.php:92
+msgid "Product attribute"
+msgstr ""
+
+#: berocket/includes/conditions.php:93
+msgid "Product age"
+msgstr ""
+
+#: berocket/includes/conditions.php:94
+msgid "Sale price"
+msgstr ""
+
+#: berocket/includes/conditions.php:95
+msgid "Regular price"
+msgstr ""
+
+#: berocket/includes/conditions.php:96
+msgid "Stock quantity"
+msgstr ""
+
+#: berocket/includes/conditions.php:97 main.php:119
+msgid "Featured"
+msgstr ""
+
+#: berocket/includes/conditions.php:98
+msgid "Shipping Class"
+msgstr ""
+
+#: berocket/includes/conditions.php:99
+msgid "Product Type"
+msgstr ""
+
+#: berocket/includes/conditions.php:100
+msgid "Product Rating"
+msgstr ""
+
+#: berocket/includes/conditions.php:102
+msgid "Page ID"
+msgstr ""
+
+#: berocket/includes/conditions.php:103
+msgid "Product Attribute"
+msgstr ""
+
+#: berocket/includes/conditions.php:104
+msgid "Product Search"
+msgstr ""
+
+#: berocket/includes/conditions.php:105
+msgid "Product Category"
+msgstr ""
+
+#: berocket/includes/conditions.php:118 berocket/includes/functions.php:352
+msgid "Equal"
+msgstr ""
+
+#: berocket/includes/conditions.php:119 berocket/includes/functions.php:353
+msgid "Not equal"
+msgstr ""
+
+#: berocket/includes/conditions.php:122 berocket/includes/functions.php:356
+msgid "Equal or less"
+msgstr ""
+
+#: berocket/includes/conditions.php:125 berocket/includes/functions.php:359
+msgid "Equal or more"
+msgstr ""
+
+#: berocket/includes/conditions.php:175
+msgid "Is on sale"
+msgstr ""
+
+#: berocket/includes/conditions.php:176 berocket/includes/conditions.php:233
+#: berocket/includes/conditions.php:491 includes/divi-builder.php:36
+#: includes/divi-builder.php:52 includes/divi-builder.php:157
+#: includes/divi-builder.php:169 includes/divi-builder.php:177
+#: includes/divi-builder.php:185
+msgid "Yes"
+msgstr ""
+
+#: berocket/includes/conditions.php:177 berocket/includes/conditions.php:234
+#: berocket/includes/conditions.php:492 includes/divi-builder.php:35
+#: includes/divi-builder.php:51 includes/divi-builder.php:156
+#: includes/divi-builder.php:168 includes/divi-builder.php:176
+#: includes/divi-builder.php:184
+msgid "No"
+msgstr ""
+
+#: berocket/includes/conditions.php:185 berocket/includes/conditions.php:296
+msgid "Count of product"
+msgstr ""
+
+#: berocket/includes/conditions.php:231
+msgid "Has Rating:"
+msgstr ""
+
+#: berocket/includes/conditions.php:247 berocket/includes/conditions.php:465
+#: berocket/includes/conditions.php:478
+msgid "From:"
+msgstr ""
+
+#: berocket/includes/conditions.php:248 berocket/includes/conditions.php:466
+#: berocket/includes/conditions.php:479
+msgid "To:"
+msgstr ""
+
+#: berocket/includes/conditions.php:250
+msgid "Product price"
+msgstr ""
+
+#: berocket/includes/conditions.php:251
+msgid "With tax"
+msgstr ""
+
+#: berocket/includes/conditions.php:252
+msgid "Without tax"
+msgstr ""
+
+#: berocket/includes/conditions.php:276
+msgid "In stock"
+msgstr ""
+
+#: berocket/includes/conditions.php:277
+msgid "Out of stock"
+msgstr ""
+
+#: berocket/includes/conditions.php:278
+msgid "On Backorder"
+msgstr ""
+
+#: berocket/includes/conditions.php:398
+msgid "Include subcategories"
+msgstr ""
+
+#: berocket/includes/conditions.php:426
+msgid "Select attribute"
+msgstr ""
+
+#: berocket/includes/conditions.php:453
+msgid "day(s)"
+msgstr ""
+
+#: berocket/includes/conditions.php:487
+msgid "Products in stock"
+msgstr ""
+
+#: berocket/includes/conditions.php:489
+msgid "Backorder allowed"
+msgstr ""
+
+#: berocket/includes/conditions.php:490
+msgid "Any"
+msgstr ""
+
+#: berocket/includes/custom_post.php:155
+#: berocket/includes/custom_post/enable_disable.php:34
+msgid "Enable"
+msgstr ""
+
+#: berocket/includes/custom_post.php:162
+#: berocket/includes/custom_post/enable_disable.php:37
+msgid "Disable"
+msgstr ""
+
+#: berocket/includes/custom_post.php:215
+msgid "Save content"
+msgstr ""
+
+#: berocket/includes/custom_post.php:216
+msgid "Copy settings from"
+msgstr ""
+
+#: berocket/includes/custom_post.php:228
+msgid "Do not copy"
+msgstr ""
+
+#: berocket/includes/custom_post.php:239
+msgid "Copy"
+msgstr ""
+
+#: berocket/includes/custom_post.php:275
+msgid "Delete Permanently"
+msgstr ""
+
+#: berocket/includes/custom_post.php:277
+msgid "Move to Trash"
+msgstr ""
+
+#: berocket/includes/custom_post.php:287 main.php:756
+msgid "Save"
+msgstr ""
+
+#: berocket/includes/custom_post.php:287
+msgid "Save/update notice"
+msgstr ""
+
+#: berocket/includes/custom_post/enable_disable.php:60
+#: berocket/includes/custom_post/enable_disable.php:87
+msgid "Sorry, you are not allowed to change this item status."
+msgstr ""
+
+#: berocket/includes/custom_post/enable_disable.php:81
+msgid "The item you are trying to change status no longer exists."
+msgstr ""
+
+#: berocket/includes/custom_post/enable_disable.php:84
+msgid "Invalid post type."
+msgstr ""
+
+#: berocket/includes/custom_post/enable_disable.php:128
+msgid "Enabled"
+msgstr ""
+
+#: berocket/includes/custom_post/enable_disable.php:136
+msgid "Disabled"
+msgstr ""
+
+#: berocket/includes/custom_post/sortable.php:108 includes/base-widget.php:49
+#: main.php:738 main.php:744
+msgid "Order"
+msgstr ""
+
+#: berocket/includes/functions.php:168
+msgid "Default"
+msgstr ""
+
+#: berocket/includes/functions.php:196 berocket/includes/functions.php:248
+msgid "Upload"
+msgstr ""
+
+#: berocket/includes/functions.php:198 berocket/includes/functions.php:251
+#: berocket/includes/functions.php:284
+msgid "Remove"
+msgstr ""
+
+#: berocket/includes/functions.php:249 berocket/includes/functions.php:282
+msgid "Font Awesome"
+msgstr ""
+
+#: berocket/includes/functions.php:311
+msgid "Enter 3 or more characters"
+msgstr ""
+
+#: berocket/includes/settings_fields.php:183
+msgid "MULTISITE ADMIN"
+msgstr ""
+
+#: berocket/includes/settings_fields.php:183
+msgid "ADMIN"
+msgstr ""
+
+#: berocket/includes/settings_fields.php:184
+#, php-format
+msgid "Field can be changed only by %s"
+msgstr ""
+
+#: berocket/includes/updater.php:132 berocket/includes/updater.php:466
+msgid "Account Keys"
+msgstr ""
+
+#: berocket/includes/updater.php:235
+msgid "Please"
+msgstr ""
+
+#: berocket/includes/updater.php:235
+msgid "activate plugin"
+msgstr ""
+
+#: berocket/includes/updater.php:235
+msgid "with help of plugin/account key from"
+msgstr ""
+
+#: berocket/includes/updater.php:236
+msgid "BeRocket account"
+msgstr ""
+
+#: berocket/includes/updater.php:237
+msgid "You can activate plugin in"
+msgstr ""
+
+#: berocket/includes/updater.php:238
+msgid "BeRocket Account settings"
+msgstr ""
+
+#: berocket/includes/updater.php:452 berocket/includes/updater.php:466
+#: berocket/includes/updater.php:525
+msgid "BeRocket Account Settings"
+msgstr ""
+
+#: berocket/includes/updater.php:452
+msgid "BeRocket Account"
+msgstr ""
+
+#: berocket/includes/updater.php:529
+msgid "DEBUG MODE"
+msgstr ""
+
+#: berocket/includes/updater.php:532
+msgid "Enable debug mode"
+msgstr ""
+
+#: berocket/includes/updater.php:535
+msgid "Account key"
+msgstr ""
+
+#: berocket/includes/updater.php:569
+msgid "Errors"
+msgstr ""
+
+#: berocket/includes/updater.php:571
+msgid "Select plugin"
+msgstr ""
+
+#: berocket/includes/widget.php:51 includes/base-widget.php:28
+msgid "Title:"
+msgstr ""
+
+#: berocket/libraries/addons/addons.php:106
+msgid "Active Addons"
+msgstr ""
+
+#: berocket/libraries/addons/addons.php:110
+msgid "Inactive Addons"
+msgstr ""
+
+#: berocket/libraries/addons/addons.php:153
+#: berocket/libraries/templates/templates.php:164
+msgid "Go Premium"
+msgstr ""
+
+#: berocket/libraries/feature_tab.php:28
+msgid "Upgrade to Premium "
+msgstr ""
+
+#: berocket/libraries/feature_tab.php:29
+msgid "Upgrade"
+msgstr ""
+
+#: berocket/libraries/feature_tab.php:42
+msgid "Premium"
+msgstr ""
+
+#: berocket/libraries/feature_tab.php:42
+msgid "Features"
+msgstr ""
+
+#: includes/base-widget.php:33
+msgid "Display text"
+msgstr ""
+
+#: includes/base-widget.php:38
+msgid "Image:"
+msgstr ""
+
+#: includes/base-widget.php:43
+msgid "Order by:"
+msgstr ""
+
+#: includes/base-widget.php:47 includes/widget-catalog.php:29
+msgid "Alphabet"
+msgstr ""
+
+#: includes/base-widget.php:48
+msgid "Number of products"
+msgstr ""
+
+#: includes/base-widget.php:50 includes/visual-composer.php:191
+#: includes/visual-composer.php:243
+msgid "Random"
+msgstr ""
+
+#: includes/base-widget.php:56
+msgid "&nbsp;"
+msgstr ""
+
+#: includes/base-widget.php:60
+msgid "Asc"
+msgstr ""
+
+#: includes/base-widget.php:61
+msgid "Desc"
+msgstr ""
+
+#: includes/base-widget.php:67
+msgid "Show number of products"
+msgstr ""
+
+#: includes/base-widget.php:72
+msgid "Hide empty"
+msgstr ""
+
+#: includes/base-widget.php:77
+msgid "Featured first"
+msgstr ""
+
+#: includes/base-widget.php:335 includes/functions.php:48
+msgid "Width"
+msgstr ""
+
+#: includes/base-widget.php:336 includes/functions.php:56
+msgid "Height"
+msgstr ""
+
+#: includes/base-widget.php:337 includes/functions.php:64
+msgid "Fit"
+msgstr ""
+
+#: includes/base-widget.php:339 includes/functions.php:69
+msgid "Cover"
+msgstr ""
+
+#: includes/base-widget.php:340 includes/functions.php:70
+msgid "Contain"
+msgstr ""
+
+#: includes/base-widget.php:341 includes/functions.php:71
+msgid "Fill"
+msgstr ""
+
+#: includes/base-widget.php:342 includes/functions.php:72
+#: includes/widget-catalog.php:31
+msgid "None"
+msgstr ""
+
+#: includes/base-widget.php:344 includes/functions.php:76
+msgid "Align"
+msgstr ""
+
+#: includes/base-widget.php:346
+msgid "Above name"
+msgstr ""
+
+#: includes/base-widget.php:347
+msgid "Left to name"
+msgstr ""
+
+#: includes/base-widget.php:348
+msgid "Right to name"
+msgstr ""
+
+#: includes/base-widget.php:349
+msgid "Under name"
+msgstr ""
+
+#: includes/divi-builder.php:6 includes/visual-composer.php:9
+msgid "Brands by Name"
+msgstr ""
+
+#: includes/divi-builder.php:32 includes/divi-builder.php:153
+#: includes/visual-composer.php:18
+msgid "Display image"
+msgstr ""
+
+#: includes/divi-builder.php:40 includes/visual-composer.php:28
+msgid "Maximum image height"
+msgstr ""
+
+#: includes/divi-builder.php:44 includes/visual-composer.php:34
+msgid "Maximum image width"
+msgstr ""
+
+#: includes/divi-builder.php:48 includes/divi-builder.php:165
+#: includes/visual-composer.php:98
+msgid "Display name"
+msgstr ""
+
+#: includes/divi-builder.php:56 includes/visual-composer.php:40
+#: includes/visual-composer.php:178 includes/visual-composer.php:230
+msgid "Columns"
+msgstr ""
+
+#: includes/divi-builder.php:60 includes/divi-builder.php:425
+#: includes/visual-composer.php:46
+msgid "Position"
+msgstr ""
+
+#: includes/divi-builder.php:63 includes/visual-composer.php:49
+msgid "Name after image"
+msgstr ""
+
+#: includes/divi-builder.php:64 includes/visual-composer.php:50
+msgid "Name before image"
+msgstr ""
+
+#: includes/divi-builder.php:65 includes/visual-composer.php:51
+msgid "Name under image"
+msgstr ""
+
+#: includes/divi-builder.php:66
+msgid "Show only on letter click"
+msgstr ""
+
+#: includes/divi-builder.php:70 includes/visual-composer.php:56
+msgid "Style"
+msgstr ""
+
+#: includes/divi-builder.php:73 includes/divi-builder.php:81
+#: includes/visual-composer.php:59 includes/widget-catalog.php:41
+msgid "Vertical"
+msgstr ""
+
+#: includes/divi-builder.php:74 includes/divi-builder.php:82
+#: includes/visual-composer.php:60 includes/widget-catalog.php:42
+msgid "Horizontal"
+msgstr ""
+
+#: includes/divi-builder.php:78
+msgid "Color"
+msgstr ""
+
+#: includes/divi-builder.php:114 includes/visual-composer.php:71
+msgid "Brands List"
+msgstr ""
+
+#: includes/divi-builder.php:149 includes/visual-composer.php:78
+#: includes/visual-composer.php:187 includes/visual-composer.php:239
+msgid "Title"
+msgstr ""
+
+#: includes/divi-builder.php:161 includes/visual-composer.php:90
+msgid "Image height"
+msgstr ""
+
+#: includes/divi-builder.php:173
+msgid "Hide brands without products"
+msgstr ""
+
+#: includes/divi-builder.php:181 includes/visual-composer.php:110
+msgid "Display as slider"
+msgstr ""
+
+#: includes/divi-builder.php:189 includes/visual-composer.php:114
+#: includes/widget-list.php:34
+msgid "Brands per row"
+msgstr ""
+
+#: includes/divi-builder.php:193 includes/visual-composer.php:120
+msgid "Number of brands"
+msgstr ""
+
+#: includes/divi-builder.php:197 includes/divi-builder.php:273
+#: includes/visual-composer.php:126 includes/visual-composer.php:184
+#: includes/visual-composer.php:196 includes/visual-composer.php:236
+#: includes/visual-composer.php:248
+msgid "Order By"
+msgstr ""
+
+#: includes/divi-builder.php:200 includes/visual-composer.php:129
+msgid "Brand name"
+msgstr ""
+
+#: includes/divi-builder.php:201 includes/visual-composer.php:130
+msgid "Count of products"
+msgstr ""
+
+#: includes/divi-builder.php:205 includes/visual-composer.php:135
+msgid "Padding around brands"
+msgstr ""
+
+#: includes/divi-builder.php:209 includes/visual-composer.php:141
+#: includes/widget-list.php:70
+msgid "Border color"
+msgstr ""
+
+#: includes/divi-builder.php:213 includes/visual-composer.php:147
+msgid "Border width"
+msgstr ""
+
+#: includes/divi-builder.php:238
+msgid "Brands Products"
+msgstr ""
+
+#: includes/divi-builder.php:261
+msgid "brand ID(s)"
+msgstr ""
+
+#: includes/divi-builder.php:265
+msgid "brand slug(s)"
+msgstr ""
+
+#: includes/divi-builder.php:269
+msgid "count of columns for product list"
+msgstr ""
+
+#: includes/divi-builder.php:276
+msgid "Order by title"
+msgstr ""
+
+#: includes/divi-builder.php:277
+msgid "Order by post name (post slug)"
+msgstr ""
+
+#: includes/divi-builder.php:278
+msgid "Order by date"
+msgstr ""
+
+#: includes/divi-builder.php:279
+msgid "Order by last modified date"
+msgstr ""
+
+#: includes/divi-builder.php:280
+msgid "Random order"
+msgstr ""
+
+#: includes/divi-builder.php:284
+msgid "Order Type"
+msgstr ""
+
+#: includes/divi-builder.php:287
+msgid "ascending"
+msgstr ""
+
+#: includes/divi-builder.php:288 main.php:1391 main.php:1453 main.php:1500
+msgid "descending"
+msgstr ""
+
+#: includes/divi-builder.php:309
+msgid "Brand info for product page"
+msgstr ""
+
+#: includes/divi-builder.php:326 includes/divi-builder.php:367
+#: includes/divi-builder.php:417 includes/divi-builder.php:421
+msgid "Data type"
+msgstr ""
+
+#: includes/divi-builder.php:330 includes/divi-builder.php:413
+msgid "Product ID"
+msgstr ""
+
+#: includes/divi-builder.php:350
+msgid "Brand info"
+msgstr ""
+
+#: includes/divi-builder.php:371
+msgid "Brand ID"
+msgstr ""
+
+#: includes/divi-builder.php:391
+msgid "Brand thumbnail"
+msgstr ""
+
+#: includes/divi-builder.php:429
+msgid "left"
+msgstr ""
+
+#: includes/divi-builder.php:430
+msgid "right"
+msgstr ""
+
+#: includes/visual-composer.php:11 includes/visual-composer.php:73
+#: includes/visual-composer.php:161 includes/visual-composer.php:213
+msgid "BeRocket"
+msgstr ""
+
+#: includes/visual-composer.php:24
+msgid "Hide name"
+msgstr ""
+
+#: includes/visual-composer.php:86
+msgid "Hide image"
+msgstr ""
+
+#: includes/visual-composer.php:102
+msgid "Show empty"
+msgstr ""
+
+#: includes/visual-composer.php:104
+msgid "Show brands without products"
+msgstr ""
+
+#: includes/visual-composer.php:108 includes/widget-list.php:25 main.php:1146
+msgid "Slider"
+msgstr ""
+
+#: includes/visual-composer.php:159
+msgid "Brand Products"
+msgstr ""
+
+#: includes/visual-composer.php:166 includes/visual-composer.php:218
+msgid "Brand ID(s)"
+msgstr ""
+
+#: includes/visual-composer.php:172 includes/visual-composer.php:224
+msgid "Brand slug(s)"
+msgstr ""
+
+#: includes/visual-composer.php:188 includes/visual-composer.php:240
+msgid "Post name (post slug)"
+msgstr ""
+
+#: includes/visual-composer.php:189 includes/visual-composer.php:241
+msgid "Date"
+msgstr ""
+
+#: includes/visual-composer.php:190 includes/visual-composer.php:242
+msgid "Modified date"
+msgstr ""
+
+#: includes/visual-composer.php:199 includes/visual-composer.php:251
+msgid "Descending"
+msgstr ""
+
+#: includes/visual-composer.php:200 includes/visual-composer.php:252
+msgid "Ascending"
+msgstr ""
+
+#: includes/visual-composer.php:211
+msgid "Brand Info"
+msgstr ""
+
+#: includes/widget-catalog.php:7
+msgid "WooCommerce Brand Catalog"
+msgstr ""
+
+#: includes/widget-catalog.php:20
+msgid "Show \"All\" tab"
+msgstr ""
+
+#: includes/widget-catalog.php:25
+msgid "Group by:"
+msgstr ""
+
+#: includes/widget-catalog.php:37
+msgid "Layout:"
+msgstr ""
+
+#: includes/widget-catalog.php:48
+msgid "Columns:"
+msgstr ""
+
+#: includes/widget-catalog.php:64
+msgid "Uncategorized"
+msgstr ""
+
+#: includes/widget-description.php:14
+msgid "WooCommerce Product Brands Description"
+msgstr ""
+
+#: includes/widget-description.php:83
+msgid "Display title"
+msgstr ""
+
+#: includes/widget-description.php:86
+msgid "Display thumbnails"
+msgstr ""
+
+#: includes/widget-description.php:89 main.php:1193
+msgid "Display description"
+msgstr ""
+
+#: includes/widget-description.php:92
+msgid "Image width"
+msgstr ""
+
+#: includes/widget-description.php:96
+msgid "Image align"
+msgstr ""
+
+#: includes/widget-list.php:6
+msgid "WooCommerce Brand List"
+msgstr ""
+
+#: includes/widget-list.php:46
+msgid "Brands in list"
+msgstr ""
+
+#: includes/widget-list.php:49 templates/catalog.php:32
+msgid "All"
+msgstr ""
+
+#: includes/widget-list.php:55
+msgid "Padding, px"
+msgstr ""
+
+#: includes/widget-list.php:60
+msgid "Margin, px"
+msgstr ""
+
+#: includes/widget-list.php:65
+msgid "Border width, px"
+msgstr ""
+
+#: main.php:58
+msgid "Go to the brand website >>"
+msgstr ""
+
+#: main.php:84 main.php:1199
+msgid "Thumbnail"
+msgstr "Иконка бренда"
+
+#: main.php:89 main.php:1205
+msgid "Banner"
+msgstr ""
+
+#: main.php:94
+msgid "Categories"
+msgstr ""
+
+#: main.php:95
+msgid "Product categories"
+msgstr ""
+
+#: main.php:100
+msgid "Tooltip"
+msgstr ""
+
+#: main.php:101
+msgid "Optional message to pop up on hover or on click"
+msgstr ""
+
+#: main.php:120
+msgid ""
+"Featured brands can be output first or you may select to show featured "
+"brands only"
+msgstr ""
+
+#: main.php:124
+msgid "URL"
+msgstr ""
+
+#: main.php:125
+msgid "Link to the brand page or to the external website"
+msgstr ""
+
+#: main.php:541 main.php:543 main.php:1558 main.php:1740 main.php:1752
+msgid "Brands"
+msgstr ""
+
+#: main.php:544
+msgid "Back to Brands"
+msgstr ""
+
+#: main.php:545
+msgid "No brands found."
+msgstr ""
+
+#: main.php:546
+msgid "Brand"
+msgstr ""
+
+#: main.php:547
+msgid "Search Brands"
+msgstr ""
+
+#: main.php:548 main.php:1566
+msgid "All Brands"
+msgstr ""
+
+#: main.php:549
+msgid "Parent Brand"
+msgstr ""
+
+#: main.php:550
+msgid "Parent Brand:"
+msgstr ""
+
+#: main.php:551
+msgid "Edit Brand"
+msgstr ""
+
+#: main.php:552
+msgid "Update Brand"
+msgstr ""
+
+#: main.php:553
+msgid "Add New Brand"
+msgstr ""
+
+#: main.php:554
+msgid "New Brand Name"
+msgstr ""
+
+#: main.php:570 templates/permalink_option.php:9
+msgid "brands"
+msgstr ""
+
+#: main.php:737
+msgid "Description"
+msgstr ""
+
+#: main.php:755
+msgid "Saving..."
+msgstr ""
+
+#: main.php:757
+msgid "Level up"
+msgstr ""
+
+#: main.php:758
+msgid "Level down"
+msgstr ""
+
+#: main.php:1058
+msgid "Select a brand"
+msgstr ""
+
+#: main.php:1070
+msgid "Product brands"
+msgstr ""
+
+#: main.php:1071
+msgid "Any brand"
+msgstr ""
+
+#: main.php:1081
+msgid "Products with these brands will be discounted"
+msgstr ""
+
+#: main.php:1085
+msgid "Exclude brands"
+msgstr ""
+
+#: main.php:1086
+msgid "No brands"
+msgstr ""
+
+#: main.php:1097
+msgid "Products with these brands will not be discounted"
+msgstr ""
+
+#: main.php:1115
+msgid " settings"
+msgstr ""
+
+#: main.php:1138
+msgid "General"
+msgstr ""
+
+#: main.php:1142
+msgid "Brand Page"
+msgstr ""
+
+#: main.php:1150
+msgid "CSS"
+msgstr ""
+
+#: main.php:1154
+msgid "Addons"
+msgstr ""
+
+#: main.php:1158
+msgid "License"
+msgstr ""
+
+#: main.php:1165
+msgid "Use cache"
+msgstr ""
+
+#: main.php:1178
+msgid "Clear cache after update shortcodes and widgets"
+msgstr ""
+
+#: main.php:1180
+msgid "Clearing..."
+msgstr ""
+
+#: main.php:1180
+msgid "Cleared"
+msgstr ""
+
+#: main.php:1182
+msgid "Clear"
+msgstr ""
+
+#: main.php:1210
+msgid "External link"
+msgstr "Внешняя ссылка"
+
+#: main.php:1215
+msgid "Display (if URL for the brand is set)"
+msgstr ""
+
+#: main.php:1222
+msgid "Text"
+msgstr ""
+
+#: main.php:1228
+msgid "Open in new tab"
+msgstr ""
+
+#: main.php:1238
+msgid "Autoplay"
+msgstr ""
+
+#: main.php:1246
+msgid "Autoplay Speed"
+msgstr ""
+
+#: main.php:1247 main.php:1255
+msgid "ms"
+msgstr ""
+
+#: main.php:1254
+msgid "Slide change speed"
+msgstr ""
+
+#: main.php:1261
+msgid "Infinite"
+msgstr ""
+
+#: main.php:1267
+msgid "Show Arrows"
+msgstr ""
+
+#: main.php:1273
+msgid "Brands to Scroll"
+msgstr ""
+
+#: main.php:1279
+msgid "Change slide mode"
+msgstr ""
+
+#: main.php:1280
+msgid "Slide"
+msgstr ""
+
+#: main.php:1281
+msgid "Fade"
+msgstr ""
+
+#: main.php:1288
+msgid "Easing"
+msgstr ""
+
+#: main.php:1291
+msgid "Linear"
+msgstr ""
+
+#: main.php:1292
+msgid "Ease"
+msgstr ""
+
+#: main.php:1293
+msgid "Ease in"
+msgstr ""
+
+#: main.php:1294
+msgid "Ease out"
+msgstr ""
+
+#: main.php:1295
+msgid "Ease in-out"
+msgstr ""
+
+#: main.php:1296
+msgid "Cubic Bezier 1"
+msgstr ""
+
+#: main.php:1297
+msgid "Cubic Bezier 2"
+msgstr ""
+
+#: main.php:1298
+msgid "Cubic Bezier 3"
+msgstr ""
+
+#: main.php:1299
+msgid "Cubic Bezier 4"
+msgstr ""
+
+#: main.php:1300
+msgid "Cubic Bezier 5"
+msgstr ""
+
+#: main.php:1301
+msgid "Cubic Bezier 6"
+msgstr ""
+
+#: main.php:1307
+msgid "Stop Autoscroll on Focus"
+msgstr ""
+
+#: main.php:1313
+msgid "Show dots"
+msgstr ""
+
+#: main.php:1321
+msgid "Dots color"
+msgstr ""
+
+#: main.php:1329
+msgid "Disable Font Awesome"
+msgstr ""
+
+#: main.php:1333
+msgid ""
+"Don't loading css file for Font Awesome on site front end. Use it only if "
+"you doesn't uses Font Awesome icons in widgets or you have Font Awesome in "
+"your theme."
+msgstr ""
+
+#: main.php:1336
+msgid "Font Awesome Version"
+msgstr ""
+
+#: main.php:1340
+msgid "Font Awesome 4"
+msgstr ""
+
+#: main.php:1341
+msgid "Font Awesome 5"
+msgstr ""
+
+#: main.php:1344
+msgid ""
+"Version of Font Awesome that will be used on front end. Please select "
+"version that you have in your theme"
+msgstr ""
+
+#: main.php:1348
+msgid "Custom CSS"
+msgstr ""
+
+#: main.php:1361
+msgid "Shortcodes: click to expand"
+msgstr ""
+
+#: main.php:1366
+msgid "list of brands"
+msgstr ""
+
+#: main.php:1369
+msgid "title of the brand list"
+msgstr ""
+
+#: main.php:1370
+msgid "display brand name (1 or 0)"
+msgstr ""
+
+#: main.php:1371
+msgid "number of columns for brands list (number of brands per slider)"
+msgstr ""
+
+#: main.php:1372 main.php:1431
+msgid "hide brands without products (1 or 0)"
+msgstr ""
+
+#: main.php:1373 main.php:1432
+msgid "maximum number of brands"
+msgstr ""
+
+#: main.php:1374
+msgid "padding around image and name in pixels (default is 3)"
+msgstr ""
+
+#: main.php:1375
+msgid "border color in HEX (#FFFFFF - white, #000000 - black)"
+msgstr ""
+
+#: main.php:1376
+msgid "border width in pixels"
+msgstr ""
+
+#: main.php:1377
+msgid "output mode: slider (1) or list (0)"
+msgstr ""
+
+#: main.php:1378 main.php:1440
+msgid "sort brands by:"
+msgstr ""
+
+#: main.php:1380 main.php:1435 main.php:1442
+msgid "brand name (default)"
+msgstr ""
+
+#: main.php:1381 main.php:1443
+msgid "number of products"
+msgstr ""
+
+#: main.php:1382 main.php:1444
+msgid "brand order"
+msgstr ""
+
+#: main.php:1383 main.php:1445 main.php:1494
+msgid "random order"
+msgstr ""
+
+#: main.php:1384 main.php:1446
+msgid "brand slug"
+msgstr ""
+
+#: main.php:1385 main.php:1447 main.php:1515 main.php:1548
+msgid "brand description"
+msgstr ""
+
+#: main.php:1388 main.php:1450 main.php:1497
+msgid "sorting order:"
+msgstr ""
+
+#: main.php:1390 main.php:1452 main.php:1499
+msgid "ascending (default)"
+msgstr ""
+
+#: main.php:1394
+msgid "display brand image (1 or 0)"
+msgstr ""
+
+#: main.php:1395
+msgid "brand image height in px or % (i.e. 50%, 100px; default is 64px)"
+msgstr ""
+
+#: main.php:1396
+msgid "brand image width in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+
+#: main.php:1397 main.php:1459
+msgid "brand image fit:"
+msgstr ""
+
+#: main.php:1399 main.php:1461
+msgid "default"
+msgstr ""
+
+#: main.php:1404 main.php:1466
+msgid "brand image align to name:"
+msgstr ""
+
+#: main.php:1406 main.php:1468
+msgid "image left to name"
+msgstr ""
+
+#: main.php:1407 main.php:1469
+msgid "image right to name"
+msgstr ""
+
+#: main.php:1408 main.php:1470
+msgid "image under name"
+msgstr ""
+
+#: main.php:1409 main.php:1471
+msgid "image above name (default)"
+msgstr ""
+
+#: main.php:1412 main.php:1474
+msgid "show featured brands first (0 or 1)"
+msgstr ""
+
+#: main.php:1413 main.php:1475
+msgid "brands to display (id list, i.e. include='45,47,52,61')"
+msgstr ""
+
+#: main.php:1414 main.php:1476
+msgid "brands to exclude from display (i.e. exclude='45,47,52,61')"
+msgstr ""
+
+#: main.php:1419
+msgid "brands grouped by name or category"
+msgstr ""
+
+#: main.php:1422
+msgid "title of the brand catalog"
+msgstr ""
+
+#: main.php:1423
+msgid "display brand name"
+msgstr ""
+
+#: main.php:1424
+msgid "placement of brands:"
+msgstr ""
+
+#: main.php:1426
+msgid "vertically (default)"
+msgstr ""
+
+#: main.php:1427
+msgid "horizontally"
+msgstr ""
+
+#: main.php:1430
+msgid "number of columns"
+msgstr ""
+
+#: main.php:1433
+msgid "group brands by:"
+msgstr ""
+
+#: main.php:1436
+msgid "brand category"
+msgstr ""
+
+#: main.php:1437
+msgid "no group"
+msgstr ""
+
+#: main.php:1456
+msgid "display brand image"
+msgstr ""
+
+#: main.php:1457
+msgid "brand image height, in px or % (i.e. 50%, 100px; default is 64px)"
+msgstr ""
+
+#: main.php:1458
+msgid "brand image width, in px or % (i.e. 50%, 100px; default is 100%)"
+msgstr ""
+
+#: main.php:1481
+msgid "product list for given brands (by ids or slugs)"
+msgstr ""
+
+#: main.php:1484
+msgid "one or more brand ID (example: brand_id='12,34,35')"
+msgstr ""
+
+#: main.php:1485
+msgid "one or more brand slugs (example: brand_slug='brand1,brand2,brand3')"
+msgstr ""
+
+#: main.php:1486
+msgid "Use only one of these options: brand_id or brand_slug"
+msgstr ""
+
+#: main.php:1487
+msgid ""
+"number of columns for product list. May not work with some themes or plugins"
+msgstr ""
+
+#: main.php:1488
+msgid "order products by:"
+msgstr ""
+
+#: main.php:1490
+msgid "product title"
+msgstr ""
+
+#: main.php:1491
+msgid "product name (post slug)"
+msgstr ""
+
+#: main.php:1492
+msgid "date of creation"
+msgstr ""
+
+#: main.php:1493
+msgid "last modified date"
+msgstr ""
+
+#: main.php:1507
+msgid "information about brand"
+msgstr ""
+
+#: main.php:1510
+msgid "brand ID"
+msgstr ""
+
+#: main.php:1511
+msgid "type of information:"
+msgstr ""
+
+#: main.php:1513 main.php:1546
+msgid "brand name"
+msgstr ""
+
+#: main.php:1514 main.php:1547
+msgid "brand thumbnail"
+msgstr ""
+
+#: main.php:1522
+msgid "brand image for product page"
+msgstr ""
+
+#: main.php:1525
+msgid "product id"
+msgstr ""
+
+#: main.php:1526
+msgid "image width (default is 35%)"
+msgstr ""
+
+#: main.php:1527
+msgid "image height (optionally)"
+msgstr ""
+
+#: main.php:1528
+msgid "float style for element (default is right)"
+msgstr ""
+
+#: main.php:1530
+msgid "right to text (default)"
+msgstr ""
+
+#: main.php:1531
+msgid "left to text"
+msgstr ""
+
+#: main.php:1534
+msgid "display brand image, if available (1 or 0, default is 1)"
+msgstr ""
+
+#: main.php:1535
+msgid "display image as link (1 or 0, default is 0)"
+msgstr ""
+
+#: main.php:1540
+msgid "single brand info for single product"
+msgstr ""
+
+#: main.php:1543
+msgid "product ID; on single product page can get it automatically"
+msgstr ""
+
+#: main.php:1544
+msgid "what to display:"
+msgstr ""
+
+#: templates/result-count.php:28
+msgid "Showing the single result"
+msgstr ""
