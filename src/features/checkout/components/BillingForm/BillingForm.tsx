@@ -31,6 +31,7 @@ import { useState } from 'react';
 import { ROUTES } from '@/config/routes';
 import { useRouter } from 'next/navigation';
 import { useCart } from '@/contexts/CartContext';
+import { decodeDatabaseId } from '@/helper/decoded';
 
 const BillingForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,7 +53,7 @@ const BillingForm = () => {
   });
 
   const { setValue } = form;
-
+  const uid = user?.databaseId || decodeDatabaseId(user?.id || '');
   const onSubmit = async (data: BillingFormValues) => {
     const validCart = await validateCartFromLocalStorage();
     if (!validCart) {
@@ -63,7 +64,7 @@ const BillingForm = () => {
     }
     setIsSubmitting(true);
     try {
-      const order = await createOrder(data, validCart);
+      const order = await createOrder(data, validCart, uid);
       if (order) {
         toast.success('Order created successfully!');
         localStorage.removeItem('cart');

@@ -16,10 +16,10 @@ export interface BillingInfo {
   country: string;
   note?: string;
 }
-export async function createOrder(billingInfo: BillingInfo, cart: CartItem[]) {
+export async function createOrder(billingInfo: BillingInfo, cart: CartItem[], uid: number) {
   const client = getClient();
-
   const input = {
+    customerId: uid,
     status: 'PENDING',
     billing: {
       firstName: billingInfo.firstName,

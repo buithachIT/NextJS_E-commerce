@@ -21,8 +21,8 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType>({
   user: null,
   loading: true,
-  refresh: async () => {},
-  logout: async () => {},
+  refresh: async () => { },
+  logout: async () => { },
 });
 
 type AuthProviderProps = {

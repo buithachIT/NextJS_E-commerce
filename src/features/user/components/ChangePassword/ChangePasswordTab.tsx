@@ -41,13 +41,13 @@ const ChangePasswordTab = () => {
         toast.success('Password changed successfully');
         form.reset();
       } else {
-        toast.error(res?.error || 'Failed to change password');
+        toast.error(res?.error);
       }
     } catch (error: unknown) {
       if (error instanceof Error) {
         toast.error(error.message);
       } else {
-        toast.error('Failed to change password');
+        toast.error('Failed to change password!');
       }
     }
   };
