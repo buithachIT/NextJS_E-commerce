@@ -6,7 +6,6 @@ import { ProductCategoryListType } from '@/types/product';
 import { DEFAULT_PAGE_SIZE } from '@/consts/pagination';
 import Pagination from '@/components/paginations/pagination';
 import { ROUTES } from '@/config/routes';
-
 import { SortSelect } from '@/features/product/components/FilterProduct/sortProduct';
 import { filterProducts } from '@/features/product/utils/filterProduct';
 import { sortProducts } from '@/features/product/utils/sortProduct';
