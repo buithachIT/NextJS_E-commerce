@@ -1,5 +1,5 @@
 import React from 'react';
-import type { FilterValues } from './FilterToggle';
+import type { FilterValues } from './filterToggle';
 
 function ActiveFilters({
   filterValues,
