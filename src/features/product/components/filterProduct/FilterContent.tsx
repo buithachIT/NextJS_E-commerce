@@ -218,8 +218,8 @@ export default function FilterContent({
                 key={size}
                 onClick={() => handleSizeChange(size)}
                 className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
-                    ? 'bg-black text-white'
-                    : 'bg-gray-100 text-gray-800'
+                  ? 'bg-black text-white'
+                  : 'bg-gray-100 text-gray-800'
                   }`}
               >
                 {size}

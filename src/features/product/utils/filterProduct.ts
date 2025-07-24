@@ -38,28 +38,28 @@ export function filterProducts(
     const colorMatch =
       Array.isArray(filters.color) && filters.color.length > 0
         ? attrs.some(
-            (attr: ProductAttribute) =>
-              attr &&
-              attr.name?.toLowerCase().trim() === 'pa_color' &&
-              Array.isArray(attr.options) &&
-              attr.options.some((opt) =>
-                filters
-                  .color!.map((c) => c.toLowerCase().trim())
-                  .includes((opt || '').toLowerCase().trim())
-              )
-          )
+          (attr: ProductAttribute) =>
+            attr &&
+            attr.name?.toLowerCase().trim() === 'pa_color' &&
+            Array.isArray(attr.options) &&
+            attr.options.some((opt) =>
+              filters
+                .color!.map((c) => c.toLowerCase().trim())
+                .includes((opt || '').toLowerCase().trim())
+            )
+        )
         : true;
     const sizeMatch =
       Array.isArray(filters.size) && filters.size.length > 0
         ? attrs.some(
-            (attr) =>
-              attr.name?.toLowerCase().trim() === 'pa_size' &&
-              attr.options?.some((opt) =>
-                filters
-                  .size!.map((s) => s.toLowerCase().trim())
-                  .includes((opt || '').toLowerCase().trim())
-              )
-          )
+          (attr) =>
+            attr.name?.toLowerCase().trim() === 'pa_size' &&
+            attr.options?.some((opt) =>
+              filters
+                .size!.map((s) => s.toLowerCase().trim())
+                .includes((opt || '').toLowerCase().trim())
+            )
+        )
         : true;
 
     return colorMatch && sizeMatch && price >= minPrice && price <= maxPrice;
