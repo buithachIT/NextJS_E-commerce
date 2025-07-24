@@ -7,8 +7,8 @@ import { ROUTES } from '@/config/routes';
 import { filterProducts } from '@/features/product/utils/filterProduct';
 import { sortProducts } from '@/features/product/utils/sortProduct';
 import ProductList from '@/features/product/components/FeatureProduct/ProductList';
-import FilterToggle from '@/features/product/components/FilterProduct/filterToggle';
-import { SortSelect } from '@/features/product/components/FilterProduct/sortSelect';
+import FilterToggle from '@/features/product/components/FilterProduct/FilterToggle';
+import { SortSelect } from '@/features/product/components/FilterProduct/SortSelect';
 
 type Props = {
   params: { slug: string };

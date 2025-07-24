@@ -1,5 +1,5 @@
 import { VariableProduct, ProductAttribute } from '@/__generated__/types';
-import { FilterValues } from '@/features/product/components/FilterProduct/filterToggle';
+import { FilterValues } from '@/features/product/components/FilterProduct/FilterToggle';
 import { ProductCategoryListType } from '@/types/product';
 
 export function filterProducts(
