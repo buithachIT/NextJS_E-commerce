@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { filterProducts } from '../filterProduct';
+import { filterProducts } from '../FilterProduct';
 import { ProductCategoryListType } from '@/types/product';
 import { FilterValues } from '@/features/product/components/FilterProduct/FilterProduct';
 import { StockStatusEnum } from '@/__generated__/types';
