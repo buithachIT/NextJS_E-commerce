@@ -5,6 +5,8 @@ import {
 } from '@/__generated__/graphql';
 import { GetProductByIdQuery, StockStatusEnum } from '@/__generated__/types';
 
+export { StockStatusEnum };
+
 export type ProductList = NonNullable<
   NonNullable<GetLatestProductsQuery['products']>['nodes']
 >;

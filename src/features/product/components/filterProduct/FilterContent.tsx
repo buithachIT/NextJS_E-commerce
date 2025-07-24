@@ -58,7 +58,14 @@ export default function FilterContent({
 
         setColors(fetchedColors.length > 0 ? fetchedColors : DEFAULT_COLORS);
         setSizes(fetchedSizes.length > 0 ? fetchedSizes : DEFAULT_SIZES);
-      } catch (error) {
+      } catch (error: unknown) {
+        let message = 'Unknown error';
+
+        if (error instanceof Error) {
+          message = error.message;
+        }
+
+        console.error('Error fetching product options:', message);
         setColors(DEFAULT_COLORS);
         setSizes(DEFAULT_SIZES);
       }
@@ -210,11 +217,10 @@ export default function FilterContent({
               <Button
                 key={size}
                 onClick={() => handleSizeChange(size)}
-                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${
-                  (values.size ?? []).includes(size)
+                className={`px-3 py-1 rounded-full cursor-pointer border text-sm ${(values.size ?? []).includes(size)
                     ? 'bg-black text-white'
                     : 'bg-gray-100 text-gray-800'
-                }`}
+                  }`}
               >
                 {size}
               </Button>

@@ -1,5 +1,5 @@
 import { GetCurrentUserQuery } from '@/__generated__/graphql';
-
+import parse from 'html-react-parser'
 export async function loginUser({
   email,
   password,
@@ -16,7 +16,7 @@ export async function loginUser({
   if (!response.ok) {
     const errorData = await response.json().catch(() => null);
     let msg = errorData?.message || 'Login failed.';
-    msg = msg.replace(/<[^>]*>?/gm, '');
+    msg = parse(msg);
     throw new Error(msg.trim());
   }
   return { success: true };

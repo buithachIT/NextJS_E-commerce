@@ -13,12 +13,13 @@ export const UPDATE_USER_MUTATION = gql`
     }
   }
 `;
-export const UPDATE_USER_PASSWORD = gql`
-  mutation UpdateUserPassword($id: ID!, $password: String!) {
-    updateUser(input: { id: $id, password: $password }) {
-      user {
-        name
-      }
-    }
-  }
-`;
+export const UPDATE_USER_PASSWORD = `
+        mutation UpdateUserPassword($id: ID!, $password: String!) {
+          updateUser(input: { id: $id, password: $password }) {
+            user {
+              id
+              username
+            }
+          }
+        }
+      `;

@@ -18,6 +18,8 @@ import { loginUser } from '@/lib/action/auth';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import { ROUTES } from '@/config/routes';
+import parse from 'html-react-parser'
+
 const LoginForm = () => {
   const router = useRouter();
   const form = useForm<LoginFormValues>({
@@ -33,8 +35,8 @@ const LoginForm = () => {
       toast.success(`Hi best friend!`);
       router.push('/');
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Login failed!';
-      toast.error(message);
+      const message = parse(err instanceof Error ? err.message : 'Login failed!');
+      toast.error(<div>{message}</div>);
     }
   };
   return (
