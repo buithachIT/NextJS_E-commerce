@@ -10,7 +10,6 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { useForm } from 'react-hook-form';
-import PickCountry from '../PickAddress/pickCountry';
 import { billingFormSchema, BillingFormValues } from './BillingFormSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@/components/ui/button';
@@ -33,6 +32,7 @@ import { useRouter } from 'next/navigation';
 import { useCart } from '@/contexts/CartContext';
 import { decodeDatabaseId } from '@/helper/decoded';
 import { loadStripe } from '@stripe/stripe-js';
+import PickCountry from '../PickAddress/pickCountry';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 const BillingForm = () => {
