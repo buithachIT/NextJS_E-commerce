@@ -42,7 +42,6 @@ describe('Breadcrumb component', () => {
     const homeLink = screen.getByRole('link', { name: /home/i });
     const categoryLink = screen.getByRole('link', { name: /category/i });
     const menLink = screen.getByRole('link', { name: /men/i });
-    const shirtsText = screen.getByText(/shirts/i);
 
     expect(homeLink).toHaveAttribute('href', '/');
     expect(categoryLink).toHaveAttribute('href', '/category');

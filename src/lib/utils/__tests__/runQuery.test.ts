@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { safeQuery } from '../runQuery';
 import { ApolloClient, ApolloError, InMemoryCache } from '@apollo/client';
@@ -6,7 +7,7 @@ import { DocumentNode } from 'graphql';
 // Mock console.error to prevent logging during tests
 const consoleErrorSpy = vi
   .spyOn(console, 'error')
-  .mockImplementation(() => {});
+  .mockImplementation(() => { });
 
 describe('safeQuery', () => {
   let mockClient: ApolloClient<any>;

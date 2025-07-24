@@ -41,7 +41,8 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ success: true });
-  } catch (err) {
+  } catch (error) {
+    console.error('Error in register API:', error);
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
