@@ -7,7 +7,7 @@ import { ROUTES } from '@/config/routes';
 import { filterProducts } from '@/features/product/utils/filterProduct';
 import { sortProducts } from '@/features/product/utils/sortProduct';
 import ProductList from '@/features/product/components/FeatureProduct/ProductList';
-import { SortSelect } from '@/features/product/components/FilterProduct/SortSelect.tsx';
+import { SortSelect } from '@/features/product/components/FilterProduct/SortSelect';
 import FilterToggle from '@/features/product/components/FilterProduct/FilterToggle';
 
 
