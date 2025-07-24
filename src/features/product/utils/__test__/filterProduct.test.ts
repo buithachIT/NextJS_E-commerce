@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { filterProducts } from '../filterProduct';
 import { ProductCategoryListType } from '@/types/product';
-import { FilterValues } from '@/features/product/components/FilterProduct/FilterProduct';
+import { FilterValues } from '@/features/product/components/FilterProduct/FilterProductComponent';
 import { StockStatusEnum } from '@/__generated__/types';
 
 const mockProducts: ProductCategoryListType[] = [

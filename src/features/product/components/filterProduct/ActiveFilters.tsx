@@ -1,5 +1,5 @@
 import React from 'react';
-import type { FilterValues } from './FilterProduct';
+import type { FilterValues } from './FilterProductComponent';
 
 function ActiveFilters({
   filterValues,

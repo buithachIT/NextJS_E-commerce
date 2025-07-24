@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { ChevronDown, ChevronUp, ChevronRight } from 'lucide-react';
 import { DualRangeSlider } from '@/components/ui/dual-range-slider';
 import { isLightColor } from '@/helper/islight';
-import { FilterValues } from './FilterProduct';
+import { FilterValues } from './FilterProductComponent';
 import { getSizeColor } from '@/lib/action/product';
 import { getCategory } from '@/lib/action/category';
 import { CategoryNode } from '@/types/category';
